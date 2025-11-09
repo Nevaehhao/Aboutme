@@ -3,119 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me - Student Portfolio</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <div class="hero__overlay"></div>
-      <div class="hero__content">
-        <h1>Hello, I'm Maria Chen</h1>
-        <p>Computer Science student at the University of Ottawa</p>
-        <a class="hero__cta" href="#contact">Get in touch</a>
+    <main class="about">
+      <img class="about__photo" src="photo/myphoto.jpg" alt="Portrait of Ruiyao Hao" />
+      <div class="about__content">
+        <h1>Hi, I'm Ruiyao Hao</h1>
+        <p>
+          I enjoy capturing stories through design and technology, creating experiences
+          that feel personal, warm, and full of possibility.
+        </p>
+        <a class="about__link" href="https://ruiyaohao983.wixsite.com/ruiyao" target="_blank" rel="noopener">Visit my portfolio</a>
       </div>
-    </header>
-
-    <main>
-      <section id="about" class="card">
-        <h2>About Me</h2>
-        <p>
-          I'm a third-year Computer Science student at the University of Ottawa.
-          I enjoy building practical software that makes life easier and I'm
-          especially interested in cloud technologies and accessible design.
-        </p>
-        <p>
-          When I'm not coding, you can find me volunteering at local tech meetups
-          or exploring the walking trails along the Rideau Canal.
-        </p>
-      </section>
-
-      <section id="education" class="card">
-        <h2>Education</h2>
-        <ul class="timeline">
-          <li>
-            <h3>BSc in Computer Science</h3>
-            <span class="timeline__subtitle">University of Ottawa &bull; 2021&ndash;Present</span>
-            <p>
-              Coursework includes Data Structures, Human-Computer Interaction,
-              Cloud Computing, and Software Engineering. Currently focusing on
-              serverless architectures and user experience design.
-            </p>
-          </li>
-          <li>
-            <h3>High School Diploma</h3>
-            <span class="timeline__subtitle">Lisgar Collegiate Institute &bull; 2017&ndash;2021</span>
-            <p>
-              Graduated with honours, captain of the robotics club, and founder
-              of a coding mentorship program for younger students.
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section id="projects" class="card">
-        <h2>Recent Projects</h2>
-        <div class="projects">
-          <article class="project">
-            <h3>Campus Navigator</h3>
-            <p>
-              Built a mobile-friendly web app that helps new students find
-              classrooms and services on the University of Ottawa campus.
-            </p>
-            <ul>
-              <li>Integrated interactive maps using Mapbox.</li>
-              <li>Implemented AWS Lambda functions for location search.</li>
-              <li>Designed a clean UI optimized for accessibility.</li>
-            </ul>
-          </article>
-          <article class="project">
-            <h3>Study Buddy</h3>
-            <p>
-              Created a peer-study matching service that pairs students with
-              similar courses and interests.
-            </p>
-            <ul>
-              <li>Built serverless backend with AWS API Gateway and DynamoDB.</li>
-              <li>Developed responsive React frontend with reusable components.</li>
-              <li>Implemented automated email reminders using AWS SES.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="card">
-        <h2>Skills</h2>
-        <div class="skill-grid">
-          <div class="skill">
-            <h3>Languages</h3>
-            <p>Python, JavaScript, Java, C++</p>
-          </div>
-          <div class="skill">
-            <h3>Tools &amp; Platforms</h3>
-            <p>AWS (S3, Lambda, CloudFront), Git, Docker, Linux</p>
-          </div>
-          <div class="skill">
-            <h3>Course Highlights</h3>
-            <p>Cloud Computing, Web Development, UX Design, Algorithms</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p>
-          I'd love to connect! Reach me through any of the channels below.
-        </p>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> maria.chen@uottawa.ca</li>
-          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mariachen" target="_blank" rel="noopener">linkedin.com/in/mariachen</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/mariachen" target="_blank" rel="noopener">github.com/mariachen</a></li>
-        </ul>
-      </section>
     </main>
-
-    <footer>
-      <p>&copy; 2024 Maria Chen. Built with AWS S3 static hosting for ASSG_3.</p>
-    </footer>
   </body>
 </html>
