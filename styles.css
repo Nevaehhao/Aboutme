@@ -320,6 +320,9 @@ main {
   color: var(--text);
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel-strong);
+  backdrop-filter: blur(10px);
   font-weight: 600;
   letter-spacing: 0.01em;
 }
