@@ -134,7 +134,6 @@ const buildPage = () => {
           </div>
         </div>
         <nav class="nav" aria-label="Primary">
-          <a href="#top" class="nav__link">Top</a>
           <a href="#about" class="nav__link">About</a>
           <a href="#experience" class="nav__link">Experience</a>
           <a href="#projects" class="nav__link">Projects</a>
@@ -232,6 +231,10 @@ const buildPage = () => {
       </main>
 
       <div class="scroll-progress" aria-hidden="true"><span></span></div>
+      <button class="to-top" type="button" data-back-to-top aria-label="Back to top">
+        <span>Top</span>
+        <span aria-hidden="true">↑</span>
+      </button>
     </div>
   `;
 };
@@ -434,6 +437,26 @@ const initNavHighlight = () => {
   document.addEventListener('scroll', onScroll);
 };
 
+const initBackToTop = () => {
+  const btn = document.querySelector('[data-back-to-top]');
+  if (!btn) return;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 220) {
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+    }
+  };
+
+  toggleVisibility();
+  document.addEventListener('scroll', toggleVisibility);
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+};
+
 const init = () => {
   buildPage();
   initTheme();
@@ -446,6 +469,7 @@ const init = () => {
   initScrollProgress();
   initSmoothScroll();
   initNavHighlight();
+  initBackToTop();
 };
 
 init();
