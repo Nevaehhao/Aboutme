@@ -73,50 +73,7 @@ const data = {
 const app = document.getElementById('app');
 
 const buildPage = () => {
-  const projectCards = data.projects
-    .map(
-      (item) => `
-        <article class="card tile tilt" data-animate>
-          <div class="badge">${item.tag}</div>
-          <h3>${item.title}</h3>
-          <p>${item.copy}</p>
-          <a class="text-link" href="#">Read case study</a>
-        </article>
-      `
-    )
-    .join('');
-
-  const experienceItems = data.experience
-    .map(
-      (item) => `
-        <article class="card outline" data-animate>
-          <header>
-            <p class="eyebrow">${item.period}</p>
-            <h3>${item.role}</h3>
-            <p class="meta">${item.summary}</p>
-          </header>
-          <ul>
-            ${item.bullets.map((bullet) => `<li>${bullet}</li>`).join('')}
-          </ul>
-        </article>
-      `
-    )
-    .join('');
-
-  const stepItems = data.steps
-    .map(
-      (step) => `
-        <div class="card step tilt" data-animate>
-          <p class="chip">${step.label}</p>
-          <h3>${step.title}</h3>
-          <p>${step.copy}</p>
-        </div>
-      `
-    )
-    .join('');
-
-  const toolboxItems = data.toolbox.map((item) => `<li>${item}</li>`).join('');
-
+  if (!app) return;
   app.innerHTML = `
     <div class="page-shell">
       <div class="backdrop">
@@ -134,11 +91,11 @@ const buildPage = () => {
           </div>
         </div>
         <nav class="nav" aria-label="Primary">
-          <a href="#top" class="nav__link">Top</a>
-          <a href="#about" class="nav__link">About</a>
-          <a href="#experience" class="nav__link">Experience</a>
-          <a href="#projects" class="nav__link">Projects</a>
-          <a href="#contact" class="nav__link">Contact</a>
+          <a href="index.html" class="nav__link is-active">Home</a>
+          <a href="about.html" class="nav__link">About me</a>
+          <a href="experience.html" class="nav__link">Experience</a>
+          <a href="projects.html" class="nav__link">Project</a>
+          <a href="contact.html" class="nav__link">Contact</a>
           <button class="pill" type="button" data-theme-toggle>Dark mode</button>
         </nav>
       </header>
@@ -146,92 +103,16 @@ const buildPage = () => {
       <main id="top">
         <section class="hero card glass" data-animate>
           <div>
-            <p class="eyebrow">${data.hero.eyebrow}</p>
-            <h1>${data.hero.headline}</h1>
-            <p class="lede">${data.hero.lede}</p>
-            <p class="typewriter" id="typewriter" aria-live="polite"></p>
-            <div class="actions">
-              <a class="pill pill--solid magnetic" href="#projects">View work</a>
-              <a class="pill magnetic" href="https://ruiyaohao983.wixsite.com/ruiyao" target="_blank" rel="noopener">Visit full portfolio</a>
-            </div>
-            <div class="meta-grid">
-              <div>
-                <p class="eyebrow">Focus</p>
-                <p class="meta">${data.meta.focus}</p>
-              </div>
-              <div>
-                <p class="eyebrow">Currently</p>
-                <p class="meta">${data.meta.current}</p>
-              </div>
-            </div>
+            <p class="eyebrow">Welcome</p>
+            <h1>Ruiyao Hao</h1>
+            <p class="lede">Welcome to my portfolio.</p>
           </div>
           <div class="portrait tilt">
             <div class="glow"></div>
             <img src="photo/myphoto.jpg" alt="Portrait of Ruiyao Hao" />
-            <div class="card overlay">
-              <p class="eyebrow">Available for</p>
-              <p class="meta">Product design · UX research · Internships</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="about">
-          <div class="section__header" data-animate>
-            <p class="eyebrow">About</p>
-            <h2>Designing with empathy, rigor, and measurable impact.</h2>
-          </div>
-          <div class="section__content grid" data-animate>
-            <p>
-              I blend qualitative research with data-led iteration to shape experiences that feel intuitive and trustworthy. Swap in your own narrative here—highlight your superpower, design philosophy, and the outcomes you care about.
-            </p>
-            <div class="card list">
-              <p class="eyebrow">Toolbox</p>
-              <ul>${toolboxItems}</ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="experience">
-          <div class="section__header" data-animate>
-            <p class="eyebrow">Experience</p>
-            <h2>Recent roles and impact moments.</h2>
-          </div>
-          <div class="section__content columns">${experienceItems}</div>
-        </section>
-
-        <section class="section" id="projects">
-          <div class="section__header" data-animate>
-            <p class="eyebrow">Projects</p>
-            <h2>Case-study ready tiles you can replace.</h2>
-            <p class="meta">Swap the content with your own UX work.</p>
-          </div>
-          <div class="section__content grid">${projectCards}</div>
-        </section>
-
-        <section class="section alt" id="process">
-          <div class="section__header" data-animate>
-            <p class="eyebrow">Approach</p>
-            <h2>How I collaborate</h2>
-          </div>
-          <div class="section__content steps">${stepItems}</div>
-        </section>
-
-        <section class="section" id="contact">
-          <div class="callout card glass" data-animate>
-            <div>
-              <p class="eyebrow">Contact</p>
-              <h2>Let’s build something thoughtful together.</h2>
-              <p class="meta">Drop a note about the problem space, audience, and success metrics.</p>
-            </div>
-            <div class="actions">
-              <a class="pill pill--solid magnetic" href="mailto:ruiyao@example.com">Email me</a>
-              <a class="pill magnetic" href="#top">Back to top</a>
-            </div>
           </div>
         </section>
       </main>
-
-      <div class="scroll-progress" aria-hidden="true"><span></span></div>
     </div>
   `;
 };
@@ -361,8 +242,8 @@ const initParticles = () => {
     x: Math.random(),
     y: Math.random(),
     size: Math.random() * 2 + 0.5,
-    speedX: (Math.random() - 0.5) * 0.2,
-    speedY: (Math.random() - 0.5) * 0.2,
+    speedX: (Math.random() - 0.5) * 0.08,
+    speedY: (Math.random() - 0.5) * 0.08,
   }));
 
   const resize = () => {
@@ -415,10 +296,14 @@ const initSmoothScroll = () => {
 };
 
 const initNavHighlight = () => {
-  const links = document.querySelectorAll('.nav__link');
-  const sections = Array.from(links)
-    .map((link) => document.querySelector(link.getAttribute('href')))
-    .filter(Boolean);
+  const links = Array.from(document.querySelectorAll('.nav__link')).filter((link) => {
+    const href = link.getAttribute('href') || '';
+    return href.startsWith('#');
+  });
+
+  const sections = links.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+
+  if (!links.length || !sections.length) return;
 
   const onScroll = () => {
     const offset = window.scrollY + 120;
