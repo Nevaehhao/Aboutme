@@ -1,0 +1,100 @@
+.site-header {
+    max-width: var(--max);
+    margin: 18px auto 0;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 12px;
+    backdrop-filter: blur(14px);
+    z-index: 10;
+  }
+  
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; }
+  
+  .brand__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--primary);
+    box-shadow: 0 0 18px rgba(124, 126, 255, 0.55);
+  }
+  
+  .site-nav { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  
+  .nav__link {
+    padding: 10px 12px;
+    border-radius: 12px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  
+  .nav__link.is-active { color: var(--text); background: var(--surface-strong); }
+  
+  .btn {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .btn--primary {
+    background: var(--primary);
+    color: #0c1020;
+    border-color: transparent;
+  }
+  
+  .btn--ghost { background: transparent; }
+  
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px;
+  }
+  
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface-strong);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  .card__meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  
+  .link {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--primary);
+    font-weight: 800;
+    margin-top: 10px;
+  }
+  
+  .link::after { content: "↗"; font-size: 12px; }
+  
+  .bullets { margin: 12px 0 0; padding-left: 18px; color: var(--muted); }
+  .bullets strong { color: var(--text); }
+  
+  .site-footer {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 28px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+  }
+  
