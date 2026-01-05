@@ -3,17 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ruiyao Hao · Dynamic Portfolio</title>
+    <title>Ruiyao Hao · UX Intern</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script src="script.js"></script>
+    <div class="grid-bg"></div>
+
+    <div class="layout layout--centered">
+      <aside class="sidebar">
+        <div class="sidebar__badge">R</div>
+        <nav class="sidebar__nav">
+          <a href="#hero" aria-label="Hero">🛋️</a>
+          <a href="#projects" aria-label="Projects">📓</a>
+          <a href="assets/Ruiyao.pdf" aria-label="Resume">📄</a>
+        </nav>
+        <div class="sidebar__contact">
+          <a href="mailto:ruiyaohao@gmail.com" aria-label="Email">✉️</a>
+          <a href="https://www.linkedin.com/in/hry1/" aria-label="LinkedIn">🔗</a>
+        </div>
+      </aside>
+
+      <main class="board">
+        <section class="board__row">
+          <article class="card card--hero" id="hero">
+            <div class="hero-copy">
+              <p class="eyebrow">UX Intern Candidate</p>
+              <h1>UX Designer focused on data-informed and research-driven design</h1>
+              <p class="lead">
+                UX Intern candidate with a strong foundation in user research, interaction design,
+                and product thinking.
+              </p>
+              <p class="supporting">
+                I design clear, usable experiences by translating insights into thoughtful design
+                decisions.
+              </p>
+            </div>
+          </article>
+
+          <div class="stack">
+            <article class="card card--square card--tall card--resume">
+              <div class="mini-icon mini-icon--large">📄</div>
+              <a class="mini-link" href="assets/Ruiyao.pdf">Resume</a>
+            </article>
+            <article class="card card--square card--dark card--tall">
+              <p class="mini-label">Local time</p>
+              <p class="mini-time">16:20</p>
+              <p class="mini-meta">Canada</p>
+            </article>
+            <article class="card card--profile">
+              <p class="profile-hello">Hello! Nice to meet you.</p>
+              <div class="profile-frame">
+                <img src="photo/myphoto.jpg" alt="Portrait of Ruiyao Hao" />
+              </div>
+              <p class="caption">Based in Canada · Open to UX Intern opportunities</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="board__row">
+          <article class="card card--wide card--accent">
+            <div class="wide-left wide-left--icon">
+              <span class="emoji emoji--large">👋</span>
+            </div>
+            <a class="pill-link" href="about.html">About Me</a>
+          </article>
+
+          <article class="card card--wide card--accent-alt" id="projects">
+            <div class="wide-left wide-left--icon">
+              <span class="emoji emoji--large">📓</span>
+            </div>
+            <a class="pill-link" href="projects.html">View Projects</a>
+          </article>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
