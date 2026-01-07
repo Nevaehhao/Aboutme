@@ -12,86 +12,117 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body id="top">
-    <div class="orb orb--left"></div>
-    <div class="orb orb--right"></div>
+  <body class="projects-page">
+    <div class="about-grid-bg"></div>
 
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Ruiyao Hao home">
-        <span class="brand__orb" aria-hidden="true"></span>
-        <span>Ruiyao Hao · UX</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a class="nav__link" href="index.html">Home</a>
-        <a class="nav__link" href="about.html">About</a>
-        <a class="nav__link" href="experience.html">Experience</a>
-        <a class="nav__link is-active" href="projects.html">Projects</a>
-        <a class="nav__link" href="contact.html">Contact</a>
-        <button class="pill-button" type="button" data-theme-toggle>Dark mode</button>
-      </nav>
-    </header>
+    <main class="projects-shell">
+      <div class="projects-search">
+        <span class="search-icon">🔍</span>
+        <input
+          type="search"
+          placeholder="Search projects by name, description, or tag..."
+          aria-label="Search projects"
+        />
+      </div>
 
-    <main>
-      <section class="section-shell hero reveal">
-        <div class="hero__copy">
-          <p class="eyebrow">Projects</p>
-          <h1 class="hero__title">Case studies with motion-rich storytelling.</h1>
-          <p class="hero__lede">
-            Showcase your work with cinematic polish. Swap images, titles, and links; animations and layout are ready for
-            your content.
-          </p>
-          <div class="meta-row">
-            <span class="badge">Product</span>
-            <span class="badge">Design Systems</span>
-            <span class="badge">Research Ops</span>
+      <div class="projects-filters">
+        <button class="filter-pill is-active" type="button">All Projects</button>
+        <button class="filter-pill" type="button">UX Strategy</button>
+        <button class="filter-pill" type="button">UI/Design System</button>
+        <button class="filter-pill" type="button">Development</button>
+        <button class="filter-pill" type="button">Creative &amp; Motion</button>
+      </div>
+
+      <section class="projects-grid">
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="assets/projects/ABF/cover.png" alt="ABF project cover" />
           </div>
-        </div>
-        <div class="hero-visual">
-          <img src="photo/myphoto.jpg" alt="Portrait of Ruiyao Hao" />
-        </div>
-      </section>
+          <span class="project-pill">Decision Making Tool</span>
+          <h3>ABF</h3>
+          <p>Designing decisions for profit &amp; sustainability.</p>
+          <div class="project-tags">
+            <span>UX Strategy</span>
+          </div>
+        </article>
 
-      <section class="section-shell reveal">
-        <div class="eyebrow">Case studies</div>
-        <h2 class="section-title">Featured work</h2>
-        <div class="grid grid--two" style="margin-top: 1.2rem">
-          <article class="card">
-            <div class="project-media">Add mockup</div>
-            <div class="chip">Mobile</div>
-            <h3>Patient wellness companion</h3>
-            <p class="muted">Journey-led redesign that reduced drop-off and grew weekly retention.</p>
-            <a class="text-link" href="#">Read case study</a>
-          </article>
-          <article class="card">
-            <div class="project-media">Add mockup</div>
-            <div class="chip">Web</div>
-            <h3>Energy usage dashboard</h3>
-            <p class="muted">Data storytelling for smart homes, balancing clarity with depth.</p>
-            <a class="text-link" href="#">Read case study</a>
-          </article>
-          <article class="card">
-            <div class="project-media">Add mockup</div>
-            <div class="chip">Design System</div>
-            <h3>Accessible component library</h3>
-            <p class="muted">Scalable, WCAG-compliant patterns that speed up product delivery.</p>
-            <a class="text-link" href="#">Read case study</a>
-          </article>
-          <article class="card">
-            <div class="project-media">Add mockup</div>
-            <div class="chip">Emerging Tech</div>
-            <h3>Voice-first assistant</h3>
-            <p class="muted">Natural language flows that emphasize trust, privacy, and delight.</p>
-            <a class="text-link" href="#">Read case study</a>
-          </article>
-        </div>
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="assets/projects/Bosch/cover.png" alt="Bosch project cover" />
+          </div>
+          <span class="project-pill">AI Feature</span>
+          <h3>Bosch</h3>
+          <p>Designing AI-guided learning experiences.</p>
+          <div class="project-tags">
+            <span>UX Strategy</span>
+            <span>UI/Design System</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">
+            <div class="project-fallback">Creative</div>
+          </div>
+          <span class="project-pill">Growth Strategy</span>
+          <h3>Creative</h3>
+          <p>Motion, storytelling, and visual systems.</p>
+          <div class="project-tags">
+            <span>Creative &amp; Motion</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">
+            <img
+              src="assets/projects/Data%20Visualization/cover.png"
+              alt="Data Visualization project cover"
+            />
+          </div>
+          <span class="project-pill">Design System</span>
+          <h3>Data Visualization</h3>
+          <p>Clarity-first dashboards and data stories.</p>
+          <div class="project-tags">
+            <span>UI/Design System</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="assets/projects/LBN/cover.jpg" alt="LBN project cover" />
+          </div>
+          <span class="project-pill">User Retention</span>
+          <h3>LBN</h3>
+          <p>Designing for engagement and trust.</p>
+          <div class="project-tags">
+            <span>UX Strategy</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="assets/projects/UOKN/cover.png" alt="UOKN project cover" />
+          </div>
+          <span class="project-pill">Icon Design</span>
+          <h3>UOKN</h3>
+          <p>System visuals and scalable assets.</p>
+          <div class="project-tags">
+            <span>Creative &amp; Motion</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="assets/projects/UX%20design/cover.png" alt="UX design project cover" />
+          </div>
+          <span class="project-pill">Vibe Coding</span>
+          <h3>UX design</h3>
+          <p>Designing calm through UI systems.</p>
+          <div class="project-tags">
+            <span>Development</span>
+            <span>UI/Design System</span>
+          </div>
+        </article>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <span class="brand">Made for Ruiyao Hao</span>
-      <a class="text-link" href="#top">Back to top</a>
-    </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>

@@ -12,96 +12,99 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body id="top">
-    <div class="orb orb--left"></div>
-    <div class="orb orb--right"></div>
+  <body class="about-page">
+    <div class="about-grid-bg"></div>
 
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Ruiyao Hao home">
-        <span class="brand__orb" aria-hidden="true"></span>
-        <span>Ruiyao Hao · UX</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a class="nav__link" href="index.html">Home</a>
-        <a class="nav__link is-active" href="about.html">About</a>
-        <a class="nav__link" href="experience.html">Experience</a>
-        <a class="nav__link" href="projects.html">Projects</a>
-        <a class="nav__link" href="contact.html">Contact</a>
-        <button class="pill-button" type="button" data-theme-toggle>Dark mode</button>
-      </nav>
-    </header>
+    <div class="layout layout--centered">
+      <aside class="sidebar">
+        <div class="sidebar__badge">R</div>
+        <nav class="sidebar__nav">
+          <a href="index.html#hero" aria-label="Home">🛋️</a>
+          <a href="about.html" aria-label="About">👋</a>
+          <a href="projects.html" aria-label="Projects">📓</a>
+          <a href="assets/Ruiyao.pdf" aria-label="Resume">📄</a>
+        </nav>
+        <div class="sidebar__contact">
+          <a href="mailto:ruiyaohao@gmail.com" aria-label="Email">✉️</a>
+          <a href="https://www.linkedin.com/in/hry1/" aria-label="LinkedIn">🔗</a>
+        </div>
+      </aside>
 
-    <main>
-      <section class="section-shell hero reveal">
-        <div class="hero__copy">
-          <p class="eyebrow">About</p>
-          <h1 class="hero__title">Designing with clarity, empathy, and momentum.</h1>
-          <p class="hero__lede">
-            I mix research depth with prototyping speed to move teams forward. Swap in your own story to highlight how you
-            listen, synthesize, and ship with confidence.
-          </p>
-          <div class="meta-row">
-            <span class="badge">Systems thinker</span>
-            <span class="badge">Story-led</span>
-            <span class="badge">Data aware</span>
+      <main class="about-layout">
+        <section class="about-grid">
+          <article class="about-card about-card--bio">
+          <div class="about-copy">
+            <p class="about-kicker">Spend 3 more mins knowing Ruiyao</p>
+            <h1>Hi, I’m Ruiyao Hao.</h1>
+            <p>
+              I’m a UX designer with a background in data analysis and research-driven design. I
+              believe good UX is not just about aesthetics, but about reducing uncertainty and
+              helping users make confident decisions.
+            </p>
+            <p>
+              My work focuses on translating research findings and behavioral data into clear
+              structures, intuitive flows, and measurable outcomes. I enjoy working on complex
+              problems—especially in health, data, and behavior-change contexts—where clarity and
+              trust matter most.
+            </p>
+            <p>
+              Through iterative research, prototyping, and validation, I design experiences that
+              feel calm, purposeful, and grounded in evidence.
+            </p>
           </div>
-        </div>
-        <div class="hero-visual">
-          <img src="photo/myphoto.jpg" alt="Portrait of Ruiyao Hao" />
-        </div>
-      </section>
+          <div class="about-portrait">
+            <img src="assets/images/photo/myself.png" alt="Portrait of Ruiyao Hao" />
+          </div>
+        </article>
 
-      <section class="section-shell reveal">
-        <div class="eyebrow">Principles</div>
-        <h2 class="section-title">How I work</h2>
-        <div class="grid grid--two" style="margin-top: 1.2rem">
-          <article class="card">
-            <h3>Empathy first</h3>
-            <p class="muted">Start with context, map real behaviors, and design for accessibility from the outset.</p>
-          </article>
-          <article class="card">
-            <h3>Decisions you can trace</h3>
-            <p class="muted">Ground flows in research, data, and alignment sessions. Keep a changelog for every pivot.</p>
-          </article>
-          <article class="card">
-            <h3>Low friction collaboration</h3>
-            <p class="muted">Share prototypes early, invite critique, and turn feedback loops into momentum.</p>
-          </article>
-          <article class="card">
-            <h3>Beauty meets rigor</h3>
-            <p class="muted">Calm visuals, crisp typography, and motion that feels inevitable—not decorative.</p>
-          </article>
-        </div>
-      </section>
+          <aside class="about-card about-card--travel" id="travel">
+          <div class="travel-header">
+            When Ruiyao is not designing, she enjoys traveling and see how beautiful the world is...
+          </div>
+          <span class="travel-spark">✳︎</span>
+          <div class="travel-strip" aria-hidden="true">
+            <div class="travel-track">
+              <img src="assets/images/lvyou/IMG_5063.jpg" alt="Travel photo 1" />
+              <img src="assets/images/lvyou/IMG_5517.JPG" alt="Travel photo 2" />
+              <img src="assets/images/lvyou/IMG_8788.JPG" alt="Travel photo 3" />
+              <img src="assets/images/lvyou/IMG_8816.JPG" alt="Travel photo 4" />
+              <img src="assets/images/lvyou/IMG_8830.JPG" alt="Travel photo 5" />
+              <img src="assets/images/lvyou/IMG_5063.jpg" alt="" />
+              <img src="assets/images/lvyou/IMG_5517.JPG" alt="" />
+              <img src="assets/images/lvyou/IMG_8788.JPG" alt="" />
+              <img src="assets/images/lvyou/IMG_8816.JPG" alt="" />
+              <img src="assets/images/lvyou/IMG_8830.JPG" alt="" />
+            </div>
+          </div>
+        </aside>
 
-      <section class="section-shell reveal">
-        <div class="eyebrow">Capabilities</div>
-        <h2 class="section-title">What I bring</h2>
-        <div class="grid grid--three" style="margin-top: 1.2rem">
-          <article class="card">
-            <div class="chip">Research</div>
-            <h3>Mixed methods</h3>
-            <p class="muted">Discovery interviews, usability, diary studies, and survey design to triangulate signals.</p>
-          </article>
-          <article class="card">
-            <div class="chip">Design</div>
-            <h3>Product & systems</h3>
-            <p class="muted">Flows, microcopy, accessibility, and component libraries tuned for multiple products.</p>
-          </article>
-          <article class="card">
-            <div class="chip">Delivery</div>
-            <h3>Storytelling</h3>
-            <p class="muted">Narratives that make metrics clear and help stakeholders see the path to launch.</p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span class="brand">Made for Ruiyao Hao</span>
-      <a class="text-link" href="#top">Back to top</a>
-    </footer>
-
-    <script src="script.js"></script>
+          <section class="about-card about-card--tools">
+          <div class="tools-header">Design Arsenal</div>
+          <div class="tools-row" aria-hidden="true">
+            <div class="tools-track">
+              <span>🖊️</span>
+              <span>📐</span>
+              <span>🧪</span>
+              <span>🧭</span>
+              <span>🗂️</span>
+              <span>🧩</span>
+              <span>🧠</span>
+              <span>🖊️</span>
+              <span>📐</span>
+              <span>🧪</span>
+              <span>🧭</span>
+              <span>🗂️</span>
+              <span>🧩</span>
+              <span>🧠</span>
+            </div>
+          </div>
+          <div class="scroll-hint">
+            <span class="scroll-dot"></span>
+            <span>Scroll</span>
+          </div>
+          </section>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
