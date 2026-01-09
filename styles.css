@@ -55,15 +55,15 @@ a {
 .layout--centered {
   max-width: 1220px;
   margin: 0 auto;
-  align-items: start;
+  align-items: stretch;
   min-height: 100vh;
   height: 100vh;
 }
 
 .sidebar {
-  position: sticky;
-  top: 24px;
-  align-self: start;
+  position: relative;
+  top: auto;
+  align-self: stretch;
   background: var(--card);
   border-radius: 40px;
   padding: 16px 12px;
@@ -73,7 +73,7 @@ a {
   align-items: center;
   gap: 22px;
   height: auto;
-  min-height: calc(100vh - 48px);
+  height: 100%;
   border: 1px solid rgba(36, 36, 36, 0.08);
 }
 
@@ -110,6 +110,34 @@ a {
   background: #f0f5ff;
   border: 1px solid rgba(31, 39, 54, 0.08);
   transition: transform 0.2s ease, background 0.2s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.sidebar__nav a::after,
+.sidebar__contact a::after {
+  content: attr(data-label);
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px) rotate(-6deg);
+  background: #1b1b1b;
+  color: #f6f6f6;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.sidebar__nav a:hover::after,
+.sidebar__contact a:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) rotate(-6deg);
 }
 
 .sidebar__nav a:hover,
