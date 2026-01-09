@@ -803,7 +803,9 @@ h2 {
 .travel-track {
   display: flex;
   gap: 14px;
-  animation: travel-scroll 16s linear infinite;
+  animation: travel-scroll 65s linear infinite;
+  width: max-content;
+  flex-shrink: 0;
 }
 
 .travel-track img {
