@@ -11,11 +11,33 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="projects-page">
     <div class="about-grid-bg"></div>
 
-    <main class="projects-shell">
+    <div class="layout layout--centered">
+      <aside class="sidebar">
+        <nav class="sidebar__nav">
+          <a href="index.html#hero" aria-label="Home" data-label="Home">
+            <span class="iconify" data-icon="fluent-emoji:house"></span>
+          </a>
+          <a href="projects.html" aria-label="Projects" data-label="Projects">
+            <span class="iconify" data-icon="fluent-emoji:books"></span>
+          </a>
+          <a href="assets/Ruiyao.pdf" aria-label="Resume" data-label="Resume">📝</a>
+        </nav>
+        <div class="sidebar__contact">
+          <a href="mailto:ruiyaohao@gmail.com" aria-label="Email" data-label="Email">
+            <span class="iconify" data-icon="fluent-emoji:love-letter"></span>
+          </a>
+          <a href="https://www.linkedin.com/in/hry1/" aria-label="LinkedIn" data-label="LinkedIn">
+            <span class="iconify" data-icon="logos:linkedin-icon"></span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="projects-shell">
       <div class="projects-search">
         <span class="search-icon">🔍</span>
         <input
@@ -123,6 +145,7 @@
           </div>
         </article>
       </section>
-    </main>
+      </main>
+    </div>
   </body>
 </html>
