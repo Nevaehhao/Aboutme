@@ -9,6 +9,8 @@
   --line: rgba(31, 39, 54, 0.12);
   --shadow: 0 16px 28px rgba(31, 39, 54, 0.12);
   --radius: 26px;
+  --gap: 20px;
+  --scale: 0.92;
 }
 
 * {
@@ -47,9 +49,10 @@ a {
 .layout {
   display: grid;
   grid-template-columns: 90px 1fr;
-  gap: 28px;
+  gap: var(--gap);
   padding: 24px;
   align-items: stretch;
+  height: 100%;
 }
 
 .layout--centered {
@@ -57,7 +60,9 @@ a {
   margin: 0 auto;
   align-items: stretch;
   min-height: 100vh;
-  height: 100vh;
+  height: calc(100vh / var(--scale));
+  transform: scale(var(--scale));
+  transform-origin: top center;
 }
 
 .sidebar {
@@ -149,7 +154,7 @@ a {
 .board {
   display: grid;
   grid-template-rows: 2.2fr 1fr;
-  gap: 22px;
+  gap: var(--gap);
   min-height: 100%;
   height: calc(100vh - 48px);
 }
@@ -157,7 +162,7 @@ a {
 .board__row {
   display: grid;
   grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
-  gap: 20px;
+  gap: var(--gap);
   align-items: stretch;
 }
 
@@ -187,14 +192,14 @@ a {
 
 .hero-copy {
   max-width: 430px;
-  margin-top: 120px;
+  margin-top: clamp(24px, 6vh, 96px);
 }
 
 .stack {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: 1.2fr 1fr 1fr;
-  gap: 14px;
+  gap: var(--gap);
   height: 100%;
 }
 
