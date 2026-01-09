@@ -1,17 +1,41 @@
 # About Me Portfolio
 
-This repository hosts a dynamic, JavaScript-driven personal portfolio. The landing page is assembled in `script.js` and stylized with `styles.css`, showcasing education, projects, skills, and contact links.
+A front-end portfolio website with multiple pages (home, projects, about, contact) and custom case study layouts. Styling lives in `styles.css`, and page-specific behavior is handled by small JS files under `assets/scripts/`.
 
-## 本地预览 / Run locally
+Live site: https://nevaehhao.github.io/Aboutme/
 
-- 直接打开：双击 `index.html`，或在浏览器中拖入该文件即可查看。
-- 使用本地服务器（推荐，避免某些浏览器的本地文件限制）：
-  1. 在项目根目录运行 `python -m http.server 8000`。
-  2. 浏览器访问 `http://localhost:8000`。
+## Design notes
 
-## 部署到静态托管
+- Visual direction: clean, grid-based layout with rounded cards and soft shadows.
+- Interaction: hover-reveal buttons, tooltip labels, and image lightbox on case pages.
+- Layout system: reusable card grid for the home and projects pages, and a long-form case study template.
 
-1. 创建（或复用）一个启用 **Static website hosting** 的 S3 Bucket 或其他静态站点服务。
-2. 上传 `index.html`、`styles.css`、`script.js` 以及 `photo/` 资源目录。
-3. 根据需要配置公开读取权限。
-4. 使用托管服务提供的站点 URL 查看上线效果。
+## Tech stack
+
+- HTML5
+- CSS3 (custom properties, CSS Grid, Flexbox)
+- Vanilla JavaScript (DOM interactions)
+
+## Run locally
+
+Option 1: Open the file directly
+- Double‑click `index.html`, or drag it into a browser.
+
+Option 2: Use a local server (recommended)
+1. From the project root, run:
+   ```bash
+   python -m http.server 8000
+   ```
+2. Open `http://localhost:8000`.
+
+## Project structure
+
+- `index.html` — home page
+- `projects.html` — projects list
+- `case/` — individual case study pages
+- `styles.css` — global styles
+- `assets/` — images, scripts, PDFs, and other static assets
+
+## Deploy
+
+Any static hosting works. Upload the HTML files, `styles.css`, and the `assets/` and `case/` folders. Then point your domain or static host to the uploaded files.
