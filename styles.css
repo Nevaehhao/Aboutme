@@ -1001,6 +1001,7 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.08);
