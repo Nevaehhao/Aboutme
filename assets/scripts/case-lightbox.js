@@ -1,5 +1,7 @@
 const initCaseLightbox = () => {
-  const targets = document.querySelectorAll('.case-hero img, .case-image-block img');
+  const targets = document.querySelectorAll(
+    '.case-prototype__frame img, .case-image-block img, .case-overview-image img'
+  );
   if (!targets.length) return;
 
   const lightbox = document.createElement('div');
