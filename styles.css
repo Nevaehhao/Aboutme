@@ -1225,6 +1225,7 @@ h2 {
 
 .case-image-block--overview {
   margin: 18px 0 28px;
+  padding: 0;
 }
 
 .case-image-placeholder {
@@ -1245,6 +1246,27 @@ h2 {
   display: block;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: zoom-in;
+}
+
+.case-image-block--overview img {
+  border-radius: 0;
+  height: 250px;
+  max-height: none;
+  object-fit: cover;
+  width: 100%;
+}
+
+.case-overview-image {
+  height: 320px;
+  max-height: none;
+  object-fit: cover;
+  background: transparent;
+}
+
+.case-overview-banner {
+  height: 260px;
+  max-height: none;
+  object-fit: cover;
 }
 
 .case-image-large {
@@ -1284,9 +1306,8 @@ h2 {
 }
 
 .case-hero img:hover,
-.case-image-block img:hover,
+.case-image-block:not(.case-image-block--overview) img:hover,
 .case-prototype__frame img:hover,
-.case-overview-image img:hover,
 .case-image-grid img:hover {
   transform: scale(1.03);
   box-shadow: none;
