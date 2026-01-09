@@ -83,7 +83,7 @@ a {
 
 .sidebar {
   position: fixed;
-  top: 24px;
+  top: calc(24px / var(--scale));
   left: calc(50% - 610px + 24px);
   align-self: stretch;
   background: var(--card);
@@ -94,8 +94,8 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 22px;
-  height: calc(100vh - 48px);
-  min-height: calc(100vh - 48px);
+  height: calc((100vh - 48px) / var(--scale));
+  min-height: calc((100vh - 48px) / var(--scale));
   border: 1px solid rgba(36, 36, 36, 0.08);
   z-index: 10;
 }
@@ -700,7 +700,8 @@ h2 {
 
 .about-layout {
   width: 100%;
-  height: 100%;
+  height: calc((100vh - 48px) / var(--scale));
+  min-height: calc((100vh - 48px) / var(--scale));
   padding: 0;
   display: flex;
 }
@@ -708,48 +709,52 @@ h2 {
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 2.2fr 1fr;
   gap: 24px;
   width: 100%;
+  height: 100%;
   padding: 8px;
 }
 
 .about-card {
-  background: #1f2124;
-  color: #f3f2ef;
+  background: var(--card);
+  color: var(--ink);
   border-radius: 26px;
   padding: 28px;
   box-shadow: 0 18px 32px rgba(31, 39, 54, 0.18);
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .about-card--bio {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: 24px;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  align-self: stretch;
 }
 
 .about-kicker {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.16em;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--muted);
   margin: 0 0 12px;
 }
 
 .about-card--bio h1 {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   margin: 0 0 16px;
 }
 
 .about-copy p {
   margin: 0 0 14px;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
   line-height: 1.6;
+  font-size: 14px;
 }
 
 .about-portrait img {
@@ -773,14 +778,14 @@ h2 {
 .travel-header {
   font-size: 13px;
   text-transform: none;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--muted);
   line-height: 1.5;
   margin-bottom: 12px;
 }
 
 .travel-spark {
   font-size: 24px;
-  color: #6d98e6;
+  color: var(--accent-deep);
 }
 
 .travel-strip {
@@ -817,13 +822,14 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: stretch;
 }
 
 .tools-header {
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--muted);
   margin-bottom: 12px;
 }
 
@@ -846,9 +852,17 @@ h2 {
   width: 36px;
   height: 36px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #f3f6ff;
+  color: #2a2a2a;
   display: grid;
   place-items: center;
+}
+
+.tool-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
 }
 
 .scroll-hint {
@@ -858,7 +872,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--muted);
   font-size: 12px;
 }
 
