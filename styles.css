@@ -1432,6 +1432,10 @@ h2 {
   width: 100%;
 }
 
+.knc-overview {
+  object-fit: cover;
+}
+
 .case-overview-image {
   height: 320px;
   max-height: none;
