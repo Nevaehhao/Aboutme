@@ -1226,6 +1226,32 @@ h2 {
   position: relative;
 }
 
+.case-cta-top {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  color: #2a2a2a;
+  font-size: 12px;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 720px) {
+  .case-cta-top {
+    position: static;
+    margin-top: 10px;
+    align-self: flex-start;
+  }
+}
+
 .case-pill {
   display: inline-flex;
   align-items: center;
@@ -1494,7 +1520,8 @@ h2 {
 .case-hero img:hover,
 .case-image-block:not(.case-image-block--overview) img:hover,
 .case-prototype__frame img:hover,
-.case-image-grid img:hover {
+.case-image-grid img:hover,
+.abf-media img:hover {
   transform: scale(1.03);
   box-shadow: none;
 }
@@ -1525,6 +1552,79 @@ h2 {
 
 .case-related {
   margin-top: 28px;
+}
+
+.abf-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.abf-section--reverse .abf-media {
+  order: 2;
+}
+
+.abf-content h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.abf-content p {
+  margin: 0;
+  font-size: 12px;
+  color: #5f6c84;
+  line-height: 1.6;
+}
+
+.abf-media {
+  border-radius: 12px;
+  background: #eef1f6;
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  color: #8a8a8a;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.abf-media--stack {
+  display: grid;
+  gap: 12px;
+}
+
+.abf-media--stack img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.abf-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: zoom-in;
+}
+
+.abf-divider {
+  height: 1px;
+  background: rgba(31, 39, 54, 0.12);
+  margin: 18px 0;
+}
+
+@media (max-width: 720px) {
+  .abf-section {
+    grid-template-columns: 1fr;
+  }
+
+  .abf-section--reverse .abf-media {
+    order: 0;
+  }
 }
 
 .case-related h2 {
