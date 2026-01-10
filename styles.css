@@ -770,7 +770,7 @@ h2 {
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  grid-template-rows: 2.2fr 1fr;
+  grid-template-rows: 2.8fr 0.8fr;
   gap: 24px;
   width: 100%;
   height: 100%;
@@ -790,7 +790,7 @@ h2 {
 
 .about-card--bio {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
   gap: 24px;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -807,8 +807,15 @@ h2 {
 
 .about-card--bio h1 {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-  font-size: 28px;
+  font-size: 26px;
   margin: 0 0 16px;
+}
+
+.about-greeting {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-deep);
 }
 
 .about-copy p {
@@ -823,7 +830,7 @@ h2 {
   border-radius: 22px;
   display: block;
   object-fit: cover;
-  height: 100%;
+  height: 90%;
 }
 
 .about-card--travel {
@@ -898,6 +905,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-self: stretch;
+  padding: 20px;
 }
 
 .tools-header {
