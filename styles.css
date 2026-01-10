@@ -802,10 +802,22 @@ h2 {
 
 .travel-track {
   display: flex;
-  gap: 14px;
-  animation: travel-scroll 65s linear infinite;
+  gap: 0;
+  animation: travel-scroll 95s linear infinite;
   width: max-content;
   flex-shrink: 0;
+  --scroll-distance: 0px;
+}
+
+.travel-track__group {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+  width: max-content;
+}
+
+.travel-track__group + .travel-track__group {
+  margin-left: 14px;
 }
 
 .travel-track img {
@@ -840,14 +852,28 @@ h2 {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 1;
 }
 
 .tools-track {
   display: flex;
+  gap: 0;
+  animation: tools-scroll 28s linear infinite;
+  width: max-content;
+  flex-shrink: 0;
+  --scroll-distance: 0px;
+}
+
+.tools-track__group {
+  display: flex;
   gap: 10px;
-  animation: tools-scroll 14s linear infinite;
+  flex-shrink: 0;
+  width: max-content;
+}
+
+.tools-track__group + .tools-track__group {
+  margin-left: 10px;
 }
 
 .tools-track span {
@@ -868,8 +894,8 @@ h2 {
 }
 
 .tool-icon[src*="pixelmator_no_bg.svg"] {
-  width: 98px;
-  height: 28px;
+  width: 56px;
+  height: 26px;
 }
 
 .scroll-hint {
@@ -895,7 +921,7 @@ h2 {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-1 * var(--scroll-distance)));
   }
 }
 
@@ -904,7 +930,7 @@ h2 {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-1 * var(--scroll-distance)));
   }
 }
 
