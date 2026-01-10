@@ -939,8 +939,8 @@ h2 {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #c85c24;
-  color: #fff;
+  background: transparent;
+  color: #2a2a2a;
   display: grid;
   place-items: center;
   font-size: 14px;
