@@ -1,6 +1,6 @@
 const initCaseLightbox = () => {
   const targets = document.querySelectorAll(
-    '.case-prototype__frame img, .case-image-block:not(.case-image-block--overview) img, .case-image-grid img'
+    '.case-prototype__frame img, .case-image-block:not(.case-image-block--overview) img, .case-image-grid img, .knc-image img, .knc-gallery__item img'
   );
   if (!targets.length) return;
 
