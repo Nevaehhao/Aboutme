@@ -867,6 +867,11 @@ h2 {
   display: block;
 }
 
+.tool-icon[src*="pixelmator_no_bg.svg"] {
+  width: 98px;
+  height: 28px;
+}
+
 .scroll-hint {
   position: absolute;
   right: 24px;
