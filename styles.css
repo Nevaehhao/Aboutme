@@ -1636,7 +1636,8 @@ h2 {
 
 .case-compare__media {
   margin-top: 22px;
-  width: min(100%, 400px);
+  width: 380px;
+  max-width: 100%;
   justify-self: center;
 }
 
