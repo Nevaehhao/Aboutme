@@ -1658,6 +1658,7 @@ h2 {
   display: block;
   border-radius: 4px;
   border: 1px solid rgba(31, 39, 54, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: zoom-in;
 }
 
@@ -1762,6 +1763,7 @@ h2 {
 .case-image-block:not(.case-image-block--overview) img:hover,
 .case-prototype__frame img:hover,
 .case-image-grid img:hover,
+.case-compare__image:hover,
 .abf-media img:hover {
   transform: scale(1.03);
   box-shadow: none;
