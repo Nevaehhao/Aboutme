@@ -1634,6 +1634,18 @@ h2 {
   color: #5f6c84;
 }
 
+.case-compare__media {
+  margin-top: 22px;
+}
+
+.case-compare__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 39, 54, 0.08);
+}
+
 .case-image-block {
   margin-top: 24px;
 }
