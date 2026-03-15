@@ -1604,6 +1604,7 @@ h2 {
 .case-compare__head {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   min-height: auto;
 }
 
@@ -1612,6 +1613,7 @@ h2 {
   font-size: 14px;
   font-weight: 700;
   color: var(--ink);
+  text-align: center;
 }
 
 .case-compare__body {
