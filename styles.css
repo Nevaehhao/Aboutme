@@ -1641,6 +1641,13 @@ h2 {
   justify-self: center;
 }
 
+.case-compare--center-media .case-compare__media {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .case-compare__media--narrow {
   width: 230px;
 }
