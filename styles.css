@@ -1647,6 +1647,7 @@ h2 {
   display: block;
   border-radius: 4px;
   border: 1px solid rgba(31, 39, 54, 0.08);
+  cursor: zoom-in;
 }
 
 .case-image-block {
