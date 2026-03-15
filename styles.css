@@ -1641,6 +1641,10 @@ h2 {
   justify-self: center;
 }
 
+.case-compare__media--narrow {
+  width: 230px;
+}
+
 .case-compare__image {
   width: 100%;
   height: auto;
