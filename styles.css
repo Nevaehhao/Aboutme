@@ -1769,6 +1769,47 @@ h2 {
   box-shadow: none;
 }
 
+.case-analysis {
+  margin-top: 40px;
+}
+
+.case-analysis h2 {
+  margin: 0 0 28px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.case-analysis p {
+  margin: 0 0 28px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2f3850;
+}
+
+.case-analysis__list {
+  margin: 0 0 30px 22px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.case-analysis__item {
+  color: #111827;
+}
+
+.case-analysis__item strong {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.case-analysis__item p {
+  margin: 0 0 0 2px;
+  color: #2f3850;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
