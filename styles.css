@@ -1798,17 +1798,10 @@ h2 {
 
 .case-insight-heading {
   display: block;
+  margin-bottom: 4px;
   font-size: inherit;
   font-weight: 600;
   color: inherit;
-}
-
-.case-key-insights h2 {
-  margin-bottom: 24px;
-}
-
-.case-key-insights > p {
-  margin: 0 0 16px;
 }
 
 .case-insights {
@@ -1824,7 +1817,7 @@ h2 {
 }
 
 .case-insight-block p {
-  margin: 10px 0 0;
+  margin: 0;
   font-size: inherit;
   line-height: inherit;
   color: #5f6c84;
