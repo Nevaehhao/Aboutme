@@ -48,6 +48,32 @@
           </p>
         </div>
 
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#before-after" data-case-nav-link
+                >Before &amp; After</a
+              >
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#key-insights" data-case-nav-link
+                >Key Insights</a
+              >
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#design-process" data-case-nav-link
+                >Design Process</a
+              >
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#results" data-case-nav-link>Results</a>
+            </li>
+          </ul>
+        </nav>
+
         <section class="case-image-block case-image-block--overview">
           <img
             class="case-overview-image"
@@ -76,7 +102,7 @@
           </article>
         </section>
 
-        <section class="case-section">
+        <section class="case-section" id="overview" data-case-target>
           <h2>Overview</h2>
           <p>
             This project redesigns the Pacific Northwest X Ray website, a B2B supplier of medical
@@ -104,7 +130,7 @@
           </p>
         </section>
 
-        <section class="case-section">
+        <section class="case-section" id="before-after" data-case-target>
           <h2>Before &amp; After</h2>
           <h2 class="case-compare__section-title">1. Navigation Clarity</h2>
           <div class="case-compare">
@@ -313,7 +339,7 @@
           <p>These observations informed the design improvements presented in the redesign.</p>
         </section>
 
-        <section class="case-section case-key-insights">
+        <section class="case-section case-key-insights" id="key-insights" data-case-target>
           <h2>Key Insights</h2>
           <p>
             The analysis of the existing interface revealed several key insights that guided the
@@ -351,7 +377,7 @@
           </ul>
         </section>
 
-        <section class="case-section case-key-insights">
+        <section class="case-section case-key-insights" id="design-process" data-case-target>
           <h2>Design Principles</h2>
           <p>
             The redesign was guided by several design principles derived from the research
@@ -423,6 +449,47 @@
           </p>
         </section>
 
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Website_Design/SomeDetails.png"
+            alt="Visual system details including navigation states, color palette, and typography"
+          />
+        </section>
+
+        <section class="case-section case-results" id="results" data-case-target>
+          <h2>Results</h2>
+          <p>
+            The redesign turns a dense supplier website into a clearer B2B browsing experience.
+            With stronger hierarchy, more structured navigation, and visible ordering paths, the
+            concept better supports professional buyers as they move from product discovery to
+            action.
+          </p>
+          <div class="case-results-grid">
+            <article class="case-results-card">
+              <h3>Clearer product wayfinding</h3>
+              <p>
+                Grouped categories and more predictable navigation patterns make product sections
+                easier to recognize and revisit.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Faster scanning on dense pages</h3>
+              <p>
+                Stronger typographic hierarchy and visual grouping reduce the effort required to
+                parse long product lists and supporting details.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>More visible next steps</h3>
+              <p>
+                Ordering and contact options are surfaced more clearly, helping users understand
+                how to proceed once they identify the right equipment.
+              </p>
+            </article>
+          </div>
+        </section>
+
         <section class="case-related">
           <h2>Other Projects</h2>
           <div class="case-related-grid">
@@ -463,5 +530,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>
