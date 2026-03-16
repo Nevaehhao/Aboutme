@@ -1797,8 +1797,23 @@ h2 {
 }
 
 .case-insight-heading {
+  display: block;
   font-weight: 600;
-  color: inherit;
+  color: #111827;
+}
+
+.case-insights {
+  display: grid;
+  gap: 24px;
+}
+
+.case-insight-block {
+  display: grid;
+  gap: 6px;
+}
+
+.case-insight-block p {
+  margin: 0;
 }
 
 .lightbox {
