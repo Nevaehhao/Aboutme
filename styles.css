@@ -1778,7 +1778,7 @@ h2 {
   margin: 0 0 12px;
   font-size: 12px;
   line-height: 1.6;
-  color: #5f6c84;
+  color: #000000;
 }
 
 .case-analysis__item strong {
@@ -1786,13 +1786,14 @@ h2 {
   margin-bottom: 4px;
   font-size: inherit;
   color: inherit;
+  font-weight: 600;
 }
 
 .case-analysis__item p {
   margin: 0;
   font-size: inherit;
   line-height: inherit;
-  color: inherit;
+  color: #5f6c84;
 }
 
 .lightbox {
