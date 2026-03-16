@@ -1796,6 +1796,11 @@ h2 {
   color: #5f6c84;
 }
 
+.case-insight-heading {
+  font-weight: 600;
+  color: inherit;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
