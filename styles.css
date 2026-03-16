@@ -1803,14 +1803,22 @@ h2 {
   color: #111827;
 }
 
+.case-key-insights h2 {
+  margin-bottom: 24px;
+}
+
+.case-key-insights > p {
+  margin: 0 0 30px;
+}
+
 .case-insights {
   display: grid;
-  gap: 24px;
+  gap: 30px;
 }
 
 .case-insight-block {
   display: grid;
-  gap: 6px;
+  gap: 10px;
 }
 
 .case-insight-block p {
