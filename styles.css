@@ -1587,7 +1587,7 @@ h2 {
 .case-section-nav {
   position: fixed;
   top: 120px;
-  right: max(24px, calc(50% - 610px + 24px));
+  right: 24px;
   width: 192px;
   padding: 20px 16px;
   border-radius: 48px;
