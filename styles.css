@@ -1808,12 +1808,12 @@ h2 {
 }
 
 .case-key-insights > p {
-  margin: 0 0 30px;
+  margin: 0 0 16px;
 }
 
 .case-insights {
   display: grid;
-  gap: 30px;
+  gap: 18px;
 }
 
 .case-insight-block {
