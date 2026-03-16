@@ -1812,17 +1812,18 @@ h2 {
 }
 
 .case-insights {
+  margin: 0 0 0 18px;
+  padding: 0;
   display: grid;
   gap: 18px;
 }
 
 .case-insight-block {
-  display: grid;
-  gap: 10px;
+  margin: 0;
 }
 
 .case-insight-block p {
-  margin: 0;
+  margin: 10px 0 0;
 }
 
 .lightbox {
