@@ -1798,6 +1798,7 @@ h2 {
 
 .case-insight-heading {
   display: block;
+  font-size: 12px;
   font-weight: 600;
   color: #111827;
 }
