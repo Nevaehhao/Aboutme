@@ -10,7 +10,8 @@
   --shadow: 0 16px 28px rgba(31, 39, 54, 0.12);
   --radius: 26px;
   --gap: 20px;
-  --scale: 0.92;
+  --layout-max: 1122px;
+  --layout-half: 561px;
 }
 
 .home-page {
@@ -61,20 +62,20 @@ a {
 }
 
 .layout--centered {
-  max-width: 1220px;
+  max-width: var(--layout-max);
   margin: 0 auto;
   align-items: stretch;
   min-height: 100vh;
-  height: calc(100vh / var(--scale));
-  transform: scale(var(--scale));
-  transform-origin: top center;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
 }
 
 .projects-page .layout--centered,
 .case-page .layout--centered {
   height: auto;
   min-height: 100vh;
-  transform: none;
+  min-height: 100dvh;
 }
 
 .projects-page .sidebar,
@@ -82,13 +83,15 @@ a {
   position: fixed;
   top: 24px;
   height: calc(100vh - 48px);
+  height: calc(100dvh - 48px);
   min-height: calc(100vh - 48px);
+  min-height: calc(100dvh - 48px);
 }
 
 .sidebar {
   position: fixed;
-  top: calc(24px / var(--scale));
-  left: calc(50% - 610px + 24px);
+  top: 24px;
+  left: max(24px, calc(50% - var(--layout-half) + 24px));
   align-self: stretch;
   background: var(--card);
   border-radius: 40px;
@@ -98,8 +101,10 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 22px;
-  height: calc((100vh - 48px) / var(--scale));
-  min-height: calc((100vh - 48px) / var(--scale));
+  height: calc(100vh - 48px);
+  height: calc(100dvh - 48px);
+  min-height: calc(100vh - 48px);
+  min-height: calc(100dvh - 48px);
   border: 1px solid rgba(36, 36, 36, 0.08);
   z-index: 10;
 }
@@ -179,6 +184,7 @@ a {
   gap: var(--gap);
   min-height: 100%;
   height: calc(100vh - 48px);
+  height: calc(100dvh - 48px);
 }
 
 .board__row {
@@ -857,8 +863,10 @@ h2 {
 
 .about-layout {
   width: 100%;
-  height: calc((100vh - 48px) / var(--scale));
-  min-height: calc((100vh - 48px) / var(--scale));
+  height: calc(100vh - 48px);
+  height: calc(100dvh - 48px);
+  min-height: calc(100vh - 48px);
+  min-height: calc(100dvh - 48px);
   padding: 0;
   display: flex;
 }
