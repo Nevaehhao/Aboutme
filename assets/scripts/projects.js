@@ -7,9 +7,9 @@ const initProjectsSearch = () => {
   const cards = Array.from(document.querySelectorAll('.project-card'));
   if (!cards.length) return;
 
-  let activeFilter = 'All Projects';
-
   const normalize = (value) => value.toLowerCase().trim();
+  const defaultFilter = page.dataset.defaultFilter?.trim() || 'All Projects';
+  let activeFilter = defaultFilter;
 
   const getCardText = (card) => {
     const title = card.querySelector('h3')?.textContent || '';
@@ -44,6 +44,15 @@ const initProjectsSearch = () => {
       applyFilters();
     });
   });
+
+  const activeButton = Array.from(filterButtons).find(
+    (btn) => normalize(btn.textContent) === normalize(defaultFilter)
+  );
+
+  if (activeButton) {
+    filterButtons.forEach((btn) => btn.classList.remove('is-active'));
+    activeButton.classList.add('is-active');
+  }
 
   applyFilters();
 };
