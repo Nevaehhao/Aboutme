@@ -192,6 +192,7 @@ a {
   grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
   gap: var(--gap);
   align-items: stretch;
+  min-height: 0;
 }
 
 .board__row--quicklinks {
@@ -200,6 +201,7 @@ a {
 
 .board__row > * {
   height: 100%;
+  min-height: 0;
 }
 
 .card {
@@ -290,6 +292,7 @@ a {
   grid-template-rows: 1.2fr 1fr 1fr;
   gap: var(--gap);
   height: 100%;
+  min-height: 0;
 }
 
 .card--square {
@@ -789,6 +792,102 @@ h2 {
 
   .card--profile {
     grid-column: span 2;
+  }
+}
+
+@media (max-height: 860px) and (min-width: 1101px) {
+  .home-page .layout {
+    padding: 16px;
+    padding-left: calc(16px + 76px + 16px);
+  }
+
+  .home-page .sidebar {
+    top: 16px;
+    left: max(16px, calc(50% - var(--layout-half) + 16px));
+    height: calc(100vh - 32px);
+    height: calc(100dvh - 32px);
+    min-height: calc(100vh - 32px);
+    min-height: calc(100dvh - 32px);
+    padding: 14px 10px;
+    gap: 16px;
+  }
+
+  .home-page .sidebar__nav,
+  .home-page .sidebar__contact {
+    gap: 12px;
+  }
+
+  .home-page .sidebar__nav a,
+  .home-page .sidebar__contact a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-page .board {
+    gap: 16px;
+    height: calc(100vh - 32px);
+    height: calc(100dvh - 32px);
+  }
+
+  .home-page .card,
+  .home-page .card--hero {
+    padding: 24px;
+  }
+
+  .home-page .hero-topline-row {
+    min-height: 112px;
+    padding-right: 118px;
+  }
+
+  .home-page .hero-topline {
+    font-size: 16px;
+    max-width: 240px;
+  }
+
+  .home-page .hero-emoji {
+    max-width: 104px;
+    max-height: 104px;
+    right: 6px;
+  }
+
+  .home-page .hero-main h1 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    margin-bottom: 8px;
+  }
+
+  .home-page .hero-main .lead {
+    font-size: 16px;
+  }
+
+  .home-page .stack {
+    gap: 16px;
+  }
+
+  .home-page .mini-icon--large {
+    width: 84px;
+    height: 84px;
+    font-size: 74px;
+  }
+
+  .home-page .mini-time {
+    font-size: 36px;
+  }
+
+  .home-page .profile-frame {
+    padding: 14px;
+  }
+
+  .home-page .profile-hello {
+    margin-bottom: 12px;
+  }
+
+  .home-page .card--shortcut {
+    min-height: 174px;
+    padding: 20px;
+  }
+
+  .home-page .shortcut-media {
+    padding: 0 8px 32px;
   }
 }
 
