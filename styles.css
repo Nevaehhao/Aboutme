@@ -10,7 +10,8 @@
   --shadow: 0 16px 28px rgba(31, 39, 54, 0.12);
   --radius: 26px;
   --gap: 20px;
-  --scale: 0.92;
+  --layout-max: 1122px;
+  --layout-half: 561px;
 }
 
 .home-page {
@@ -61,20 +62,20 @@ a {
 }
 
 .layout--centered {
-  max-width: 1220px;
+  max-width: var(--layout-max);
   margin: 0 auto;
   align-items: stretch;
   min-height: 100vh;
-  height: calc(100vh / var(--scale));
-  transform: scale(var(--scale));
-  transform-origin: top center;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
 }
 
 .projects-page .layout--centered,
 .case-page .layout--centered {
   height: auto;
   min-height: 100vh;
-  transform: none;
+  min-height: 100dvh;
 }
 
 .projects-page .sidebar,
@@ -82,13 +83,15 @@ a {
   position: fixed;
   top: 24px;
   height: calc(100vh - 48px);
+  height: calc(100dvh - 48px);
   min-height: calc(100vh - 48px);
+  min-height: calc(100dvh - 48px);
 }
 
 .sidebar {
   position: fixed;
-  top: calc(24px / var(--scale));
-  left: calc(50% - 610px + 24px);
+  top: 24px;
+  left: max(24px, calc(50% - var(--layout-half) + 24px));
   align-self: stretch;
   background: var(--card);
   border-radius: 40px;
@@ -98,8 +101,10 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 22px;
-  height: calc((100vh - 48px) / var(--scale));
-  min-height: calc((100vh - 48px) / var(--scale));
+  height: calc(100vh - 48px);
+  height: calc(100dvh - 48px);
+  min-height: calc(100vh - 48px);
+  min-height: calc(100dvh - 48px);
   border: 1px solid rgba(36, 36, 36, 0.08);
   z-index: 10;
 }
@@ -141,6 +146,13 @@ a {
   overflow: visible;
 }
 
+.sidebar__icon-image {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
 .sidebar__nav a::after,
 .sidebar__contact a::after {
   content: attr(data-label);
@@ -179,6 +191,7 @@ a {
   gap: var(--gap);
   min-height: 100%;
   height: calc(100vh - 48px);
+  height: calc(100dvh - 48px);
 }
 
 .board__row {
@@ -186,10 +199,16 @@ a {
   grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
   gap: var(--gap);
   align-items: stretch;
+  min-height: 0;
+}
+
+.board__row--quicklinks {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .board__row > * {
   height: 100%;
+  min-height: 0;
 }
 
 .card {
@@ -280,6 +299,7 @@ a {
   grid-template-rows: 1.2fr 1fr 1fr;
   gap: var(--gap);
   height: 100%;
+  min-height: 0;
 }
 
 .card--square {
@@ -562,6 +582,26 @@ h2 {
   gap: 20px;
 }
 
+.card--shortcut {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 22px;
+  min-height: 210px;
+  overflow: hidden;
+}
+
+.shortcut-media {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px 44px;
+}
+
 .wide-left--icon {
   width: 100%;
   display: flex;
@@ -618,13 +658,13 @@ h2 {
 
 .project-icon {
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 104px;
+  height: 104px;
 }
 
 .project-icon__icon {
-  width: 96px;
-  height: 96px;
+  width: 104px;
+  height: 104px;
   display: block;
 }
 
@@ -633,10 +673,20 @@ h2 {
 }
 
 .aboutme-image {
-  width: 160px;
-  height: 160px;
+  width: min(156px, 100%);
+  max-height: 138px;
   object-fit: contain;
   background: transparent;
+  transition: transform 0.2s ease;
+}
+
+.internships-image {
+  width: min(156px, 100%);
+  max-height: 138px;
+  object-fit: contain;
+  background: transparent;
+  transform: scale(1.24);
+  transform-origin: center;
   transition: transform 0.2s ease;
 }
 
@@ -663,10 +713,20 @@ h2 {
   position: relative;
 }
 
+.card--shortcut .pill-link,
 .card--wide .pill-link {
   position: absolute;
   right: 18px;
   bottom: 18px;
+}
+
+.card--shortcut:hover .aboutme-image,
+.card--shortcut:hover .project-icon {
+  transform: translateY(-3px);
+}
+
+.card--shortcut:hover .internships-image {
+  transform: translateY(-3px) scale(1.24);
 }
 
 .pill-link:hover {
@@ -720,6 +780,10 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .board__row--quicklinks {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .board {
     height: auto;
     min-height: 0;
@@ -735,6 +799,112 @@ h2 {
 
   .card--profile {
     grid-column: span 2;
+  }
+}
+
+@media (max-height: 860px) and (min-width: 1101px) {
+  .home-page .layout {
+    padding: 16px;
+    padding-left: calc(16px + 76px + 16px);
+  }
+
+  .home-page .sidebar {
+    top: 16px;
+    left: max(16px, calc(50% - var(--layout-half) + 16px));
+    height: calc(100vh - 32px);
+    height: calc(100dvh - 32px);
+    min-height: calc(100vh - 32px);
+    min-height: calc(100dvh - 32px);
+    padding: 14px 10px;
+    gap: 16px;
+  }
+
+  .home-page .sidebar__nav,
+  .home-page .sidebar__contact {
+    gap: 12px;
+  }
+
+  .home-page .sidebar__nav a,
+  .home-page .sidebar__contact a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-page .board {
+    gap: 16px;
+    height: calc(100vh - 32px);
+    height: calc(100dvh - 32px);
+  }
+
+  .home-page .card,
+  .home-page .card--hero {
+    padding: 24px;
+  }
+
+  .home-page .hero-topline-row {
+    min-height: 112px;
+    padding-right: 118px;
+  }
+
+  .home-page .hero-topline {
+    font-size: 16px;
+    max-width: 240px;
+  }
+
+  .home-page .hero-emoji {
+    max-width: 104px;
+    max-height: 104px;
+    right: 6px;
+  }
+
+  .home-page .hero-main h1 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    margin-bottom: 8px;
+  }
+
+  .home-page .hero-main .lead {
+    font-size: 16px;
+  }
+
+  .home-page .stack {
+    gap: 16px;
+  }
+
+  .home-page .mini-icon--large {
+    width: 84px;
+    height: 84px;
+    font-size: 74px;
+  }
+
+  .home-page .mini-time {
+    font-size: 36px;
+  }
+
+  .home-page .profile-frame {
+    padding: 14px;
+  }
+
+  .home-page .profile-hello {
+    margin-bottom: 12px;
+  }
+
+  .home-page .card--shortcut {
+    min-height: 174px;
+    padding: 20px;
+  }
+
+  .home-page .shortcut-media {
+    padding: 0 8px 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .board__row--quicklinks {
+    grid-template-columns: 1fr;
+  }
+
+  .card--shortcut {
+    min-height: 190px;
   }
 }
 
@@ -761,6 +931,20 @@ h2 {
     align-items: flex-start;
   }
 
+  .card--shortcut {
+    min-height: 176px;
+    padding: 22px;
+  }
+
+  .shortcut-media {
+    padding-bottom: 18px;
+  }
+
+  .card--shortcut .pill-link {
+    position: static;
+    margin-top: 4px;
+  }
+
   .cta-links {
     flex-direction: column;
   }
@@ -785,8 +969,10 @@ h2 {
 
 .about-layout {
   width: 100%;
-  height: calc((100vh - 48px) / var(--scale));
-  min-height: calc((100vh - 48px) / var(--scale));
+  height: calc(100vh - 48px);
+  height: calc(100dvh - 48px);
+  min-height: calc(100vh - 48px);
+  min-height: calc(100dvh - 48px);
   padding: 0;
   display: flex;
 }
