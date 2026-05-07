@@ -10,8 +10,8 @@
   --shadow: 0 16px 28px rgba(31, 39, 54, 0.12);
   --radius: 26px;
   --gap: 20px;
-  --layout-max: 1122px;
-  --layout-half: 561px;
+  --layout-max: 1440px;
+  --layout-half: 720px;
 }
 
 .home-page {
@@ -1400,7 +1400,7 @@ h2 {
   border-radius: 32px;
   box-shadow: var(--shadow);
   padding: 42px 48px 52px;
-  max-width: 840px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
