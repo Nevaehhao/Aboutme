@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=13" />
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="case-page">
@@ -42,13 +42,33 @@
 
       <main class="case-shell">
         <a class="case-back" href="../projects.html">← Back to Projects</a>
+
         <div class="case-header">
           <span class="case-pill">Adobe Photoshop, Pixelmator Pro &amp; Affinity Photo Comparison Video</span>
           <h1>Creating an Educational Comparison Video for Image Editing Tools</h1>
           <p class="case-subtitle">
-            A practical comparison that highlights real-world workflows, pricing, and outcomes.
+            A practical, hands-on comparison that helps everyday users understand how Photoshop,
+            Pixelmator Pro, and Affinity Photo differ in real workflows — covering usability,
+            output quality, and pricing.
           </p>
         </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#content" data-case-nav-link>Content Focus</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#production" data-case-nav-link>Production</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#reflection" data-case-nav-link>Reflection</a>
+            </li>
+          </ul>
+        </nav>
 
         <section class="case-image-block case-image-block--overview">
           <img
@@ -60,29 +80,85 @@
         <section class="case-meta">
           <article class="case-meta-card">
             <p class="case-meta-label">Structure</p>
-            <p class="case-meta-value">Group work (3 team members)</p>
+            <p class="case-meta-value">Group Work (3 members)</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Tool</p>
-            <p class="case-meta-value">Adobe Photoshop, Pixelmator Pro, Affinity Photo, DaVinci Resolve</p>
+            <p class="case-meta-value">Photoshop · Pixelmator Pro · Affinity Photo · DaVinci Resolve</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Timeline</p>
-            <p class="case-meta-value">3 weeks</p>
+            <p class="case-meta-value">3 Weeks</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Responsibility</p>
-            <p class="case-meta-value">Comparison content writing, video editing, voice recording</p>
+            <p class="case-meta-value">Comparison Content Writing · Video Editing · Voice Recording</p>
           </article>
         </section>
 
-        <section class="case-section">
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
           <h2>Overview</h2>
           <p>
-            This project is a group-created comparison video that introduces and contrasts Adobe
-            Photoshop, Pixelmator Pro, and Affinity Photo. The video focuses on practical use cases
-            such as meme creation and pricing differences, helping viewers understand how each
-            tool performs in real-world scenarios.
+            This project is a group-created educational comparison video that introduces and
+            contrasts Adobe Photoshop, Pixelmator Pro, and Affinity Photo. The video is aimed at
+            casual users and beginners who are trying to choose between image editing tools —
+            focusing on what each application actually feels like to use, rather than a
+            feature-by-feature specification comparison.
+          </p>
+          <p>
+            The team worked together across content research, hands-on testing, script writing,
+            voice recording, and final editing — with each member contributing across multiple
+            stages rather than working in silos.
+          </p>
+        </section>
+
+        <!-- CONTENT FOCUS -->
+        <section class="case-section" id="content" data-case-target>
+          <h2>Content Focus</h2>
+          <p>
+            The comparison emphasizes real-world scenarios rather than theoretical feature lists.
+            The goal was to answer the questions a typical user actually has before choosing
+            a tool — not to exhaustively document every capability.
+          </p>
+          <ul class="case-analysis__list">
+            <li class="case-analysis__item">
+              <strong>Hands-on task comparison</strong>
+              <p>
+                Each tool was used to complete the same task — creating a meme and performing
+                a basic photo edit — so viewers could see direct, like-for-like differences in
+                how the interface behaves and how long each approach takes.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Pricing and value assessment</strong>
+              <p>
+                The subscription vs. one-time purchase models across the three tools represent a
+                real decision point for budget-conscious users. The video addresses this directly,
+                helping viewers understand what they're actually paying for over one, two, and
+                five year timeframes.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Accessibility for non-professional users</strong>
+              <p>
+                The comparison was deliberately framed for casual and beginner users, not
+                professionals who already know Photoshop. Technical features are explained in
+                plain language — making the video useful to viewers who don't yet know what
+                terms like "layer masking" or "RAW support" mean in practice.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- PRODUCTION -->
+        <section class="case-section" id="production" data-case-target>
+          <h2>Production &amp; Editing</h2>
+          <p>
+            The video was edited in DaVinci Resolve, chosen for its precise timeline control and
+            free availability — consistent with the video's theme of evaluating accessible tools.
+            A professional microphone was used for all voice recording to ensure clear,
+            broadcast-quality audio throughout.
           </p>
         </section>
 
@@ -96,23 +172,64 @@
         </section>
 
         <section class="case-section">
-          <h2>Content Focus</h2>
-          <p>
-            The comparison emphasizes real-world scenarios rather than theoretical feature lists.
-            Each tool was explored through hands-on examples to show how similar tasks are handled
-            differently, making the comparison accessible to both beginners and casual users.
-            Pricing models and value differences were also included to support more informed
-            decision-making.
-          </p>
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Audio clarity as a priority</span>
+              <p>
+                Poor audio quality in comparison videos breaks trust — if the production feels
+                amateur, viewers question whether the comparisons were conducted carefully.
+                Investing in clean voice recording was a deliberate choice to maintain credibility
+                throughout.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Pacing for educational content</span>
+              <p>
+                Educational videos require longer dwell time on key points than entertainment
+                content. Cuts were timed to give viewers a moment to absorb what was just
+                demonstrated before the narration moved on — preventing the cognitive overload
+                that causes viewers to stop or rewind.
+              </p>
+            </li>
+          </ul>
         </section>
 
-        <section class="case-section">
-          <h2>Production &amp; Editing</h2>
+        <!-- REFLECTION -->
+        <section class="case-section" id="reflection" data-case-target>
+          <h2>Reflection</h2>
           <p>
-            The video was edited in DaVinci Resolve, with attention to pacing, clarity, and visual
-            consistency. A professional microphone was used for voice recording to ensure clear
-            audio quality and improve the overall viewing experience.
+            This project reinforced that educational video requires a different approach to pacing
+            and structure than promotional content. The viewer needs time to understand, not just
+            to be impressed — which changes how information is sequenced, how fast the narration
+            moves, and how much repetition is appropriate.
           </p>
+          <div class="case-results-grid">
+            <article class="case-results-card">
+              <h3>Know your audience's baseline</h3>
+              <p>
+                Writing for beginners meant constantly checking whether a term or concept had
+                been explained before using it. This produced a more inclusive video, but required
+                discipline — the temptation to assume shared knowledge is constant when you already
+                know the tools well.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Demonstrate, don't describe</h3>
+              <p>
+                The most effective moments in the video are the side-by-side task demonstrations.
+                Showing the tools doing the same thing is more persuasive than describing the
+                difference in words — it lets viewers form their own judgment from what they see.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Group editing requires shared standards</h3>
+              <p>
+                With three team members contributing content and editing, establishing shared
+                standards for pacing, tone, and terminology early prevented inconsistencies in
+                the final cut. Alignment before production is faster than reconciliation after.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section class="case-related">
@@ -130,8 +247,7 @@
               <h3>Promotional Video</h3>
               <p>Creating a short-form promotional video using AI-assisted production.</p>
               <div class="project-tags">
-                <span>Creative</span>
-                <span>Video</span>
+                <span>Creative &amp; Video</span>
               </div>
             </article>
             <article class="project-card">
@@ -146,8 +262,7 @@
               <h3>Emotion During the Pandemic</h3>
               <p>A short group video exploring personal emotions during COVID-19.</p>
               <div class="project-tags">
-                <span>Creative</span>
-                <span>Video</span>
+                <span>Creative &amp; Video</span>
               </div>
             </article>
           </div>
@@ -155,5 +270,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>

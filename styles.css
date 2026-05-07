@@ -18,6 +18,25 @@
   --accent-deep: #3A86FF;
 }
 
+.home-page .layout--centered {
+  max-width: 100%;
+  margin: 0;
+  padding: 12px;
+  padding-left: calc(8px + 68px + 12px);
+}
+
+.home-page .sidebar {
+  left: 8px;
+  top: 12px;
+  height: calc(100vh - 24px);
+  height: calc(100dvh - 24px);
+}
+
+.home-page .board {
+  height: calc(100vh - 24px);
+  height: calc(100dvh - 24px);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -72,20 +91,31 @@ a {
 }
 
 .projects-page .layout--centered,
-.case-page .layout--centered {
+.case-page .layout--centered,
+.about-page .layout--centered {
   height: auto;
   min-height: 100vh;
   min-height: 100dvh;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px;
+  padding-left: calc(8px + 68px + 12px);
+}
+
+.case-page .layout--centered {
+  padding-right: calc(36px + 168px + 20px);
 }
 
 .projects-page .sidebar,
-.case-page .sidebar {
+.case-page .sidebar,
+.about-page .sidebar {
   position: fixed;
-  top: 24px;
-  height: calc(100vh - 48px);
-  height: calc(100dvh - 48px);
-  min-height: calc(100vh - 48px);
-  min-height: calc(100dvh - 48px);
+  left: 8px;
+  top: 12px;
+  height: calc(100vh - 24px);
+  height: calc(100dvh - 24px);
+  min-height: calc(100vh - 24px);
+  min-height: calc(100dvh - 24px);
 }
 
 .sidebar {
@@ -157,9 +187,9 @@ a {
 .sidebar__contact a::after {
   content: attr(data-label);
   position: absolute;
-  right: calc(100% + 12px);
+  left: calc(100% + 12px);
   top: 50%;
-  transform: translateY(-50%) translateX(6px) rotate(-6deg);
+  transform: translateY(-50%) translateX(-6px) rotate(-6deg);
   background: #1b1b1b;
   color: #f6f6f6;
   padding: 6px 12px;
@@ -1666,7 +1696,7 @@ h2 {
 .case-prototype__frame img {
   width: 100%;
   height: auto;
-  max-height: 420px;
+  max-height: 640px;
   object-fit: contain;
   border-radius: 14px;
   box-shadow: none;
@@ -1688,7 +1718,7 @@ h2 {
 .case-overview-image__base {
   width: 100%;
   height: auto;
-  max-height: 360px;
+  max-height: 580px;
   object-fit: contain;
   border-radius: 16px;
   box-shadow: 0 20px 36px rgba(12, 18, 14, 0.45);
@@ -1738,13 +1768,13 @@ h2 {
   background: #f7f7f7;
   border-radius: 14px;
   padding: 12px 14px;
-  font-size: 12px;
+  font-size: 14px;
   color: #2a2a2a;
 }
 
 .case-meta-label {
   margin: 0 0 8px;
-  font-size: 11px;
+  font-size: 12px;
   color: #7a7a7a;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1759,14 +1789,14 @@ h2 {
 }
 
 .case-section h2 {
-  margin: 0 0 8px;
-  font-size: 14px;
+  margin: 0 0 12px;
+  font-size: 22px;
 }
 
 .case-section p {
   margin: 0;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.75;
   color: #5f6c84;
 }
 
@@ -1846,14 +1876,14 @@ h2 {
 }
 
 .case-compare__section-title {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .case-compare__title {
   margin: 0;
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--ink);
   text-align: center;
 }
@@ -1866,8 +1896,8 @@ h2 {
 
 .case-compare__column p {
   margin: 0;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.75;
   color: #5f6c84;
 }
 
@@ -1922,7 +1952,7 @@ h2 {
 
 .case-image-block img {
   width: 100%;
-  max-height: 260px;
+  max-height: 560px;
   object-fit: contain;
   border-radius: 18px;
   display: block;
@@ -1932,7 +1962,7 @@ h2 {
 
 .case-image-block--overview img {
   border-radius: 0;
-  height: 250px;
+  height: 460px;
   max-height: none;
   object-fit: cover;
   width: 100%;
@@ -1943,20 +1973,20 @@ h2 {
 }
 
 .case-overview-image {
-  height: 320px;
+  height: 500px;
   max-height: none;
   object-fit: cover;
   background: transparent;
 }
 
 .case-overview-banner {
-  height: 260px;
+  height: 460px;
   max-height: none;
   object-fit: cover;
 }
 
 .case-image-large {
-  max-height: 360px;
+  max-height: 620px;
 }
 
 .case-image-grid {
@@ -2014,8 +2044,8 @@ h2 {
 
 .case-analysis__item {
   margin: 0 0 12px;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.75;
   color: #000000;
 }
 
@@ -2049,8 +2079,8 @@ h2 {
 
 .case-insight-block {
   margin: 0 0 12px;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.75;
   color: #000000;
 }
 
@@ -2079,8 +2109,8 @@ h2 {
 }
 
 .lightbox__image {
-  max-width: min(90vw, 960px);
-  max-height: 85vh;
+  max-width: 92vw;
+  max-height: 90vh;
   border-radius: 18px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
@@ -2105,15 +2135,15 @@ h2 {
 
 .case-results-card h3 {
   margin: 0 0 8px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   color: #000000;
 }
 
 .case-results-card p {
   margin: 0;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.7;
   color: #5f6c84;
 }
 
@@ -2131,12 +2161,12 @@ h2 {
 
 .abf-content h2 {
   margin: 0 0 8px;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .abf-content p {
   margin: 0;
-  font-size: 12px;
+  font-size: 15px;
   color: #5f6c84;
   line-height: 1.6;
 }
@@ -2192,7 +2222,7 @@ h2 {
 
 .case-related h2 {
   margin: 0 0 12px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .case-related-grid {
@@ -2223,12 +2253,12 @@ h2 {
 
 .case-related-card h3 {
   margin: 0;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .case-related-card p {
   margin: 0;
-  font-size: 11px;
+  font-size: 13px;
   color: #6a6a6a;
 }
 

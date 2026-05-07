@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=13" />
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="case-page">
@@ -42,13 +42,32 @@
 
       <main class="case-shell">
         <a class="case-back" href="../projects.html">← Back to Projects</a>
+
         <div class="case-header">
           <span class="case-pill">Sequence Film Editing</span>
           <h1>Collaborative Video Editing with Music and Visual Rhythm</h1>
           <p class="case-subtitle">
-            A short sequence film crafted through collaborative editing and musical timing.
+            A short sequence film built through collaborative editing — using music as a structural
+            guide to shape pacing, cut timing, and the overall rhythm of the final piece.
           </p>
         </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#editing" data-case-nav-link>Editing Focus</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#collaboration" data-case-nav-link>Collaboration</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#reflection" data-case-nav-link>Reflection</a>
+            </li>
+          </ul>
+        </nav>
 
         <section class="case-image-block case-image-block--overview">
           <img
@@ -60,11 +79,11 @@
         <section class="case-meta">
           <article class="case-meta-card">
             <p class="case-meta-label">Structure</p>
-            <p class="case-meta-value">Group work (3 team members)</p>
+            <p class="case-meta-value">Group Work (3 members)</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Role</p>
-            <p class="case-meta-value">Team member</p>
+            <p class="case-meta-value">Team Member</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Tool</p>
@@ -72,24 +91,39 @@
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Timeline</p>
-            <p class="case-meta-value">1 week</p>
+            <p class="case-meta-value">1 Week</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Responsibility</p>
-            <p class="case-meta-value">Video editing, sequencing, music synchronization</p>
+            <p class="case-meta-value">Video Editing · Sequencing · Music Synchronization</p>
           </article>
         </section>
 
-        <section class="case-section">
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
           <h2>Overview</h2>
           <p>
-            This project is a short sequence film created through collaborative video editing. The
-            goal was to combine multiple video clips into a coherent sequence and enhance the
-            overall rhythm and mood through music.
+            This project is a short sequence film created through collaborative video editing.
+            The goal was to combine multiple video clips into a coherent visual sequence and
+            enhance the overall rhythm and mood through music — using sound as the structural
+            backbone rather than an afterthought.
           </p>
           <p>
-            All editing work was completed collaboratively by the team, with shared responsibility
-            for clip selection, sequencing, and timing.
+            The team shared full responsibility across clip selection, sequencing, and timing —
+            working iteratively together rather than dividing the project into separate ownership
+            zones. This collaborative approach produced a more unified result than individual
+            contribution assembly would have allowed.
+          </p>
+        </section>
+
+        <!-- EDITING FOCUS -->
+        <section class="case-section" id="editing" data-case-target>
+          <h2>Editing Focus</h2>
+          <p>
+            The editing centers on two primary craft elements: continuity between clips, and the
+            relationship between visual cuts and musical structure. Both require sustained attention
+            to how the viewer experiences time passing — not just what is on screen, but when
+            things change and how those changes feel.
           </p>
         </section>
 
@@ -103,14 +137,90 @@
         </section>
 
         <section class="case-section">
-          <h2>Editing Focus</h2>
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Music as structural guide</span>
+              <p>
+                The music track was selected before the final edit began — its phrasing, energy
+                shifts, and beat structure informed where cuts should land. Rather than adding
+                music to a finished edit, the edit was built around the music, which produced
+                a tighter relationship between sound and image throughout.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Cut timing and visual rhythm</span>
+              <p>
+                Each cut point was evaluated for both narrative continuity and rhythmic alignment.
+                Cuts that landed on musical accents created momentum; cuts against the music were
+                used sparingly to create contrast or tension. The rhythm of the edit became a
+                compositional element, not just a functional one.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Continuity across clips</span>
+              <p>
+                With footage from multiple sources and angles, maintaining visual continuity across
+                cuts required attention to color temperature, motion direction, and spatial logic.
+                Transitions were kept minimal — relying on clip selection and cut timing rather
+                than effects to create smooth flow.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- COLLABORATION -->
+        <section class="case-section" id="collaboration" data-case-target>
+          <h2>Collaboration Process</h2>
           <p>
-            The editing emphasizes continuity and pacing, using music to guide transitions and
-            structure the flow of the sequence. Attention was given to visual rhythm, cut timing,
-            and alignment between motion and sound to create a smooth and engaging viewing
-            experience. WeVideo was used as the primary editing tool, allowing the team to
-            collaborate efficiently and iterate on edits together.
+            WeVideo's collaborative editing environment allowed the team to work on the same
+            timeline simultaneously — viewing each other's edits in real time and responding
+            to changes without waiting for handoffs. This compressed the feedback loop and made
+            the editing process feel more like a shared creative conversation than a sequential
+            production chain.
           </p>
+          <p>
+            Disagreements about pacing and cut choices were resolved by testing alternatives
+            directly on the timeline — trying both versions rather than debating them abstractly.
+            This practical approach to creative decisions kept momentum high throughout the week.
+          </p>
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="case-section" id="reflection" data-case-target>
+          <h2>Reflection</h2>
+          <p>
+            This project deepened my understanding of how music and image work together at the
+            edit level. Sound is not just accompaniment — it creates expectations in the viewer
+            that the image either confirms or subverts. Understanding that relationship changes
+            how you approach every cut decision.
+          </p>
+          <div class="case-results-grid">
+            <article class="case-results-card">
+              <h3>The edit is a composition</h3>
+              <p>
+                Treating the edit as a musical composition — with rhythm, phrasing, and dynamics
+                — produced a more intentional result than thinking of it as a sequence of
+                individual cuts. Every decision affected every other decision.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Collaborative editing builds shared ownership</h3>
+              <p>
+                Working on the same timeline together, rather than handing files back and forth,
+                produced a more unified final cut. Each team member's instincts shaped the whole
+                piece — not just their individually assigned sections.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Simplicity in transitions</h3>
+              <p>
+                The temptation with editing tools is to use transitions as a substitute for good
+                cuts. This project reinforced that a clean cut at the right moment is almost
+                always more effective than a visual effect — the craft is in the timing,
+                not the decoration.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section class="case-related">
@@ -128,8 +238,7 @@
               <h3>Emotion During the Pandemic</h3>
               <p>A short group video exploring personal emotions during COVID-19.</p>
               <div class="project-tags">
-                <span>Creative</span>
-                <span>Video</span>
+                <span>Creative &amp; Video</span>
               </div>
             </article>
             <article class="project-card">
@@ -144,8 +253,7 @@
               <h3>Promotional Video</h3>
               <p>Creating a short-form promotional video using AI-assisted production.</p>
               <div class="project-tags">
-                <span>Creative</span>
-                <span>Video</span>
+                <span>Creative &amp; Video</span>
               </div>
             </article>
           </div>
@@ -153,5 +261,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>

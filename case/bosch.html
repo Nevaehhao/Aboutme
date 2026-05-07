@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=13" />
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="case-page">
@@ -41,15 +41,46 @@
       </aside>
 
       <main class="case-shell knc-shell">
-        <a class="case-back" href="../projects.html">← Back to Projects</a>
+        <a class="case-back" href="../experience.html">← Back to Internships</a>
 
         <div class="case-header">
-          <span class="case-pill">Internship</span>
-          <h1>Bosch</h1>
+          <span class="case-pill">Internship · Content Strategy</span>
+          <h1>Bosch — eCommerce &amp; Content Strategy</h1>
           <p class="case-subtitle">
-            eCommerce and content strategy initiatives supporting localized product experiences.
+            eCommerce and content strategy initiatives supporting localized product experiences
+            across China and Southeast Asian markets — covering PDP guidelines, short video
+            benchmarking, analytics dashboards, and translation workflows.
           </p>
         </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#ecommerce" data-case-nav-link>eCommerce Guidelines</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#shortvideo" data-case-nav-link>Short Videos</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#dashboard" data-case-nav-link>Dashboard</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#youtube" data-case-nav-link>YouTube Research</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#translation" data-case-nav-link>Translation</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#productvideo" data-case-nav-link>Product Video</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#reflection" data-case-nav-link>Reflection</a>
+            </li>
+          </ul>
+        </nav>
 
         <section class="case-image-block case-image-block--overview">
           <img src="../assets/images/Portfolio/Bosch/project_bosch.png" alt="Bosch overview" />
@@ -63,20 +94,53 @@
           </a>
         </section>
 
+        <section class="case-meta">
+          <article class="case-meta-card">
+            <p class="case-meta-label">Structure</p>
+            <p class="case-meta-value">Individual Work</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Type</p>
+            <p class="case-meta-value">Internship</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Responsibility</p>
+            <p class="case-meta-value">Content Strategy · eCommerce · Data Analytics · Video Production</p>
+          </article>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
+          <h2>Overview</h2>
+          <p>
+            During my internship at Bosch, I contributed to the global eCommerce and digital
+            marketing team — working across content strategy, data analytics, and video production
+            for international markets. The work spanned China, Southeast Asia, the Middle East,
+            and Africa, with a focus on making Bosch's digital presence more locally relevant,
+            consistent, and effective on platforms like Tmall, JD, Shopee, Lazada, and YouTube.
+          </p>
+          <p>
+            The six projects below represent distinct deliverables across that internship — from
+            product page content guidelines to short video benchmarking, Power BI dashboards,
+            and translation workflow management.
+          </p>
+        </section>
+
         <section class="knc-projects">
-          <article class="knc-card">
+          <!-- ECOMMERCE -->
+          <article class="knc-card" id="ecommerce" data-case-target>
             <h3>eCommerce Content Creation Guidelines for China</h3>
             <p>
-              Contributed to Bosch’s eCommerce strategy by developing content creation guidelines
-              tailored for the Chinese market. I adapted global PDP modules into localized “Basic”
-              and “Rich” content packages, including product visuals, comparison tables, and
+              Contributed to Bosch's eCommerce strategy by developing content creation guidelines
+              tailored for the Chinese market. I adapted global PDP modules into localized "Basic"
+              and "Rich" content packages, including product visuals, comparison tables, and
               feature videos, ensuring alignment with local user behaviors and platform standards
               (Tmall, JD).
             </p>
             <p>
               In this project, I supported content rollout for 50+ SKUs, created benchmarks for
               short video formats, and collaborated across regional markets to enhance visual
-              consistency and user trust. The guidelines not only standardized Bosch’s content
+              consistency and user trust. The guidelines not only standardized Bosch's content
               creation process in China but also improved brand coherence, boosted product appeal,
               and supported higher conversion rates across online platforms.
             </p>
@@ -87,7 +151,9 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- SHORT VIDEO -->
+          <article class="knc-card" id="shortvideo" data-case-target>
             <h3>Use of Short Videos for Shopee &amp; Lazada</h3>
             <p>
               Conducted a benchmarking study on how leading power tool brands (Makita, Dongcheng,
@@ -108,13 +174,16 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- DASHBOARD -->
+          <article class="knc-card" id="dashboard" data-case-target>
             <h3>Key Touchpoint Dashboard</h3>
             <p>
-              Developed and maintained a Power BI dashboard to consolidate Bosch’s digital
+              Developed and maintained a Power BI dashboard to consolidate Bosch's digital
               marketing data across Meta Ads, CRM, and YouTube, with a focus on tracking eDealer
               online sales. The dashboard provided a single view of KPIs including impressions,
-              CTR, engagement, and revenue, segmented by region and eDealer.
+              CTR, engagement, and revenue, segmented by region and eDealer — giving the team
+              a consistent, real-time reference point for campaign performance.
             </p>
             <div class="knc-image">
               <img
@@ -123,10 +192,12 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- YOUTUBE -->
+          <article class="knc-card" id="youtube" data-case-target>
             <h3>YouTube Research – Emerging Markets</h3>
             <p>
-              Conducted in-depth research on Bosch’s YouTube presence across high-priority markets
+              Conducted in-depth research on Bosch's YouTube presence across high-priority markets
               including Southeast Asia, the Middle East, and Africa. I analyzed channel performance
               metrics (watch time, upload frequency, engagement) and benchmarked against
               competitors to identify gaps in localization, content cadence, and eCommerce
@@ -135,7 +206,7 @@
             <p>
               Based on the findings, I provided market-specific recommendations such as reactivating
               inactive channels, expanding Shorts, improving local language support, and linking to
-              Shopee/Lazada. These insights guided Bosch’s regional digital strategy, helping align
+              Shopee/Lazada. These insights guided Bosch's regional digital strategy, helping align
               YouTube content with user behavior and market potential.
             </p>
             <div class="knc-image">
@@ -145,13 +216,16 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- TRANSLATION -->
+          <article class="knc-card" id="translation" data-case-target>
             <h3>Translation Workflow &amp; Issues Management</h3>
             <p>
-              Supported Bosch’s translation workflow across multiple touchpoints including eDealer,
+              Supported Bosch's translation workflow across multiple touchpoints including eDealer,
               MCRM, and social media assets. I identified language inconsistencies (e.g., local
               dialects, punctuation errors, misapplied translations) and coordinated proofreading
-              feedback from 8+ markets to improve accuracy and efficiency.
+              feedback from 8+ markets to improve accuracy and efficiency across all localized
+              content.
             </p>
             <div class="knc-image">
               <img
@@ -160,10 +234,12 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- PRODUCT VIDEO -->
+          <article class="knc-card" id="productvideo" data-case-target>
             <h3>Product Feature &amp; Safety Video – Shooting Script</h3>
             <p>
-              Created a detailed short video shooting script for Bosch’s product feature and
+              Created a detailed short video shooting script for Bosch's product feature and
               safety demonstration video. The script covered full user scenarios from product
               introduction and installation to real cutting and grinding operations, with
               close-ups highlighting sparks, grip, and tool performance.
@@ -181,6 +257,46 @@
               />
             </div>
           </article>
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="case-section" id="reflection" data-case-target>
+          <h2>Reflection</h2>
+          <p>
+            This internship gave me a ground-level view of how global content strategy actually
+            works across diverse markets — the gap between global brand guidelines and local
+            platform reality is significant, and bridging it requires both analytical and creative
+            skills working together.
+          </p>
+          <div class="case-results-grid">
+            <article class="case-results-card">
+              <h3>Localization is design</h3>
+              <p>
+                Adapting global PDP content for Tmall and JD involved more than translation. User
+                behavior, trust signals, and content expectations differ materially between markets
+                — treating localization as a purely linguistic task misses the most important
+                design work.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Data and content strategy together</h3>
+              <p>
+                Building the Power BI dashboard while also developing content guidelines showed
+                how these disciplines reinforce each other. Data reveals which content decisions
+                are working; content strategy shapes what data to track. Working across both
+                gives a more complete picture.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Cross-market coordination</h3>
+              <p>
+                Managing translation workflows across 8+ markets required systems thinking as much
+                as communication skill — tracking issues, coordinating feedback loops, and
+                maintaining consistency at scale while each market had its own context and
+                requirements.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section class="case-related">
@@ -222,5 +338,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>

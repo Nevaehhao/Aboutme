@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=13" />
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="case-page">
@@ -42,13 +42,35 @@
 
       <main class="case-shell">
         <a class="case-back" href="../projects.html">← Back to Projects</a>
+
         <div class="case-header">
           <span class="case-pill">PhoneNow Customer Churn &amp; Risk Analysis Dashboard</span>
           <h1>Analyzing Customer Churn Patterns and Risk Factors with Power BI</h1>
           <p class="case-subtitle">
-            A multi-section dashboard that connects churn drivers to actionable retention insights.
+            A three-section interactive dashboard that connects high-level KPIs to detailed churn
+            drivers — helping PhoneNow identify at-risk customers and act on retention opportunities.
           </p>
         </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#kpis" data-case-nav-link>KPIs</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#churn" data-case-nav-link>Churn Analysis</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#risk" data-case-nav-link>Risk Analysis</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#reflection" data-case-nav-link>Reflection</a>
+            </li>
+          </ul>
+        </nav>
 
         <section class="case-image-block case-image-block--overview">
           <img
@@ -60,7 +82,7 @@
         <section class="case-meta">
           <article class="case-meta-card">
             <p class="case-meta-label">Structure</p>
-            <p class="case-meta-value">Individual work</p>
+            <p class="case-meta-value">Individual Work</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Tool</p>
@@ -68,22 +90,39 @@
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Timeline</p>
-            <p class="case-meta-value">2 weeks</p>
+            <p class="case-meta-value">2 Weeks</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Responsibility</p>
-            <p class="case-meta-value">Data visualization, business analysis</p>
+            <p class="case-meta-value">Data Visualization · Business Analysis</p>
           </article>
         </section>
 
-        <section class="case-section">
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
           <h2>Overview</h2>
           <p>
             This project is an interactive Power BI dashboard designed for PhoneNow, a telecom
-            company, to analyze customer churn behavior and identify key risk factors. The
-            dashboard supports business decision-making by combining high-level KPIs with detailed
-            churn and risk analysis views. The solution is structured into three main sections: Key
-            Performance Indicators, Churn Analysis, and Customer Risk Analysis.
+            company, to analyze customer churn behavior and identify key risk factors. The dashboard
+            supports business decision-making by combining high-level KPIs with detailed churn and
+            risk analysis views — structured across three main sections that escalate from summary
+            to diagnosis.
+          </p>
+          <p>
+            The core challenge was making a complex dataset — spanning demographics, service types,
+            contract durations, and billing behavior — legible enough for business stakeholders to
+            act on directly, without requiring data analyst support for everyday decisions.
+          </p>
+        </section>
+
+        <!-- KPIs -->
+        <section class="case-section" id="kpis" data-case-target>
+          <h2>Key Performance Indicators</h2>
+          <p>
+            The KPI section provides a business-level overview of retention performance and
+            contract health — metrics that leadership needs before diving into the detail.
+            These indicators are designed to answer two questions at a glance: how are we
+            performing overall, and are we moving in the right direction?
           </p>
         </section>
 
@@ -91,25 +130,40 @@
           <img
             class="case-image-large"
             src="../assets/images/Portfolio/Projects/DataVisualization/PhoneNowCustomerChurn&RiskAnalysisDashboard/welcome.png"
-            alt="Welcome dashboard view"
+            alt="Welcome and KPI dashboard view"
           />
         </section>
 
         <section class="case-section">
-          <h2>Key Performance Indicators</h2>
-          <p>
-            It provides an overview of business performance and retention-related goals, such as
-            contract growth and support efficiency. These metrics offer quick context before deeper
-            analysis.
-          </p>
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Retention and contract KPIs</span>
+              <p>
+                Headline metrics include overall churn rate, contract growth targets, and support
+                efficiency scores. These provide a quick directional read before stakeholders move
+                into the deeper analysis pages — so they arrive at the detail with the right
+                context already in mind.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Entry point to deeper views</span>
+              <p>
+                The KPI page functions as a navigation anchor. KPI cards are designed to prompt
+                questions ("why is this number lower than last quarter?") that the subsequent
+                churn and risk pages are structured to answer.
+              </p>
+            </li>
+          </ul>
         </section>
 
-        <section class="case-section">
+        <!-- CHURN ANALYSIS -->
+        <section class="case-section" id="churn" data-case-target>
           <h2>Churn Analysis</h2>
           <p>
-            This section explores churn patterns across customer demographics, subscription length,
-            contract type, payment method, and service usage. Visual breakdowns highlight
-            differences between churned and retained customers, making trends easy to compare.
+            The churn analysis page explores why customers leave across multiple dimensions:
+            demographics, subscription length, contract type, payment method, and service usage.
+            Visual comparisons between churned and retained customers make behavioral differences
+            easy to spot and compare side by side.
           </p>
         </section>
 
@@ -122,12 +176,35 @@
         </section>
 
         <section class="case-section">
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Segment comparison</span>
+              <p>
+                Side-by-side visual breakdowns make it clear which customer segments churn at
+                higher rates — month-to-month contract holders, fiber optic users, and customers
+                using electronic check payments consistently show elevated churn across the data.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Behavioral pattern detection</span>
+              <p>
+                By filtering across service usage combinations, the dashboard surfaces patterns
+                that wouldn't be visible in a flat report — for example, customers with multiple
+                add-on services but no tech support subscription have meaningfully higher churn
+                than those with tech support included.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- RISK ANALYSIS -->
+        <section class="case-section" id="risk" data-case-target>
           <h2>Customer Risk Analysis</h2>
           <p>
             The risk analysis view focuses on identifying high-risk customer segments through
             cross-analysis of internet service types, contract duration, multiple service
-            subscriptions, and billing behavior. This helps surface patterns that contribute to
-            higher churn rates.
+            subscriptions, and billing behavior. This page moves from describing what happened
+            to predicting what is likely to happen next.
           </p>
         </section>
 
@@ -140,14 +217,62 @@
         </section>
 
         <section class="case-section">
-          <h2>Key Features</h2>
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">High-risk segment isolation</span>
+              <p>
+                Interactive slicers allow business analysts to isolate specific risk profiles —
+                for example, fiber optic customers on month-to-month contracts without tech support.
+                This segment-level view turns aggregate patterns into actionable retention targets.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Actionable output</span>
+              <p>
+                The risk page is deliberately designed to end in a list of identifiable customer
+                types, not just statistical summaries. The goal is to give retention teams a
+                concrete starting point: specific customer profiles to prioritize for proactive
+                outreach or contract upgrade offers.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="case-section" id="reflection" data-case-target>
+          <h2>Reflection</h2>
           <p>
-            Clearly defined business KPIs aligned with retention and contract strategies.
-            Interactive slicers for service type, contract duration, and churn status.
-            Comparative visualizations showing churn differences across customer segments.
-            Aggregated insights supporting targeted retention actions, such as focusing on
-            high-risk fiber optic users or reducing reliance on month-to-month contract.
+            This project taught me the value of structuring a dashboard as a narrative — moving
+            from "how are we doing?" to "where is the problem?" to "who specifically is at risk?"
+            That progression makes the dashboard useful at every level of the organization, not
+            just for analysts who already know the data well.
           </p>
+          <div class="case-results-grid">
+            <article class="case-results-card">
+              <h3>Dashboard as a decision flow</h3>
+              <p>
+                Structuring the three sections as a funnel — from KPIs to churn patterns to
+                individual risk — made the dashboard useful for both high-level review and
+                targeted operational decisions, without needing separate reports.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Specificity drives action</h3>
+              <p>
+                Aggregate churn rates don't motivate action. Knowing that fiber optic customers
+                on month-to-month contracts without tech support churn at 2× the average does.
+                The design prioritizes getting to that level of specificity as quickly as possible.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Interactivity as insight</h3>
+              <p>
+                Some of the most valuable insights in this dashboard only emerge when you apply
+                multiple filters at once. Designing for interactive exploration — not just static
+                viewing — was essential to making the data tell a complete story.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section class="case-related">
@@ -166,7 +291,6 @@
               <p>Visualizing call center metrics through Power BI.</p>
               <div class="project-tags">
                 <span>Data Visualization</span>
-                <span>Dashboard</span>
               </div>
             </article>
             <article class="project-card">
@@ -182,7 +306,6 @@
               <p>Visualizing hiring, promotion, and representation trends.</p>
               <div class="project-tags">
                 <span>Data Visualization</span>
-                <span>Dashboard</span>
               </div>
             </article>
           </div>
@@ -190,5 +313,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>

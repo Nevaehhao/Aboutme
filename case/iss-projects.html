@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=13" />
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="case-page">
@@ -41,16 +41,46 @@
       </aside>
 
       <main class="case-shell knc-shell">
-        <a class="case-back" href="../projects.html">← Back to Projects</a>
+        <a class="case-back" href="../experience.html">← Back to Internships</a>
 
         <div class="case-header">
-          <span class="case-pill">Internship</span>
+          <span class="case-pill">Internship · UX Design</span>
           <h1>Innovation Support Services Projects</h1>
           <p class="case-subtitle">
-            UX improvements that clarify ISS services, structure, and navigation for partners and
-            researchers.
+            UX improvements that clarify ISS services, structure, and navigation for researchers
+            and industry partners — a full website redesign managed end-to-end, from stakeholder
+            interviews through final implementation.
           </p>
         </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#navigation" data-case-nav-link>Navigation</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#service-dropdown" data-case-nav-link>Service Dropdown</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#news" data-case-nav-link>News Section</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#related-links" data-case-nav-link>Related Links</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#mission" data-case-nav-link>Vision &amp; Mission</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#ip-policy" data-case-nav-link>IP Policy</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#research-costs" data-case-nav-link>Research Costs</a>
+            </li>
+          </ul>
+        </nav>
 
         <section class="case-image-block case-image-block--overview">
           <img
@@ -67,8 +97,42 @@
           </a>
         </section>
 
+        <section class="case-meta">
+          <article class="case-meta-card">
+            <p class="case-meta-label">Structure</p>
+            <p class="case-meta-value">Individual Work</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Type</p>
+            <p class="case-meta-value">Internship</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Responsibility</p>
+            <p class="case-meta-value">UX Design · Information Architecture · Stakeholder Communication · Implementation</p>
+          </article>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
+          <h2>Overview</h2>
+          <p>
+            Innovation Support Services (ISS) is a department at the University of Ottawa that
+            supports researchers and industry partners with IP management, technology transfer,
+            and commercialization. The existing website had not been updated in years — its
+            structure was disorganized, the navigation was unclear, and the content no longer
+            reflected the department's current services or priorities.
+          </p>
+          <p>
+            I led the complete redesign of the ISS website from initial stakeholder meetings
+            through content auditing, UX design, layout restructuring, and final implementation.
+            The seven deliverables below each address a specific structural or usability problem
+            identified during the audit and stakeholder interviews.
+          </p>
+        </section>
+
         <section class="knc-projects">
-          <article class="knc-card">
+          <!-- NAVIGATION -->
+          <article class="knc-card" id="navigation" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/innovation-support-services"
@@ -80,7 +144,7 @@
             <p>
               Redesigned the navigation bar for the Innovation Support Services (ISS) website
               based on insights gathered through multiple meetings with the department manager. I
-              categorized the navigation buttons by analyzing ISS’s core activities and services,
+              categorized the navigation buttons by analyzing ISS's core activities and services,
               ensuring each section reflected real user needs. The final layout simplifies user
               access to key resources, aligns with departmental goals, and improves the overall
               clarity of the site.
@@ -92,7 +156,9 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- SERVICE DROPDOWN -->
+          <article class="knc-card" id="service-dropdown" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/innovation-support-services"
@@ -102,7 +168,7 @@
               <h3>Interactive Dropdown Design for Service Overview</h3>
             </a>
             <p>
-              Designed a dropdown-style content layout to present ISS’s services for researchers
+              Designed a dropdown-style content layout to present ISS's services for researchers
               and industry partners. This section contains a large amount of detailed information,
               which was originally displayed as long, static paragraphs. By using collapsible
               menus, I improved content scannability, reduced visual overload, and allowed users to
@@ -115,7 +181,9 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- NEWS -->
+          <article class="knc-card" id="news" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/innovation-support-services"
@@ -125,7 +193,7 @@
               <h3>Visual News Highlights Section</h3>
             </a>
             <p>
-              Designed a dynamic and visually engaging news section titled “Shaping Innovation” to
+              Designed a dynamic and visually engaging news section titled "Shaping Innovation" to
               feature ISS updates, funding opportunities, and partnership announcements. I used a
               card-based layout with bold headlines, preview text, and visual thumbnails, enabling
               users to scan content quickly. This layout not only improved content discoverability,
@@ -138,17 +206,19 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- RELATED LINKS -->
+          <article class="knc-card" id="related-links" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/innovation-support-services"
               target="_blank"
               rel="noreferrer"
             >
-              <h3>“Related Links” Section</h3>
+              <h3>"Related Links" Section</h3>
             </a>
             <p>
-              Designed a visually consistent “Related Links” section to guide users toward key
+              Designed a visually consistent "Related Links" section to guide users toward key
               affiliated resources such as Research and Innovation, the Kanata North campus, and
               the Entrepreneurship Hub. I used uniform icon style and circular image formatting to
               maintain visual alignment with the ISS site branding. This section enhances
@@ -162,7 +232,9 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- MISSION -->
+          <article class="knc-card" id="mission" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/innovation-support-services/about-us"
@@ -172,10 +244,10 @@
               <h3>Clear Vision &amp; Mission Section for Credibility</h3>
             </a>
             <p>
-              Structured the “About Us” page around clear and concise vision and mission
-              statements, supported by relevant imagery to reflect ISS’s role in fostering
+              Structured the "About Us" page around clear and concise vision and mission
+              statements, supported by relevant imagery to reflect ISS's role in fostering
               research and industry collaboration. The layout balances textual clarity and visual
-              engagement, helping users quickly understand ISS’s purpose and values. This section
+              engagement, helping users quickly understand ISS's purpose and values. This section
               reinforces organizational credibility and establishes a strong first impression for
               new visitors.
             </p>
@@ -186,7 +258,9 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- IP POLICY -->
+          <article class="knc-card" id="ip-policy" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/innovation-support-services/resources-industry-partners"
@@ -196,7 +270,7 @@
               <h3>Structuring IP Policy Content for Readability</h3>
             </a>
             <p>
-              Created the “uOttawa IP Policy” page to clearly communicate ownership rules and
+              Created the "uOttawa IP Policy" page to clearly communicate ownership rules and
               disclosure obligations. I applied a clean layout with bullet-point formatting, bold
               section titles, and visual icons to break down complex information. This section
               helps researchers understand their intellectual property rights and responsibilities
@@ -210,7 +284,9 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- RESEARCH COSTS -->
+          <article class="knc-card" id="research-costs" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/innovation-support-services/indirect-costs-research"
@@ -220,7 +296,7 @@
               <h3>Tabular Design for Indirect Research Costs</h3>
             </a>
             <p>
-              Designed a structured and easy-to-read table for the “Indirect Costs of Research”
+              Designed a structured and easy-to-read table for the "Indirect Costs of Research"
               page, displaying contract types, applicable rates, and contextual comments. This
               format allows researchers and administrators to quickly compare cost structures
               across various funding sources. The use of clear alignment, consistent typography,
@@ -276,5 +352,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>

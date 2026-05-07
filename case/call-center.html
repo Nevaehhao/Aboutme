@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=13" />
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="case-page">
@@ -42,13 +42,33 @@
 
       <main class="case-shell">
         <a class="case-back" href="../projects.html">← Back to Projects</a>
+
         <div class="case-header">
           <span class="case-pill">Call Center Performance Dashboard</span>
           <h1>Visualizing Call Center Metrics Through an Interactive Power BI Dashboard</h1>
           <p class="case-subtitle">
-            A data-driven dashboard that makes operational performance easy to scan and compare.
+            A data-driven dashboard that makes three months of call center operational data easy
+            to scan, compare, and act on — supporting quick performance reviews at both the team
+            and individual agent level.
           </p>
         </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#metrics" data-case-nav-link>Key Metrics</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#features" data-case-nav-link>Dashboard Features</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#reflection" data-case-nav-link>Reflection</a>
+            </li>
+          </ul>
+        </nav>
 
         <section class="case-image-block case-image-block--overview">
           <img
@@ -60,7 +80,7 @@
         <section class="case-meta">
           <article class="case-meta-card">
             <p class="case-meta-label">Structure</p>
-            <p class="case-meta-value">Individual work</p>
+            <p class="case-meta-value">Individual Work</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Tool</p>
@@ -68,21 +88,88 @@
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Timeline</p>
-            <p class="case-meta-value">1 week</p>
+            <p class="case-meta-value">1 Week</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Responsibility</p>
-            <p class="case-meta-value">Data visualization, dashboard design</p>
+            <p class="case-meta-value">Data Visualization · Dashboard Design</p>
           </article>
         </section>
 
-        <section class="case-section">
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
           <h2>Overview</h2>
           <p>
             This project is an interactive dashboard built in Power BI to analyze and visualize
             call center performance data over a three-month period (January–March 2021). The
             dashboard focuses on presenting key operational metrics in a clear and accessible way,
-            supporting quick performance review and comparison.
+            supporting quick performance review and comparison across agents, topics, and time periods.
+          </p>
+          <p>
+            The core design goal was to compress a large volume of daily call data into a format
+            that a call center manager could interpret in under a minute — identifying underperformance,
+            tracking satisfaction trends, and drilling into specific agents or issue types without
+            needing to run custom queries.
+          </p>
+        </section>
+
+        <!-- KEY METRICS -->
+        <section class="case-section" id="metrics" data-case-target>
+          <h2>Key Metrics Visualized</h2>
+          <p>
+            The dashboard centers on five operational metrics that directly reflect call center
+            health and customer experience quality:
+          </p>
+          <ul class="case-analysis__list">
+            <li class="case-analysis__item">
+              <strong>Answered vs. unanswered calls</strong>
+              <p>
+                The ratio of answered to missed calls is a primary indicator of capacity and
+                staffing alignment. Trends in unanswered calls over the three-month period
+                surface periods where demand outpaced availability.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Resolved cases</strong>
+              <p>
+                Resolution rate — the proportion of calls that ended with the issue fully
+                addressed — reflects both agent effectiveness and the complexity of incoming
+                issues. This metric is tracked at the team and individual level.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Average speed of answer</strong>
+              <p>
+                How quickly calls are picked up correlates directly with customer satisfaction.
+                The average speed of answer is trended over time to identify peak-load periods
+                and inform scheduling decisions.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Monthly call volume</strong>
+              <p>
+                Volume trends over the January–March window reveal seasonal patterns and demand
+                spikes that affect staffing needs. Month-over-month comparison is visualized
+                directly to make trends immediately apparent.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Customer satisfaction rate</strong>
+              <p>
+                Post-call satisfaction ratings are aggregated and broken down by agent and topic
+                category — making it possible to connect satisfaction outcomes to specific
+                interaction types and team members.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- DASHBOARD FEATURES -->
+        <section class="case-section" id="features" data-case-target>
+          <h2>Dashboard Features</h2>
+          <p>
+            The dashboard is built for operational use, not just reporting. Every feature was
+            chosen to reduce the time between looking at data and knowing what to do with it.
           </p>
         </section>
 
@@ -90,25 +177,74 @@
           <img
             class="case-image-large"
             src="../assets/images/Portfolio/Projects/DataVisualization/CallCenter/callcenter.png"
-            alt="Call center dashboard detail"
+            alt="Call center dashboard detail view"
           />
         </section>
 
         <section class="case-section">
-          <h2>Key Metrics Visualized</h2>
-          <p>
-            Answered vs. unanswered calls. Resolved cases. Average speed of answer. Monthly call
-            volume. Customer satisfaction rate.
-          </p>
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Interactive slicers</span>
+              <p>
+                Filter controls for agent, call topic, and date range allow managers to move
+                quickly from team-level summary to individual performance detail. A single click
+                on an agent name recalculates all metrics for that person across the full period.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">KPI cards for high-level tracking</span>
+              <p>
+                Prominent KPI cards sit above the charts to surface the most critical numbers
+                immediately — answered call rate, average satisfaction, and overall resolution
+                rate — without requiring the viewer to read a chart first.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Agent statistics table</span>
+              <p>
+                A dedicated table summarizes each agent's performance across all key indicators
+                in one row — making direct comparison fast and giving managers a structured view
+                for performance conversations and coaching decisions.
+              </p>
+            </li>
+          </ul>
         </section>
 
-        <section class="case-section">
-          <h2>Dashboard Features</h2>
+        <!-- REFLECTION -->
+        <section class="case-section" id="reflection" data-case-target>
+          <h2>Reflection</h2>
           <p>
-            Interactive slicers for agent, topic, and date range filtering. KPI cards for high-level
-            performance tracking. Pie charts and bar charts for distribution and trend comparison.
-            A dedicated agent statistics table summarizing key performance indicators.
+            This project reinforced how much of dashboard design is about understanding who will
+            use it and what decision they need to make. A call center manager's primary question
+            is "where do I need to focus?" — and every layout decision was made to answer that
+            as quickly as possible.
           </p>
+          <div class="case-results-grid">
+            <article class="case-results-card">
+              <h3>Speed of insight matters</h3>
+              <p>
+                Operational dashboards are often checked under time pressure. Leading with KPI
+                cards before charts, and keeping the layout scannable from top-left to bottom-right,
+                significantly reduces the time to the key takeaway.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Individual and team views serve different needs</h3>
+              <p>
+                Team-level trends inform scheduling and capacity planning. Agent-level detail
+                informs coaching and individual performance reviews. A single dashboard that serves
+                both requires deliberate hierarchy — summary first, drill-down second.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Choosing the right chart type</h3>
+              <p>
+                Volume trends, satisfaction distributions, and ratio comparisons each call for
+                different visual encodings. Selecting the right chart type for each metric was as
+                important as the data itself in making the dashboard interpretable at a glance.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section class="case-related">
@@ -127,7 +263,6 @@
               <p>Analyzing churn patterns and risk factors with Power BI.</p>
               <div class="project-tags">
                 <span>Data Visualization</span>
-                <span>Dashboard</span>
               </div>
             </article>
             <article class="project-card">
@@ -143,7 +278,6 @@
               <p>Visualizing hiring, promotion, and representation trends.</p>
               <div class="project-tags">
                 <span>Data Visualization</span>
-                <span>Dashboard</span>
               </div>
             </article>
           </div>
@@ -151,5 +285,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>

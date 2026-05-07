@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=13" />
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="case-page">
@@ -42,13 +42,38 @@
 
       <main class="case-shell">
         <a class="case-back" href="../projects.html">← Back to Projects</a>
+
         <div class="case-header">
           <span class="case-pill">Heart Rate Analysis App</span>
           <h1>Designing a Data-Driven Health Monitoring Experience</h1>
           <p class="case-subtitle">
-            A mobile concept that makes daily heart-rate insights clear, calm, and easy to read.
+            A mobile concept that transforms dense biometric data into calm, readable insights —
+            helping everyday users understand their heart health without needing a medical background.
           </p>
         </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#research" data-case-nav-link>Research</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#ux-direction" data-case-nav-link>UX Direction</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#core-screens" data-case-nav-link>Core Screens</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#data-visualization" data-case-nav-link>Data Visualization</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#reflection" data-case-nav-link>Reflection</a>
+            </li>
+          </ul>
+        </nav>
 
         <section class="case-image-block case-image-block--overview">
           <img
@@ -60,11 +85,11 @@
         <section class="case-meta">
           <article class="case-meta-card">
             <p class="case-meta-label">Structure</p>
-            <p class="case-meta-value">Group work</p>
+            <p class="case-meta-value">Group Work</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Role</p>
-            <p class="case-meta-value">UX designer</p>
+            <p class="case-meta-value">UX Designer</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Tool</p>
@@ -72,35 +97,95 @@
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Timeline</p>
-            <p class="case-meta-value">2 weeks</p>
+            <p class="case-meta-value">2 Weeks</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Responsibility</p>
-            <p class="case-meta-value">UX design, data visualization, interface design</p>
+            <p class="case-meta-value">UX Design · Data Visualization · Interface Design</p>
           </article>
         </section>
 
-        <section class="case-section">
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
           <h2>Overview</h2>
           <p>
-            Heart Rate Analysis App is a mobile app concept focused on making daily health data
-            easier to understand and less overwhelming. The project explores how heart rate,
-            activity, and wellness information can be presented in a clear and friendly way,
-            helping users quickly understand their status without needing to interpret complex
-            metrics.
+            Heart Rate Analysis App is a mobile concept focused on making daily health data easier
+            to understand and less overwhelming. The project explores how heart rate, activity, and
+            wellness information can be presented in a clear and friendly way — helping users quickly
+            understand their health status without needing to interpret complex clinical metrics.
           </p>
           <p>
-            The design was created entirely in Figma, with an emphasis on layout, visual hierarchy,
-            and data visualization.
+            Most fitness and health apps treat biometric data as raw output: numbers, dense charts,
+            and clinical terminology that requires a level of health literacy most users don't have.
+            This project reframes heart rate monitoring as a calm, supportive experience — one that
+            translates data into meaning, and meaning into action.
           </p>
         </section>
 
-        <section class="case-section">
-          <h2>Research &amp; Early Exploration</h2>
+        <!-- RESEARCH -->
+        <section class="case-section" id="research" data-case-target>
+          <h2>Research &amp; Problem Framing</h2>
           <p>
-            I began by reviewing existing heart rate and fitness tracking apps to understand common
-            ways health data is presented. Many apps present information through dense charts and
-            numbers, which can be overwhelming or confusing for non-professional users.
+            I began by reviewing existing heart rate and fitness tracking apps to understand how
+            health data is typically presented and where usability breaks down. A consistent pattern
+            emerged: the apps most accurate in data collection were often the least accessible to
+            general users — creating a gap between information and understanding.
+          </p>
+          <p>Key problems identified across popular heart rate monitoring apps:</p>
+          <ul class="case-analysis__list">
+            <li class="case-analysis__item">
+              <strong>Data density without context</strong>
+              <p>
+                Most apps surface raw numbers — beats per minute, HRV, resting rate — without
+                explaining what those numbers mean for a specific user's baseline or goals. Users
+                are left to interpret clinical metrics with no guidance.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Charts that inform but don't communicate</strong>
+              <p>
+                Line graphs and bar charts show trends accurately, but rarely translate them into
+                plain-language takeaways. A user who worked out five days in a row has no way to
+                feel that achievement from a chart alone.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Alert fatigue from generic notifications</strong>
+              <p>
+                Health apps frequently push alerts that feel disconnected from user behavior —
+                generic reminders to "stay active" or "check your stats" that don't relate to
+                what the user actually did that day.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Missing emotional resonance</strong>
+              <p>
+                Users who improve their heart health rarely experience that improvement as a
+                moment. Apps show data changing, but few create a sense of progress that motivates
+                the user to continue engaging with the product.
+              </p>
+            </li>
+          </ul>
+          <p>
+            These findings shaped a UX direction centered on three principles: translate data into
+            plain language, design for emotional understanding as well as informational accuracy,
+            and create moments of feedback that feel personally relevant.
+          </p>
+        </section>
+
+        <!-- UX DIRECTION -->
+        <section class="case-section" id="ux-direction" data-case-target>
+          <h2>UX Direction</h2>
+          <p>
+            Based on these observations, I focused on designing a calming and supportive experience.
+            The interface no longer prioritizes raw performance metrics, but rather emphasizes
+            trends, daily progress, and overall balance — framed in language that a non-medical user
+            can immediately understand and act on.
+          </p>
+          <p>
+            The reminder and notification system was redesigned from scratch to feel contextual
+            rather than generic. Instead of time-based pings, reminders are tied to the user's
+            recent activity pattern — surfacing at moments when they are most likely to be relevant.
           </p>
         </section>
 
@@ -108,20 +193,43 @@
           <img
             class="case-image-large"
             src="../assets/images/Portfolio/Projects/UXdesign/Heart Rate Analysis App/reminder.png"
-            alt="Reminder screen exploration"
+            alt="Reminder and notification screen exploration"
           />
         </section>
 
         <section class="case-section">
-          <h2>Defining the User Experience</h2>
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Contextual reminders</span>
+              <p>
+                Notifications are tied to the user's own routine and recent data — not a fixed
+                schedule. If activity was low the previous day, a gentle prompt appears at the
+                user's typical active hour, making the nudge feel timely rather than intrusive.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Plain-language summaries</span>
+              <p>
+                Every reminder and in-app alert is written in plain, friendly language rather than
+                clinical terminology. "Your heart rate was calmer than yesterday" communicates more
+                to a general user than a BPM delta — and feels encouraging rather than alarming.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- CORE SCREENS -->
+        <section class="case-section" id="core-screens" data-case-target>
+          <h2>Core Screens</h2>
           <p>
-            Based on these observations, I focused on designing a calming and supportive
-            experience. The interface no longer prioritizes accuracy and performance metrics, but
-            rather emphasizes trends, progress, and overall balance.
+            The main dashboard is designed to surface the most relevant information at a glance —
+            allowing users to quickly view heart rate, calories, hydration, and activity levels
+            without needing to navigate deeper into the app for a basic health check.
           </p>
           <p>
-            The main dashboard is designed to prioritize the most relevant information, allowing
-            users to quickly view heart rate, calories, hydration, and activity levels.
+            Every element on the home screen earns its space: only metrics that change meaningfully
+            day-to-day appear above the fold, while historical trends are one tap away for users
+            who want to go deeper.
           </p>
         </section>
 
@@ -129,16 +237,52 @@
           <img
             class="case-image-large"
             src="../assets/images/Portfolio/Projects/UXdesign/Heart Rate Analysis App/homepage.png"
-            alt="Homepage dashboard layout"
+            alt="Homepage dashboard layout showing heart rate, activity, and wellness metrics"
           />
         </section>
 
         <section class="case-section">
-          <h2>Interface &amp; Data Visualization</h2>
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Priority-first layout</span>
+              <p>
+                The home screen opens on the user's current heart rate and a plain-English status
+                ("Within your normal range") before showing any charts. The most important
+                information is readable in under two seconds — no scrolling, no interpretation required.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Card-based metric tiles</span>
+              <p>
+                Secondary metrics — calories burned, hydration level, step count — are arranged in
+                a card grid that allows quick scanning. Each tile uses a small progress indicator
+                so users can sense whether they're on track without reading a number.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Calm color language</span>
+              <p>
+                Color is used deliberately: warm greens signal healthy ranges, soft yellows flag
+                attention without alarm, and neutral backgrounds keep data-heavy screens from
+                feeling visually overwhelming. Red is reserved for states that genuinely need
+                immediate attention.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- DATA VISUALIZATION -->
+        <section class="case-section" id="data-visualization" data-case-target>
+          <h2>Data Visualization</h2>
           <p>
             I used clean charts, progress indicators, and a card-based layout to present health
-            data in a more easily understandable way. I considered spacing, alignment, and color
-            usage to reduce cognitive load and improve readability.
+            data in a more accessible way. Spacing, alignment, and intentional color usage were
+            applied at every level to reduce cognitive load and improve readability across different
+            usage contexts — including low-light and quick glances during activity.
+          </p>
+          <p>
+            The visualization philosophy throughout was: show the trend, name the meaning, suggest
+            the action. Charts alone inform; charts paired with plain-language insights empower.
           </p>
         </section>
 
@@ -146,8 +290,75 @@
           <img
             class="case-image-large"
             src="../assets/images/Portfolio/Projects/UXdesign/Heart Rate Analysis App/data.png"
-            alt="Data visualization screens"
+            alt="Data visualization screens showing heart rate trends and activity breakdown"
           />
+        </section>
+
+        <section class="case-section">
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Weekly heart rate trend</span>
+              <p>
+                A smoothed line chart shows heart rate patterns over the past seven days, with
+                annotated markers for high-activity periods. The curve format communicates rhythm
+                and variability more intuitively than bar charts for a metric that is naturally
+                continuous.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Zone breakdowns</span>
+              <p>
+                Time spent in different heart rate zones (rest, light, aerobic, peak) is displayed
+                as a horizontal stacked bar — giving users a fast visual sense of how their week
+                was distributed without requiring them to interpret numbers.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Progress callouts</span>
+              <p>
+                Key insights are surfaced as single-line callouts directly on the chart — "3 days
+                below target this week" or "Best resting rate in 30 days." These transform passive
+                data displays into actionable, personally meaningful moments.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="case-section" id="reflection" data-case-target>
+          <h2>Reflection</h2>
+          <p>
+            This project taught me that health data visualization is fundamentally a communication
+            design problem, not just a technical one. The challenge isn't displaying accurate data
+            — it's translating biometric numbers into experiences that feel meaningful to someone
+            who is not a medical professional.
+          </p>
+          <div class="case-results-grid">
+            <article class="case-results-card">
+              <h3>Designing for non-expert users</h3>
+              <p>
+                Heart rate data carries clinical precision that most users don't need. The real
+                design challenge was deciding what to show, what to hide, and how to frame what
+                remains — so users feel informed, not overwhelmed.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Emotion and data together</h3>
+              <p>
+                Accuracy alone doesn't drive engagement. Users return to health apps when the
+                experience feels personal and encouraging. Pairing every data point with a
+                plain-language interpretation was the most impactful UX decision in the project.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Collaboration in design</h3>
+              <p>
+                Working in a group reinforced the value of shared design principles early. Aligning
+                on color language and hierarchy before building individual screens prevented
+                inconsistency and made the final product feel cohesive.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section class="case-related">
@@ -190,5 +401,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>

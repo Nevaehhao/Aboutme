@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=13" />
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="case-page">
@@ -41,15 +41,46 @@
       </aside>
 
       <main class="case-shell knc-shell">
-        <a class="case-back" href="../projects.html">← Back to Projects</a>
+        <a class="case-back" href="../experience.html">← Back to Internships</a>
 
         <div class="case-header">
-          <span class="case-pill">Internship</span>
+          <span class="case-pill">Internship · UX Design</span>
           <h1>University of Ottawa Kanata North Campus Projects</h1>
           <p class="case-subtitle">
-            Internship deliverables across campus digital experiences and event initiatives.
+            Internship deliverables across campus digital experiences and event initiatives —
+            covering website redesigns, booking systems, room user guides, and a QR code
+            implementation that reduced technical support requests across the campus.
           </p>
         </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#ecosystem" data-case-nav-link>Ecosystem Events</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#reserve" data-case-nav-link>Reserve Space</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#iss-redesign" data-case-nav-link>ISS Redesign</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#external" data-case-nav-link>External Booking</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#userguides" data-case-nav-link>User Guides</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#qrcode" data-case-nav-link>QR Codes</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#other-works" data-case-nav-link>Other Works</a>
+            </li>
+          </ul>
+        </nav>
 
         <section class="case-image-block case-image-block--overview">
           <img
@@ -67,8 +98,41 @@
           </a>
         </section>
 
+        <section class="case-meta">
+          <article class="case-meta-card">
+            <p class="case-meta-label">Structure</p>
+            <p class="case-meta-value">Individual Work</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Type</p>
+            <p class="case-meta-value">Internship</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Responsibility</p>
+            <p class="case-meta-value">UX Design · Web Content · Information Architecture · Physical Implementation</p>
+          </article>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
+          <h2>Overview</h2>
+          <p>
+            During my internship at the University of Ottawa Kanata North Campus, I worked across
+            a range of digital experience and campus operations projects. The campus serves as a
+            bridge between uOttawa's academic research and the Kanata North technology cluster —
+            one of Canada's largest tech hubs — and its digital presence needed to reflect that
+            role clearly for students, researchers, and industry partners.
+          </p>
+          <p>
+            The six projects below span website redesigns, form optimization, physical QR code
+            implementation, and video production — each one driven by a specific usability problem
+            or operational inefficiency identified during the internship.
+          </p>
+        </section>
+
         <section class="knc-projects">
-          <article class="knc-card">
+          <!-- ECOSYSTEM EVENTS -->
+          <article class="knc-card" id="ecosystem" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/ecosystem-events"
@@ -78,7 +142,7 @@
               <h3>Ecosystem Events Page</h3>
             </a>
             <p>
-              Created a dedicated “Ecosystem Events” page on the company’s website to centralize
+              Created a dedicated "Ecosystem Events" page on the company's website to centralize
               and highlight events related to the University of Ottawa Kanata North campus. This
               page serves as a dynamic hub for promoting collaboration between academia and
               industry, increasing visibility of joint initiatives and strategic partnerships.
@@ -90,17 +154,19 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- RESERVE SPACE -->
+          <article class="knc-card" id="reserve" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/kanata-north/reserve-campus-space"
               target="_blank"
               rel="noreferrer"
             >
-              <h3>UX Redesign of “Reserve Campus Space” Page</h3>
+              <h3>UX Redesign of "Reserve Campus Space" Page</h3>
             </a>
             <p>
-              Redesigned the layout of the “Reserve Campus Space” page to improve navigation and
+              Redesigned the layout of the "Reserve Campus Space" page to improve navigation and
               user engagement. The previous template led to a high rate of misclicks. After
               restructuring the content and layout, user accuracy in finding the correct
               reservation links significantly increased.
@@ -112,7 +178,9 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- ISS REDESIGN -->
+          <article class="knc-card" id="iss-redesign" data-case-target>
             <h3>Full Redesign of the Innovation Support Services Website</h3>
             <p>
               Led the complete redesign of the Innovation Support Services (ISS) department
@@ -120,7 +188,7 @@
               structure were fully re-evaluated and transformed. I managed the entire process
               end-to-end — from initial stakeholder meetings and content auditing to UX design,
               layout restructuring, and final implementation. The result is a clean, updated, and
-              user-friendly site that reflects the department’s current services and goals.
+              user-friendly site that reflects the department's current services and goals.
             </p>
             <div class="knc-image">
               <img
@@ -129,7 +197,9 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- EXTERNAL BOOKING -->
+          <article class="knc-card" id="external" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/kanata-north/reserve-campus-space"
@@ -139,7 +209,7 @@
               <h3>Redesigning the External Booking Page for Efficiency</h3>
             </a>
             <p>
-              Redesigned the “Book a Space” webpage for external partners to improve user
+              Redesigned the "Book a Space" webpage for external partners to improve user
               experience and streamline the reservation process. Previously, the form collected
               only a company name and email address, requiring manual follow-ups. The updated
               version gathers relevant booking details upfront, reducing back-and-forth
@@ -152,7 +222,9 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- USER GUIDES -->
+          <article class="knc-card" id="userguides" data-case-target>
             <a
               class="knc-link"
               href="https://www.uottawa.ca/research-innovation/kanata-north/reserve-campus-space"
@@ -174,10 +246,12 @@
               />
             </div>
           </article>
-          <article class="knc-card">
+
+          <!-- QR CODE -->
+          <article class="knc-card" id="qrcode" data-case-target>
             <h3>In-Room QR Code System for User Guides</h3>
             <p>
-              Implemented a bilingual QR code system for each room’s AV user guide, linking
+              Implemented a bilingual QR code system for each room's AV user guide, linking
               directly to the verified web pages. QR codes were printed and installed on foam
               boards inside each room, allowing users to instantly access step-by-step instructions
               without navigating the website. This significantly reduced the need for technical
@@ -189,7 +263,7 @@
           </article>
         </section>
 
-        <section class="knc-other">
+        <section class="knc-other" id="other-works" data-case-target>
           <h2>Other Works</h2>
           <div class="knc-gallery">
             <div class="knc-gallery__item knc-gallery__item--video">
@@ -284,5 +358,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>
