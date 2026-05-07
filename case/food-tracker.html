@@ -42,14 +42,49 @@
 
       <main class="case-shell">
         <a class="case-back" href="../projects.html">← Back to Projects</a>
+
         <div class="case-header">
           <span class="case-pill">Food Tracker App</span>
           <h1>Designing a Personalized Food Tracking Experience Through Data Visualization</h1>
           <p class="case-subtitle">
-            A mobile concept that helps users understand daily nutrition through clear visuals and
-            intuitive tracking.
+            A mobile concept that helps users build lasting nutritional habits through guided
+            personalization, clear data visualization, and an intuitive daily tracking flow.
           </p>
         </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#research" data-case-nav-link>Research</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#user-flow" data-case-nav-link>User Flow</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#onboarding" data-case-nav-link
+                >Onboarding</a
+              >
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#core-features" data-case-nav-link
+                >Core Features</a
+              >
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#visual-system" data-case-nav-link
+                >Visual System</a
+              >
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#reflection" data-case-nav-link
+                >Reflection</a
+              >
+            </li>
+          </ul>
+        </nav>
 
         <section class="case-image-block case-image-block--overview">
           <img
@@ -61,7 +96,7 @@
         <section class="case-meta">
           <article class="case-meta-card">
             <p class="case-meta-label">Structure</p>
-            <p class="case-meta-value">Individual work</p>
+            <p class="case-meta-value">Individual Work</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Tool</p>
@@ -69,100 +104,347 @@
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Timeline</p>
-            <p class="case-meta-value">2 weeks</p>
+            <p class="case-meta-value">2 Weeks</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Responsibility</p>
-            <p class="case-meta-value">UX design, interaction design, data visualization</p>
+            <p class="case-meta-value">UX Design · Interaction Design · Data Visualization</p>
           </article>
         </section>
 
-        <section class="case-section">
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
           <h2>Overview</h2>
           <p>
-            Food Tracker App is a mobile application concept designed to help users better
-            understand and manage their daily nutrition through clear data visualization and
-            intuitive user flows. The project focuses on improving usability, engagement, and
-            readability in food tracking experiences by simplifying complex nutritional data into
-            accessible and meaningful insights.
+            Food Tracker App is a mobile concept designed to help users build lasting nutritional
+            habits through guided personalization and meaningful data visualization. Most existing
+            health apps overwhelm users with dense data tables, technical macros, and complex input
+            flows — creating friction that leads to drop-off within the first week.
           </p>
           <p>
-            Designed in Figma, the app combines a personalized onboarding flow with an interactive
-            dashboard that supports daily tracking, progress monitoring, and habit building.
+            This project reframes food tracking as a calm, empowering experience: one that meets
+            users at their own goals, adapts to their lifestyle, and surfaces insights that feel
+            motivating rather than prescriptive. The result is a 5-step onboarding flow paired with
+            a dashboard that makes daily nutrition visible, meaningful, and easy to act on.
           </p>
         </section>
 
-        <section class="case-image-grid case-image-grid--intro">
-          <img
-            class="case-image-uniform"
-            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Coverpage.png"
-            alt="Food Tracker app cover"
-          />
-          <img
-            class="case-image-uniform"
-            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Login1.png"
-            alt="Onboarding screen one"
-          />
-          <img
-            class="case-image-uniform"
-            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Login2.png"
-            alt="Onboarding screen two"
-          />
-          <img
-            class="case-image-uniform"
-            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Login3.png"
-            alt="Onboarding screen three"
-          />
-        </section>
-
-        <section class="case-section">
+        <!-- RESEARCH -->
+        <section class="case-section" id="research" data-case-target>
           <h2>Research &amp; Problem Framing</h2>
           <p>
-            I began by reviewing existing food tracking and health apps to understand the common
-            usability challenges they present. Many platforms rely heavily on dense data tables and
-            technical terminology, which can overwhelm users and reduce long-term engagement.
+            I began by reviewing existing food tracking and health apps to understand the usability
+            patterns that drive or prevent consistent engagement. A recurring theme emerged: apps
+            that prioritize data completeness over user experience rarely retain users past the
+            first week.
+          </p>
+          <p>Key problems identified across popular food tracking apps:</p>
+          <ul class="case-analysis__list">
+            <li class="case-analysis__item">
+              <strong>Overwhelming data entry</strong>
+              <p>
+                Most apps require logging every ingredient before showing any useful insight. This
+                high upfront cost discourages consistent daily use — especially for new users who
+                haven't yet formed the habit.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Generic onboarding</strong>
+              <p>
+                Apps rarely tailor the experience to individual goals, dietary preferences, or
+                fitness levels. A one-size-fits-all interface feels impersonal and fails to give
+                users a sense that the app understands them.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Low readability of nutritional data</strong>
+              <p>
+                Calorie counts and macro breakdowns are typically shown as raw numbers or dense
+                pie charts — difficult to interpret at a glance without a background in nutrition.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Lack of motivational feedback</strong>
+              <p>
+                Few apps celebrate progress meaningfully. Users see what they ate but rarely
+                understand why it matters for their specific goals — missing an opportunity to
+                reinforce positive behavior.
+              </p>
+            </li>
+          </ul>
+          <p>
+            These insights shaped a UX direction centered on three principles: personalization
+            from the first screen, simplified input that reduces friction, and emotionally resonant
+            progress displays that make users feel good about their choices.
           </p>
         </section>
 
-        <section class="case-section">
-          <h2>UX Direction</h2>
+        <!-- USER FLOW -->
+        <section class="case-section" id="user-flow" data-case-target>
+          <h2>User Flow</h2>
           <p>
-            Based on these insights, I defined a UX direction centered on clarity, personalization,
-            and emotional ease. The experience prioritizes quick comprehension and positive
-            reinforcement, allowing users to understand their daily intake at a glance without
-            feeling pressured or overloaded.
-          </p>
-          <p>
-            The onboarding flow was designed to gather key user information and goals early,
-            enabling a more tailored experience from the first interaction.
+            Before designing individual screens, I mapped the complete user journey — from first
+            launch through daily use. The flow is structured around three core moments: getting
+            set up, logging meals, and reviewing progress. Each path was designed to minimize
+            decision points and keep momentum moving forward.
           </p>
         </section>
 
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Userflow.png"
+            alt="Food Tracker complete user flow diagram"
+          />
+        </section>
+
+        <!-- ONBOARDING -->
+        <section class="case-section" id="onboarding" data-case-target>
+          <h2>Onboarding</h2>
+          <p>
+            The onboarding flow was designed to collect essential personalization data — fitness
+            goals, activity level, dietary preferences, and target weight — through a focused
+            5-step sequence. Each step presents a single question to minimize cognitive load and
+            keep users moving forward without feeling overwhelmed.
+          </p>
+          <p>
+            The auth and entry screens set the tone for the entire experience: clean, goal-oriented,
+            and encouraging from the very first tap.
+          </p>
+        </section>
+
+        <section class="case-image-grid">
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Splash_Screen.png"
+            alt="Splash screen"
+          />
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Welcome_Login.png"
+            alt="Welcome and login screen"
+          />
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Create_Account.png"
+            alt="Create account screen"
+          />
+        </section>
+
         <section class="case-section">
-          <h2>Interface &amp; Data Visualization</h2>
+          <h2>5-Step Personalization Flow</h2>
           <p>
-            The core dashboard presents nutritional data through progress indicators, charts, and
-            simplified metrics. These visual elements help users quickly assess their status and
-            understand trends over time.
+            Once users create an account, they complete a structured setup that captures their
+            unique context. Each step is intentionally limited to a single decision to prevent
+            drop-off during setup — keeping the total onboarding time under two minutes.
           </p>
+        </section>
+
+        <section
+          class="case-image-grid"
+          style="grid-template-columns: repeat(5, minmax(0, 1fr));"
+        >
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food%20Tracker%20APP/Goal_Selection_(Step1%3A5).png"
+            alt="Step 1 of 5: Goal Selection"
+          />
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food%20Tracker%20APP/Activity_Level_(Step2%3A5).png"
+            alt="Step 2 of 5: Activity Level"
+          />
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food%20Tracker%20APP/Dietary_Preferences_(Step3%3A5).png"
+            alt="Step 3 of 5: Dietary Preferences"
+          />
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food%20Tracker%20APP/Target_Weight_(Step4%3A5).png"
+            alt="Step 4 of 5: Target Weight"
+          />
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food%20Tracker%20APP/Success_(Step5%3A5).png"
+            alt="Step 5 of 5: Setup Complete"
+          />
+        </section>
+
+        <!-- CORE FEATURES -->
+        <section class="case-section" id="core-features" data-case-target>
+          <h2>Core Features</h2>
           <p>
-            A calm, minimal visual language was applied to reduce cognitive load and support
-            longer usage sessions. Consistent spacing, typography, and component patterns were used
-            across screens to maintain clarity and coherence.
+            After onboarding, users enter a dashboard-driven experience centered on daily
+            nutrition tracking, quick meal logging, and goal-aware progress monitoring. Every
+            screen was designed to answer one question at a glance: am I on track today?
           </p>
+        </section>
+
+        <section class="case-image-grid">
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Home_Page.png"
+            alt="Home dashboard screen"
+          />
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Meal_Logger.png"
+            alt="Meal logger screen"
+          />
+          <img
+            class="case-image-uniform"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Progress_Dashboard.png"
+            alt="Progress dashboard screen"
+          />
+        </section>
+
+        <section class="case-section">
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Home Dashboard</span>
+              <p>
+                The home screen surfaces the most important information at a glance: daily calorie
+                budget, macro breakdown, and a snapshot of logged meals. Visual progress indicators
+                and color-coded rings help users understand where they stand without reading numbers.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Meal Logger</span>
+              <p>
+                The meal logging flow is optimized for speed: a search-first interface helps users
+                quickly find foods, portions are adjusted with a single input, and a confirmation
+                screen gives immediate feedback on how the meal affects daily targets.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Progress Dashboard</span>
+              <p>
+                A weekly view of nutrition trends through clean bar charts and streak indicators.
+                Users can see patterns over time rather than just a single day's snapshot —
+                giving context that motivates continued tracking.
+              </p>
+            </li>
+          </ul>
         </section>
 
         <section class="case-image-grid case-image-grid--two">
           <img
             class="case-image-uniform"
-            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Mainpage1.png"
-            alt="Main dashboard screen"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Personal_Metrics.png"
+            alt="Personal metrics screen"
           />
           <img
             class="case-image-uniform"
-            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/reportpage.png"
-            alt="Report dashboard visualization"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Profile_Goals.png"
+            alt="Profile and goals screen"
           />
+        </section>
+
+        <section class="case-section">
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Personal Metrics</span>
+              <p>
+                Displays current body metrics alongside activity levels and nutritional targets.
+                By framing data within the context of personal goals, the screen helps users
+                understand their progress in a way that feels relevant and meaningful.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Profile &amp; Goals</span>
+              <p>
+                Users can revisit and adjust their goals at any time through the profile screen.
+                The interface mirrors the original onboarding flow — making updates feel familiar
+                and frictionless rather than buried in settings menus.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- VISUAL SYSTEM -->
+        <section class="case-section" id="visual-system" data-case-target>
+          <h2>Visual System</h2>
+          <p>
+            The visual language was designed to feel calm and motivating rather than clinical or
+            data-heavy. A warm green palette signals health and growth without the sterility of
+            medical interfaces. Rounded components, generous whitespace, and consistent type
+            hierarchy keep every screen easy to scan at a glance.
+          </p>
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/Design_Palette.png"
+            alt="Food Tracker design palette and visual system"
+          />
+        </section>
+
+        <section class="case-section">
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Color system</span>
+              <p>
+                A natural green primary palette conveys health and vitality. Supporting neutrals
+                and soft backgrounds keep data-heavy screens from feeling overwhelming and maintain
+                legibility across light usage contexts.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Typography</span>
+              <p>
+                Clean sans-serif type at consistent weights establishes clear hierarchy across
+                metric labels, screen headings, and body content. Numeric values are given extra
+                visual weight to stand out within data-dense views.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Component consistency</span>
+              <p>
+                Buttons, progress rings, and input fields follow a unified design language across
+                all screens — keeping the experience predictable and reducing the time users
+                need to orient themselves on each new view.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="case-section" id="reflection" data-case-target>
+          <h2>Reflection</h2>
+          <p>
+            This project reinforced how much of UX quality depends on reducing friction at every
+            decision point. Designing the onboarding flow taught me that getting personalization
+            right early dramatically improves the value of every subsequent screen — because users
+            enter the app already feeling understood.
+          </p>
+          <div class="case-results-grid">
+            <article class="case-results-card">
+              <h3>Designing for habit formation</h3>
+              <p>
+                The biggest challenge wasn't visual design — it was structuring a flow users would
+                actually return to daily. Every screen decision was weighed against one question:
+                does this make tomorrow's log more or less likely?
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Personalization vs. simplicity</h3>
+              <p>
+                Collecting user context during onboarding enables a richer experience — but only
+                if setup itself feels lightweight. The 5-step structure was a deliberate balance
+                between gathering enough depth and keeping setup time short.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Data visualization as empathy</h3>
+              <p>
+                Showing numbers isn't enough. The real design challenge was translating nutritional
+                data into a form users could emotionally connect with — progress that feels earned,
+                not just metrics to optimize.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section class="case-related">
@@ -205,5 +487,6 @@
       </main>
     </div>
     <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
   </body>
 </html>
