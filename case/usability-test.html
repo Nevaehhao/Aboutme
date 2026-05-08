@@ -11,6 +11,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css?v=13" />
+    <style>
+      .case-page .case-section,
+      .case-page .case-related {
+        margin-top: 40px;
+      }
+
+      .case-page .case-section h2,
+      .case-page .case-related h2 {
+        margin: 0 0 12px;
+        font-size: 22px;
+      }
+    </style>
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
   <body class="case-page">
@@ -47,9 +59,8 @@
           <span class="case-pill">Usability Test</span>
           <h1>Evaluating the Usability &amp; Information Architecture of an Academic Portal</h1>
           <p class="case-subtitle">
-            A structured usability study using Loop11 to identify navigation, findability, and
-            labeling issues in a university academic portal — generating data-backed recommendations
-            that improve the user experience for students and staff.
+            Assessing the uoZone platform to improve findability, navigation clarity, and user
+            confidence for students managing complex academic workflows.
           </p>
         </div>
 
@@ -65,7 +76,7 @@
               <a class="case-section-nav__link" href="#analysis" data-case-nav-link>Research &amp; Data Analysis</a>
             </li>
             <li>
-              <a class="case-section-nav__link" href="#findings" data-case-nav-link>Key Findings</a>
+              <a class="case-section-nav__link" href="#findings" data-case-nav-link>Key Findings &amp; Insights</a>
             </li>
             <li>
               <a class="case-section-nav__link" href="#recommendation" data-case-nav-link>Recommendation</a>
@@ -85,24 +96,20 @@
 
         <section class="case-meta">
           <article class="case-meta-card">
-            <p class="case-meta-label">Structure</p>
-            <p class="case-meta-value">Group Work (5 members)</p>
-          </article>
-          <article class="case-meta-card">
-            <p class="case-meta-label">Role</p>
-            <p class="case-meta-value">Team Lead · UX Researcher</p>
+            <p class="case-meta-label">Team Structure</p>
+            <p class="case-meta-value">Group work (5 team members)<br />Role: Team Lead</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Tool</p>
             <p class="case-meta-value">Loop11</p>
           </article>
           <article class="case-meta-card">
-            <p class="case-meta-label">Timeline</p>
+            <p class="case-meta-label">Time Frame</p>
             <p class="case-meta-value">Jan – Feb 2026</p>
           </article>
           <article class="case-meta-card">
             <p class="case-meta-label">Responsibility</p>
-            <p class="case-meta-value">Usability Testing · Moderation · Data Analysis · Recommendations</p>
+            <p class="case-meta-value">UX Researcher (Led usability testing &amp; moderation)</p>
           </article>
         </section>
 
@@ -110,425 +117,467 @@
         <section class="case-section" id="overview" data-case-target>
           <h2>Overview</h2>
           <p>
-            Academic portals serve as central hubs for students and faculty — managing course
-            registration, grade access, financial records, and institutional resources. When these
-            systems are difficult to navigate, the cost is real: missed deadlines, repeated support
-            requests, and user frustration that erodes trust in the institution's digital services.
+            uoZone is a critical academic platform, but students struggle to find key information
+            due to unclear navigation and poor information structure, leading to confusion,
+            inefficiency, and reliance on external search. These issues increase task completion
+            time, reduce user confidence, and force users to rely on external tools.
           </p>
-          <p>
-            This project evaluated the usability and information architecture of an academic portal
-            through a structured remote usability study using Loop11. As team lead and primary
-            moderator, I designed the test plan, defined the task set, facilitated moderated
-            sessions, and led the synthesis of quantitative and qualitative findings into five
-            categories of actionable recommendations.
+          <h3 style="margin-top: 2rem; margin-bottom: 0.25rem;">Research Objectives</h3>
+          <p style="margin-top: 0; margin-bottom: 1.5rem;">
+            To identify and resolve these usability issues, our research evaluated user interactions across 6 key tasks, measuring:
           </p>
-          <p>Key problems identified going into the evaluation:</p>
-          <ul class="case-analysis__list">
-            <li class="case-analysis__item">
-              <strong>Unclear navigation structure</strong>
-              <p>
-                The portal's top-level navigation did not map to users' mental models of what
-                an academic portal contains — categories were ambiguously labeled and grouped
-                by system logic rather than user tasks.
-              </p>
-            </li>
-            <li class="case-analysis__item">
-              <strong>Low findability for common tasks</strong>
-              <p>
-                Core tasks — finding a transcript, locating a course syllabus, accessing financial
-                aid — required more steps than users expected, leading to high error rates and
-                backtracking on first attempts.
-              </p>
-            </li>
-            <li class="case-analysis__item">
-              <strong>Inconsistent labeling</strong>
-              <p>
-                Menu items and page titles used institutional terminology that new users and
-                international students were unfamiliar with, creating friction at every entry point.
-              </p>
-            </li>
-            <li class="case-analysis__item">
-              <strong>Weak visual hierarchy</strong>
-              <p>
-                Important actions and links lacked visual distinction from secondary content —
-                users frequently scanned past target elements without recognizing them as actionable.
-              </p>
-            </li>
-            <li class="case-analysis__item">
-              <strong>Limited system feedback</strong>
-              <p>
-                The portal provided minimal confirmation or error messaging, leaving users uncertain
-                whether actions had been completed — particularly on form submissions and
-                registration flows.
-              </p>
-            </li>
-          </ul>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 230px)); justify-content: center; gap: 28px; margin-top: 1.5rem;">
+            <article style="border: 3px solid #7B2020; border-radius: 16px; background: #fff; padding: 18px; text-align: left;">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;">
+                <span class="iconify" data-icon="material-symbols:verified-rounded" style="color: #7B2020; font-size: 28px; flex-shrink: 0;"></span>
+                <strong style="font-size: 0.9rem; font-weight: 700;">Effectiveness</strong>
+              </div>
+              <p style="margin: 0; font-size: 0.9rem; line-height: 1.5;">Task completion rates and error recovery.</p>
+            </article>
+            <article style="border: 3px solid #7B2020; border-radius: 16px; background: #fff; padding: 18px; text-align: left;">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;">
+                <span class="iconify" data-icon="material-symbols:checklist-rounded" style="color: #7B2020; font-size: 28px; flex-shrink: 0;"></span>
+                <strong style="font-size: 0.9rem; font-weight: 700;">Efficiency</strong>
+              </div>
+              <p style="margin: 0; font-size: 0.9rem; line-height: 1.5;">Time on task, click paths, and navigation detours.</p>
+            </article>
+            <article style="border: 3px solid #7B2020; border-radius: 16px; background: #fff; padding: 18px; text-align: left;">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;">
+                <span class="iconify" data-icon="fluent:emoji-multiple-24-regular" style="color: #7B2020; font-size: 28px; flex-shrink: 0;"></span>
+                <strong style="font-size: 0.9rem; font-weight: 700;">Satisfaction</strong>
+              </div>
+              <p style="margin: 0; font-size: 0.9rem; line-height: 1.5;">Perceived usability and emotional response, measured via the System Usability Scale (SUS)</p>
+            </article>
+          </div>
         </section>
 
         <!-- METHODOLOGY -->
         <section class="case-section" id="methodology" data-case-target>
           <h2>Methodology</h2>
-          <p>
-            We used Loop11, a remote unmoderated and moderated usability testing platform, to
-            capture both behavioral data and qualitative feedback from real portal users. The
-            study combined task-based testing with System Usability Scale (SUS) scoring and
-            post-task interview questions to build a complete picture of the user experience.
-          </p>
+
+          <!-- Tab bar -->
+          <div style="background: #efefef; border-radius: 40px; padding: 5px 6px; display: flex; align-items: center; margin: 1.5rem auto 1.5rem; max-width: 88%;">
+            <button data-method-tab="setup" class="method-tab" style="background:#fff;border:none;border-radius:30px;padding:8px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.12);font-family:inherit;">Set up</button>
+            <button data-method-tab="participants" class="method-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Participants</button>
+            <button data-method-tab="moderation" class="method-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Moderation Approach</button>
+            <button data-method-tab="task-overview" class="method-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Task Overview</button>
+            <button data-method-tab="metrics" class="method-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Metrics</button>
+          </div>
+
+          <!-- Panels -->
+          <div style="max-width: 88%; margin: 0 auto;">
+            <div data-method-panel="setup">
+              <img src="../assets/images/Portfolio/Projects/UXdesign/Usability/setup.jpg" alt="Usability set-up" style="width:100%;border-radius:12px;" />
+            </div>
+            <div data-method-panel="participants" style="display:none;">
+              <p style="margin: 0 0 1.25rem;">We recruited 5 uOttawa students (Undergrad, Grad, and PhD) using a targeted screener to ensure high-quality, unbiased data.</p>
+              <img src="../assets/images/Portfolio/Projects/UXdesign/Usability/participants.jpg" alt="About the participants" style="width:100%;border-radius:12px;" />
+            </div>
+            <div data-method-panel="moderation" style="display:none;">
+              <p style="margin: 0 0 0.25rem;"><strong>1. Think-Aloud Protocol</strong></p>
+              <p style="margin: 0 0 1rem;">Participants were asked to verbalize their thought process, expectations, and moments of confusion in real-time.</p>
+              <p style="margin: 0 0 0.25rem;"><strong>2. Neutral Facilitation</strong></p>
+              <p style="margin: 0 0 1.25rem;">To capture authentic user behavior, we avoided guiding the participants, letting them fail or find workarounds naturally to expose true system flaws.</p>
+              <img src="../assets/images/Portfolio/Projects/UXdesign/Usability/moderation.png" alt="Moderation approach" style="width:100%;border-radius:12px;" />
+            </div>
+            <div data-method-panel="task-overview" style="display:none;">
+              <p style="margin: 0 0 1.25rem;">We designed 6 scenario-based tasks focusing on critical academic and administrative goals, chosen for their high usage frequency.</p>
+              <img src="../assets/images/Portfolio/Projects/UXdesign/Usability/task_overview.jpg" alt="Task overview" style="width:100%;border-radius:12px;" />
+            </div>
+            <div data-method-panel="metrics" style="display:none;">
+              <img src="../assets/images/Portfolio/Projects/UXdesign/Usability/metrics.jpg" alt="Usability metrics" style="width:100%;border-radius:12px;" />
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              var tabs = document.querySelectorAll('[data-method-tab]');
+              var panels = document.querySelectorAll('[data-method-panel]');
+              tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                  tabs.forEach(function (t) {
+                    t.style.background = 'none';
+                    t.style.color = '#888';
+                    t.style.boxShadow = 'none';
+                    t.style.fontWeight = 'normal';
+                  });
+                  tab.style.background = '#fff';
+                  tab.style.color = '#000';
+                  tab.style.boxShadow = '0 1px 3px rgba(0,0,0,0.12)';
+                  tab.style.fontWeight = '700';
+                  var target = tab.getAttribute('data-method-tab');
+                  panels.forEach(function (p) {
+                    p.style.display = p.getAttribute('data-method-panel') === target ? 'block' : 'none';
+                  });
+                });
+              });
+            })();
+          </script>
         </section>
 
-        <section class="case-image-block">
-          <img
-            class="case-image-large"
-            src="../assets/images/Portfolio/Projects/UXdesign/Usability/setup.jpg"
-            alt="Usability study setup and configuration"
-          />
-        </section>
-
-        <section class="case-section">
-          <ul class="case-insights">
-            <li class="case-insight-block">
-              <span class="case-insight-heading">Remote moderated &amp; unmoderated sessions</span>
-              <p>
-                Participants completed tasks independently through Loop11's unmoderated flow, while
-                a subset of sessions were moderated via screen share to capture think-aloud
-                commentary. This hybrid approach balanced coverage with depth.
-              </p>
-            </li>
-            <li class="case-insight-block">
-              <span class="case-insight-heading">Six-task scenario design</span>
-              <p>
-                Tasks were designed to cover the portal's core user journeys — from registration
-                and grade access to financial aid navigation. Each task had a clear, observable
-                success condition that Loop11 tracked automatically.
-              </p>
-            </li>
-            <li class="case-insight-block">
-              <span class="case-insight-heading">SUS scoring for baseline measurement</span>
-              <p>
-                All participants completed a System Usability Scale questionnaire after each
-                session, providing a standardized overall score alongside task-level data — making
-                findings comparable across participant groups and future iterations.
-              </p>
-            </li>
-          </ul>
-        </section>
-
-        <section class="case-image-block">
-          <img
-            class="case-image-large"
-            src="../assets/images/Portfolio/Projects/UXdesign/Usability/participants.jpg"
-            alt="Participant recruitment and demographics"
-          />
-        </section>
-
-        <section class="case-image-block">
-          <img
-            class="case-image-large"
-            src="../assets/images/Portfolio/Projects/UXdesign/Usability/moderation.png"
-            alt="Moderation session in progress"
-          />
-        </section>
-
-        <section class="case-image-block">
-          <img
-            class="case-image-large"
-            src="../assets/images/Portfolio/Projects/UXdesign/Usability/task_overview.jpg"
-            alt="Overview of the six usability test tasks"
-          />
-        </section>
-
-        <section class="case-image-block">
-          <img
-            class="case-image-large"
-            src="../assets/images/Portfolio/Projects/UXdesign/Usability/metrics.jpg"
-            alt="Usability metrics framework"
-          />
-        </section>
 
         <!-- RESEARCH & DATA ANALYSIS -->
         <section class="case-section" id="analysis" data-case-target>
           <h2>Research &amp; Data Analysis</h2>
           <p>
-            Loop11 captured task completion rates, time-on-task, and click paths automatically.
-            These quantitative signals were combined with SUS scores and moderation session
-            transcripts to identify where users struggled, why they struggled, and how consistently
-            those issues appeared across participants.
+            We applied multiple usability testing methods and data analyses to uncover where and
+            why uOttawa students experience friction, confusion, or drop off when navigating the
+            uoZone platform.
           </p>
-          <p>
-            First-click analysis and click path replay were particularly valuable — they revealed
-            not only where users ended up, but what they tried first, exposing the gap between
-            the portal's structure and users' initial mental models.
-          </p>
+
+          <!-- Tab bar -->
+          <div style="background: #efefef; border-radius: 40px; padding: 5px 6px; display: flex; align-items: center; margin: 1.5rem auto 1.5rem; max-width: 88%;">
+            <button data-analysis-tab="quantitative" class="analysis-tab" style="flex:1;text-align:center;background:#fff;border:none;border-radius:30px;padding:8px 10px;font-size:0.82rem;font-weight:700;cursor:pointer;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.12);font-family:inherit;">Quantitative Metrics</button>
+            <button data-analysis-tab="clickpath" class="analysis-tab" style="flex:1;text-align:center;background:none;border:none;border-radius:30px;padding:8px 10px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;font-family:inherit;">Click Path Analysis</button>
+            <button data-analysis-tab="qualitative" class="analysis-tab" style="flex:1;text-align:center;background:none;border:none;border-radius:30px;padding:8px 10px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;font-family:inherit;">Qualitative &amp; SUS Analysis</button>
+            <button data-analysis-tab="heatmap" class="analysis-tab" style="flex:1;text-align:center;background:none;border:none;border-radius:30px;padding:8px 10px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;font-family:inherit;">Heatmap Analysis</button>
+          </div>
+
+          <!-- Panels -->
+          <div style="max-width: 88%; margin: 0 auto;">
+            <div data-analysis-panel="quantitative">
+              <p style="margin: 0 0 1.25rem;">We analyzed performance data from Loop11, including task success/abandonment rates, time-on-task, and page views, to objectively measure system efficiency and effectiveness.</p>
+              <img src="../assets/images/Portfolio/Projects/UXdesign/Usability/quantitative.png" alt="Loop11 quantitative metrics" style="width:100%;border-radius:12px;" />
+            </div>
+            <div data-analysis-panel="clickpath" style="display:none;">
+              <p style="margin: 0 0 1.25rem;">By tracking users' actual navigation flows against expected paths, we identified severe mental model mismatches and navigation detours.</p>
+              <img src="../assets/images/Portfolio/Projects/UXdesign/Usability/clickpath.png" alt="Click path analysis" style="width:100%;border-radius:12px;" />
+            </div>
+            <div data-analysis-panel="qualitative" style="display:none;">
+              <p style="margin: 0 0 1.25rem;">Through the Think-Aloud protocol and post-task System Usability Scale (SUS) questionnaires, we synthesized behavioral observations, emotional responses, and user quotes.</p>
+              <img src="../assets/images/Portfolio/Projects/UXdesign/Usability/quanlitative.png" alt="Qualitative and SUS analysis" style="width:100%;border-radius:12px;" />
+            </div>
+            <div data-analysis-panel="heatmap" style="display:none;">
+              <p style="margin: 0 0 1.25rem;">We utilized first-click heatmaps to visualize user attention and initial decision-making.</p>
+              <img src="../assets/images/Portfolio/Projects/UXdesign/Usability/Heatmap.png" alt="First-click heatmap" style="width:100%;border-radius:12px;" />
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              var tabs = document.querySelectorAll('[data-analysis-tab]');
+              var panels = document.querySelectorAll('[data-analysis-panel]');
+              tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                  tabs.forEach(function (t) {
+                    t.style.background = 'none';
+                    t.style.color = '#888';
+                    t.style.boxShadow = 'none';
+                    t.style.fontWeight = 'normal';
+                  });
+                  tab.style.background = '#fff';
+                  tab.style.color = '#000';
+                  tab.style.boxShadow = '0 1px 3px rgba(0,0,0,0.12)';
+                  tab.style.fontWeight = '700';
+                  var target = tab.getAttribute('data-analysis-tab');
+                  panels.forEach(function (p) {
+                    p.style.display = p.getAttribute('data-analysis-panel') === target ? 'block' : 'none';
+                  });
+                });
+              });
+            })();
+          </script>
         </section>
 
-        <section class="case-image-block">
-          <img
-            class="case-image-large"
-            src="../assets/images/Portfolio/Projects/UXdesign/Usability/quantitative.png"
-            alt="Loop11 quantitative data — task completion and time-on-task"
-          />
-        </section>
-
-        <section class="case-section">
-          <ul class="case-insights">
-            <li class="case-insight-block">
-              <span class="case-insight-heading">Quantitative signals from Loop11</span>
-              <p>
-                Task completion rates, success paths, and time-on-task data from Loop11 identified
-                which tasks had the highest error rates. Tasks related to financial aid and
-                academic records showed the lowest completion rates and the most backtracking.
-              </p>
-            </li>
-            <li class="case-insight-block">
-              <span class="case-insight-heading">Click path analysis</span>
-              <p>
-                Click path replays surfaced recurring wrong-turn patterns — users consistently
-                navigating into the wrong section before finding the correct path. These patterns
-                indicated structural and labeling problems rather than one-off user errors.
-              </p>
-            </li>
-            <li class="case-insight-block">
-              <span class="case-insight-heading">First-click heatmaps</span>
-              <p>
-                First-click heatmaps showed where users looked first for each task. Mismatches
-                between first-click behavior and the actual location of target content confirmed
-                that navigation labels were not matching user expectations.
-              </p>
-            </li>
-          </ul>
-        </section>
-
-        <section class="case-image-block">
-          <img
-            class="case-image-large"
-            src="../assets/images/Portfolio/Projects/UXdesign/Usability/clickpath.png"
-            alt="Click path analysis showing navigation patterns"
-          />
-        </section>
-
-        <section class="case-image-block">
-          <img
-            class="case-image-large"
-            src="../assets/images/Portfolio/Projects/UXdesign/Usability/quanlitative.png"
-            alt="Qualitative analysis and SUS scoring summary"
-          />
-        </section>
-
-        <section class="case-image-block">
-          <img
-            class="case-image-large"
-            src="../assets/images/Portfolio/Projects/UXdesign/Usability/Heatmap.png"
-            alt="First-click heatmap showing where users looked first"
-          />
-        </section>
-
-        <!-- KEY FINDINGS -->
+        <!-- KEY FINDINGS & INSIGHTS -->
         <section class="case-section" id="findings" data-case-target>
           <h2>Key Findings &amp; Insights</h2>
-          <p>
-            Analysis across all sessions produced five recurring issue categories — each supported
-            by quantitative data from Loop11 and qualitative observations from moderated sessions.
-            These findings formed the direct basis for the recommendation framework.
-          </p>
-          <ul class="case-insights">
-            <li class="case-insight-block">
-              <span class="case-insight-heading">Navigation &amp; Information Architecture</span>
-              <p>
-                The portal's top-level navigation structure reflected administrative categorization
-                rather than user task flows. Users looking for academic records, financial
-                information, or course tools all started in the wrong section before finding the
-                correct path — a consistent signal of IA misalignment.
-              </p>
-            </li>
-            <li class="case-insight-block">
-              <span class="case-insight-heading">Findability</span>
-              <p>
-                High-priority content — transcripts, financial aid, grade history — was buried
-                multiple levels deep, with no shortcuts or surface-level signposting. Users
-                expected these items to be prominent and were surprised by how many clicks were
-                required to reach them.
-              </p>
-            </li>
-            <li class="case-insight-block">
-              <span class="case-insight-heading">Labeling</span>
-              <p>
-                Menu labels and section titles used institutional jargon that created friction for
-                new users. Terms like "Enrolment Services" and "Student Central" were not
-                immediately legible — participants guessed at their meaning rather than navigating
-                with confidence.
-              </p>
-            </li>
-            <li class="case-insight-block">
-              <span class="case-insight-heading">Visual Hierarchy</span>
-              <p>
-                Key links and action items did not stand out visually from surrounding content.
-                Users repeatedly scanned past their target without registering it — a problem
-                compounded by dense page layouts with low visual differentiation between
-                primary and secondary content.
-              </p>
-            </li>
-            <li class="case-insight-block">
-              <span class="case-insight-heading">Feedback &amp; System Status</span>
-              <p>
-                The portal provided minimal feedback after user actions — no confirmation
-                messages on form submission, no clear error states, and no indication of
-                progress through multi-step processes. Users frequently questioned whether
-                their actions had been registered.
-              </p>
-            </li>
-          </ul>
+
+          <!-- Theme tab bar -->
+          <div style="display:flex;justify-content:center;margin:1.5rem 0 1.35rem;">
+            <div style="background:#ececec;border-radius:999px;padding:5px 6px;display:flex;align-items:center;gap:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.7);">
+              <button data-theme-tab="1" class="theme-tab" style="background:#fff;border:none;border-radius:999px;padding:8px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,0.14);font-family:inherit;color:#111;">Theme 1</button>
+              <button data-theme-tab="2" class="theme-tab" style="background:none;border:none;border-radius:999px;padding:8px 18px;font-size:0.82rem;color:#666;cursor:pointer;font-family:inherit;font-weight:600;">Theme 2</button>
+              <button data-theme-tab="3" class="theme-tab" style="background:none;border:none;border-radius:999px;padding:8px 18px;font-size:0.82rem;color:#666;cursor:pointer;font-family:inherit;font-weight:600;">Theme 3</button>
+            </div>
+          </div>
+
+          <!-- Theme 1 panel -->
+          <div data-theme-panel="1" style="max-width:980px;margin:0 auto;width:100%;">
+            <p style="text-align:center;font-weight:700;font-size:0.88rem;margin:0 0 1.55rem;letter-spacing:0.01em;">Severe Findability Issues &amp; External Search Reliance</p>
+            <div style="display:flex;gap:30px;align-items:center;justify-content:center;">
+              <div style="display:flex;flex-direction:column;gap:16px;flex-shrink:0;width:154px;align-self:center;">
+                <button data-finding-tab="1-insight" class="finding-subtab" style="background:#9e1c22;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit;width:100%;box-shadow:0 8px 18px rgba(0,0,0,0.16);">Insight</button>
+                <button data-finding-tab="1-pain" class="finding-subtab" style="background:#aeb4be;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit;width:100%;box-shadow:0 8px 18px rgba(0,0,0,0.14);">Pain point</button>
+                <button data-finding-tab="1-evidence" class="finding-subtab" style="background:#aeb4be;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit;width:100%;box-shadow:0 8px 18px rgba(0,0,0,0.14);">Evidence</button>
+              </div>
+              <div style="flex:1;">
+                <div style="border:4px solid #9e1c22;border-radius:32px;padding:48px 50px;min-height:320px;background:#fff;display:flex;align-items:center;">
+                <div data-finding-panel="1-insight" style="font-size:0.96rem;line-height:1.72;color:#111;font-weight:400;max-width:42ch;">
+                  Critical features are deeply hidden, causing massive task abandonment and forcing users to rely on external search engines (e.g., Google).
+                </div>
+                <div data-finding-panel="1-pain" style="display:none;font-size:0.92rem;line-height:1.75;color:#111;max-width:46ch;">
+                  The "Applications" page is severely overloaded with similar icons. Finding non-frequent tools like "Volunteer Registration" or "Co-Curricular Record (CCR)" creates extreme cognitive overload.
+                </div>
+                <div data-finding-panel="1-evidence" style="display:none;font-size:0.92rem;line-height:1.75;color:#111;max-width:50ch;">
+                  <ul style="margin:0;padding-left:1.2rem;list-style:disc;">
+                    <li style="margin-bottom:0.5rem;"><strong style="color:#7B2020;">80% Abandonment Rate:</strong> 4 out of 5 users completely abandoned the volunteer registration task, rating it "Extremely difficult".</li>
+                    <li style="margin-bottom:0.5rem;"><strong style="color:#7B2020;">High Interaction Cost:</strong> Users navigated up to 17 pages looking for their CCR, with only a 20% success rate. 40% of users switched to Google out of frustration.</li>
+                    <li><strong style="color:#7B2020;">User Quotes:</strong> "I need to look through a thousand buttons... I feel clueless." / "I probably just go Google."</li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <div style="flex-shrink:0;width:110px;"></div>
+            </div>
+          </div>
+
+          <!-- Theme 2 panel -->
+          <div data-theme-panel="2" style="display:none;max-width:980px;margin:0 auto;width:100%;">
+            <p style="text-align:center;font-weight:700;font-size:0.88rem;margin:0 0 1.55rem;letter-spacing:0.01em;">IA Mismatch with Mental Models</p>
+            <div style="display:flex;gap:30px;align-items:center;justify-content:center;">
+              <div style="display:flex;flex-direction:column;gap:16px;flex-shrink:0;width:154px;align-self:center;">
+                <button data-finding-tab="2-insight" class="finding-subtab" style="background:#9e1c22;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit;width:100%;box-shadow:0 8px 18px rgba(0,0,0,0.16);">Insight</button>
+                <button data-finding-tab="2-pain" class="finding-subtab" style="background:#aeb4be;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit;width:100%;box-shadow:0 8px 18px rgba(0,0,0,0.14);">Pain point</button>
+                <button data-finding-tab="2-evidence" class="finding-subtab" style="background:#aeb4be;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit;width:100%;box-shadow:0 8px 18px rgba(0,0,0,0.14);">Evidence</button>
+              </div>
+              <div style="flex:1;">
+                <div style="border:4px solid #9e1c22;border-radius:32px;padding:48px 50px;min-height:320px;background:#fff;display:flex;align-items:center;">
+                <div data-finding-panel="2-insight" style="font-size:0.96rem;line-height:1.72;color:#111;font-weight:400;max-width:42ch;">
+                  The system's categorization contradicts students' natural intuition, resulting in significant navigation detours.
+                </div>
+                <div data-finding-panel="2-pain" style="display:none;font-size:0.92rem;line-height:1.75;color:#111;max-width:46ch;">
+                  Students naturally expect to find "Degree Progress" within the "Course Enrollment" flow, but the system separates them. Meanwhile, the actual shortcut suffers from severe banner blindness.
+                </div>
+                <div data-finding-panel="2-evidence" style="display:none;font-size:0.92rem;line-height:1.75;color:#111;max-width:50ch;">
+                  <ul style="margin:0;padding-left:1.2rem;list-style:disc;">
+                    <li style="margin-bottom:0.5rem;"><strong style="color:#7B2020;">Behavioral Deviation:</strong> 80% (4/5) of users intuitively clicked "Enroll" first to check their degree progress.</li>
+                    <li style="margin-bottom:0.5rem;"><strong style="color:#7B2020;">Banner Blindness:</strong> 0/5 users noticed the direct "My Academic Requirements" shortcut on the Applications page.</li>
+                    <li><strong style="color:#7B2020;">Complex Click Paths:</strong> Users took 7+ steps in maze-like paths (e.g., Applications &gt; Enroll &gt; Plan &gt; Enroll &gt; My Class Schedule &gt; My Academics...).</li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <div style="flex-shrink:0;width:110px;"></div>
+            </div>
+          </div>
+
+          <!-- Theme 3 panel -->
+          <div data-theme-panel="3" style="display:none;max-width:980px;margin:0 auto;width:100%;">
+            <p style="text-align:center;font-weight:700;font-size:0.88rem;margin:0 0 1.55rem;letter-spacing:0.01em;">Ambiguous Terminology &amp; Poor System Feedback</p>
+            <div style="display:flex;gap:30px;align-items:center;justify-content:center;">
+              <div style="display:flex;flex-direction:column;gap:16px;flex-shrink:0;width:154px;align-self:center;">
+                <button data-finding-tab="3-insight" class="finding-subtab" style="background:#9e1c22;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit;width:100%;box-shadow:0 8px 18px rgba(0,0,0,0.16);">Insight</button>
+                <button data-finding-tab="3-pain" class="finding-subtab" style="background:#aeb4be;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit;width:100%;box-shadow:0 8px 18px rgba(0,0,0,0.14);">Pain point</button>
+                <button data-finding-tab="3-evidence" class="finding-subtab" style="background:#aeb4be;color:#fff;border:none;border-radius:999px;padding:14px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;font-family:inherit;width:100%;box-shadow:0 8px 18px rgba(0,0,0,0.14);">Evidence</button>
+              </div>
+              <div style="flex:1;">
+                <div style="border:4px solid #9e1c22;border-radius:32px;padding:48px 50px;min-height:320px;background:#fff;display:flex;align-items:center;">
+                <div data-finding-panel="3-insight" style="font-size:0.96rem;line-height:1.72;color:#111;font-weight:400;max-width:42ch;">
+                  Academic jargon and unclear system status feedback drastically reduce user confidence and increase anxiety.
+                </div>
+                <div data-finding-panel="3-pain" style="display:none;font-size:0.92rem;line-height:1.75;color:#111;max-width:46ch;">
+                  First-year students struggle with obscure terms like "Advisement Report" or abbreviations like "CCR". Additionally, ambiguous empty states and missing loading spinners make users think the system is broken.
+                </div>
+                <div data-finding-panel="3-evidence" style="display:none;font-size:0.92rem;line-height:1.75;color:#111;max-width:50ch;">
+                  <ul style="margin:0;padding-left:1.2rem;list-style:disc;">
+                    <li style="margin-bottom:0.5rem;"><strong style="color:#7B2020;">Unclear Empty States:</strong> When no exams were scheduled, the system simply showed "An exam schedule is not available for this term", leaving users unsure if they navigated to the wrong page.</li>
+                    <li style="margin-bottom:0.5rem;"><strong style="color:#7B2020;">Missing Feedback:</strong> Clicking "View Report" for transcripts triggered no loading animation. Users repeatedly clicked the button, assuming the site froze.</li>
+                    <li><strong style="color:#7B2020;">User Quote:</strong> "Probably if they can tell me I don't have any exams, it will be better as well."</li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <div style="flex-shrink:0;width:110px;"></div>
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              var themeTabs = document.querySelectorAll('[data-theme-tab]');
+              var themePanels = document.querySelectorAll('[data-theme-panel]');
+
+              function activateTheme(num) {
+                themeTabs.forEach(function (t) {
+                  var isActive = t.getAttribute('data-theme-tab') === num;
+                  t.style.background = isActive ? '#fff' : 'none';
+                  t.style.color = isActive ? '#111' : '#666';
+                  t.style.fontWeight = isActive ? '700' : '600';
+                  t.style.boxShadow = isActive ? '0 3px 8px rgba(0,0,0,0.14)' : 'none';
+                });
+                themePanels.forEach(function (p) {
+                  p.style.display = p.getAttribute('data-theme-panel') === num ? 'block' : 'none';
+                });
+              }
+
+              themeTabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                  activateTheme(tab.getAttribute('data-theme-tab'));
+                });
+              });
+
+              var subtabs = document.querySelectorAll('[data-finding-tab]');
+              subtabs.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                  var key = btn.getAttribute('data-finding-tab');
+                  var theme = key.split('-')[0];
+                  document.querySelectorAll('[data-finding-tab^="' + theme + '-"]').forEach(function (b) {
+                    var isActive = b === btn;
+                    b.style.background = isActive ? '#9e1c22' : '#aeb4be';
+                    b.style.color = '#fff';
+                    b.style.fontWeight = isActive ? '700' : '600';
+                  });
+                  document.querySelectorAll('[data-finding-panel^="' + theme + '-"]').forEach(function (p) {
+                    p.style.display = p.getAttribute('data-finding-panel') === key ? 'block' : 'none';
+                  });
+                });
+              });
+            })();
+          </script>
         </section>
 
         <!-- RECOMMENDATION -->
         <section class="case-section" id="recommendation" data-case-target>
           <h2>Recommendation</h2>
-          <p>
-            Each recommendation category addresses one of the five identified issue areas,
-            paired with specific before/after examples to make the proposed changes concrete
-            and implementable for the portal's development team.
-          </p>
-        </section>
+          <div style="background:#efefef;border-radius:40px;padding:5px 6px;display:flex;align-items:center;margin:1.5rem auto 1.5rem;max-width:88%;">
+            <button data-recommendation-tab="navigation" class="recommendation-tab" style="background:#fff;border:none;border-radius:30px;padding:8px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.12);font-family:inherit;">Navigation</button>
+            <button data-recommendation-tab="findability" class="recommendation-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Findability</button>
+            <button data-recommendation-tab="labeling" class="recommendation-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Labeling</button>
+            <button data-recommendation-tab="hierarchy" class="recommendation-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Hierarchy</button>
+            <button data-recommendation-tab="feedback" class="recommendation-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Feedback</button>
+          </div>
 
-        <section class="knc-projects">
-          <article class="knc-card">
-            <h3>1. Navigation &amp; Information Architecture</h3>
-            <p>
-              Restructure the top-level navigation around user tasks and mental models rather than
-              administrative categories. Group items by what users are trying to accomplish —
-              "My Courses," "My Finances," "My Records" — rather than by which department
-              owns the content. Introduce a persistent quick-access bar for the portal's five
-              most-used features.
-            </p>
-            <div class="knc-image">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_1.jpg"
-                alt="Navigation and IA recommendation — before and after"
-              />
+          <div style="max-width: 88%; margin: 0 auto;">
+            <div data-recommendation-panel="navigation">
+              <div data-rec-carousel="navigation" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
+                <button data-rec-prev type="button" aria-label="Previous navigation image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8249;</button>
+                <div style="flex:1;">
+                  <img data-rec-slide="navigation" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_1.jpg" alt="Navigation recommendation 1" style="width:100%;border-radius:12px;" />
+                  <img data-rec-slide="navigation" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_2.jpg" alt="Navigation recommendation 2" style="width:100%;border-radius:12px;display:none;" />
+                  <img data-rec-slide="navigation" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_3.jpg" alt="Navigation recommendation 3" style="width:100%;border-radius:12px;display:none;" />
+                </div>
+                <button data-rec-next type="button" aria-label="Next navigation image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8250;</button>
+              </div>
             </div>
-            <div class="knc-image">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_2.jpg"
-                alt="Navigation and IA recommendation — detail view"
-              />
+            <div data-recommendation-panel="findability" style="display:none;">
+              <div data-rec-carousel="findability" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
+                <button data-rec-prev type="button" aria-label="Previous findability image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8249;</button>
+                <div style="flex:1;">
+                  <img data-rec-slide="findability" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_1.jpg" alt="Findability recommendation 1" style="width:100%;border-radius:12px;" />
+                  <img data-rec-slide="findability" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_2.jpg" alt="Findability recommendation 2" style="width:100%;border-radius:12px;display:none;" />
+                </div>
+                <button data-rec-next type="button" aria-label="Next findability image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8250;</button>
+              </div>
             </div>
-            <div class="knc-image">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_3.jpg"
-                alt="Navigation and IA recommendation — proposed structure"
-              />
+            <div data-recommendation-panel="labeling" style="display:none;">
+              <div data-rec-carousel="labeling" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
+                <button data-rec-prev type="button" aria-label="Previous labeling image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8249;</button>
+                <div style="flex:1;">
+                  <img data-rec-slide="labeling" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_1.jpg" alt="Labeling recommendation 1" style="width:100%;border-radius:12px;" />
+                  <img data-rec-slide="labeling" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_2.jpg" alt="Labeling recommendation 2" style="width:100%;border-radius:12px;display:none;" />
+                </div>
+                <button data-rec-next type="button" aria-label="Next labeling image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8250;</button>
+              </div>
             </div>
-          </article>
+            <div data-recommendation-panel="hierarchy" style="display:none;">
+              <div data-rec-carousel="hierarchy" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
+                <button data-rec-prev type="button" aria-label="Previous hierarchy image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;visibility:hidden;">&#8249;</button>
+                <div style="flex:1;">
+                  <img data-rec-slide="hierarchy" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom4.jpg" alt="Hierarchy recommendation" style="width:100%;border-radius:12px;" />
+                </div>
+                <button data-rec-next type="button" aria-label="Next hierarchy image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;visibility:hidden;">&#8250;</button>
+              </div>
+            </div>
+            <div data-recommendation-panel="feedback" style="display:none;">
+              <div data-rec-carousel="feedback" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
+                <button data-rec-prev type="button" aria-label="Previous feedback image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;visibility:hidden;">&#8249;</button>
+                <div style="flex:1;">
+                  <img data-rec-slide="feedback" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom5.jpg" alt="Feedback recommendation" style="width:100%;border-radius:12px;" />
+                </div>
+                <button data-rec-next type="button" aria-label="Next feedback image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;visibility:hidden;">&#8250;</button>
+              </div>
+            </div>
+          </div>
 
-          <article class="knc-card">
-            <h3>2. Findability</h3>
-            <p>
-              Surface the portal's most frequently accessed content at the top level. Transcripts,
-              financial aid summaries, and course schedules should be reachable in one or two
-              clicks from the homepage. Add a prominent search function with autocomplete to
-              serve users who cannot locate items through browsing.
-            </p>
-            <div class="knc-image">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_1.jpg"
-                alt="Findability recommendation — content surfacing"
-              />
-            </div>
-            <div class="knc-image">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_2.jpg"
-                alt="Findability recommendation — search and shortcuts"
-              />
-            </div>
-          </article>
+          <script>
+            (function () {
+              var section = document.getElementById('recommendation');
+              var tabs = section.querySelectorAll('[data-recommendation-tab]');
+              var panels = section.querySelectorAll('[data-recommendation-panel]');
 
-          <article class="knc-card">
-            <h3>3. Labeling</h3>
-            <p>
-              Replace institutional terminology with plain, task-oriented language throughout
-              the navigation and page headings. Conduct a labeling audit using card sorting or
-              tree testing to validate that proposed labels match users' vocabulary before
-              implementation — particularly for sections that serve international students.
-            </p>
-            <div class="knc-image">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_1.jpg"
-                alt="Labeling recommendation — terminology changes"
-              />
-            </div>
-            <div class="knc-image">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_2.jpg"
-                alt="Labeling recommendation — before and after examples"
-              />
-            </div>
-          </article>
+              function activateTab(target) {
+                tabs.forEach(function (t) {
+                  var isActive = t.getAttribute('data-recommendation-tab') === target;
+                  t.style.background = isActive ? '#fff' : 'none';
+                  t.style.color = isActive ? '#000' : '#888';
+                  t.style.boxShadow = isActive ? '0 1px 3px rgba(0,0,0,0.12)' : 'none';
+                  t.style.fontWeight = isActive ? '700' : 'normal';
+                });
+                panels.forEach(function (p) {
+                  p.style.display = p.getAttribute('data-recommendation-panel') === target ? 'block' : 'none';
+                });
+              }
 
-          <article class="knc-card">
-            <h3>4. Visual Hierarchy</h3>
-            <p>
-              Apply stronger visual differentiation between primary actions and secondary content.
-              Use size, weight, and color contrast to make high-priority links and CTAs visually
-              distinct at a glance — reducing the cognitive work of scanning dense pages and
-              ensuring users find their target on the first pass.
-            </p>
-            <div class="knc-image">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom4.jpg"
-                alt="Visual hierarchy recommendation"
-              />
-            </div>
-          </article>
+              tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                  activateTab(tab.getAttribute('data-recommendation-tab'));
+                });
+              });
 
-          <article class="knc-card">
-            <h3>5. Feedback &amp; System Status</h3>
-            <p>
-              Add clear confirmation states, error messages, and progress indicators throughout
-              all transactional flows. Users should always know whether their action succeeded,
-              failed, or is still in progress — following Nielsen's heuristic of system visibility.
-              This is especially critical for registration, financial aid, and grade-change requests.
-            </p>
-            <div class="knc-image">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom5.jpg"
-                alt="Feedback and system status recommendation"
-              />
-            </div>
-          </article>
+              section.querySelectorAll('[data-rec-carousel]').forEach(function (carousel) {
+                var key = carousel.getAttribute('data-rec-carousel');
+                var slides = carousel.querySelectorAll('[data-rec-slide="' + key + '"]');
+                var prev = carousel.querySelector('[data-rec-prev]');
+                var next = carousel.querySelector('[data-rec-next]');
+
+                function render(index) {
+                  carousel.setAttribute('data-rec-index', String(index));
+                  slides.forEach(function (slide, slideIndex) {
+                    slide.style.display = slideIndex === index ? 'block' : 'none';
+                  });
+                  if (slides.length > 1) {
+                    prev.style.visibility = index === 0 ? 'hidden' : 'visible';
+                    next.style.visibility = index === slides.length - 1 ? 'hidden' : 'visible';
+                  }
+                }
+
+                if (slides.length <= 1) {
+                  prev.style.visibility = 'hidden';
+                  next.style.visibility = 'hidden';
+                } else {
+                  prev.addEventListener('click', function () {
+                    var index = Number(carousel.getAttribute('data-rec-index'));
+                    if (index > 0) {
+                      render(index - 1);
+                    }
+                  });
+                  next.addEventListener('click', function () {
+                    var index = Number(carousel.getAttribute('data-rec-index'));
+                    if (index < slides.length - 1) {
+                      render(index + 1);
+                    }
+                  });
+                }
+
+                render(0);
+              });
+
+              activateTab('navigation');
+            })();
+          </script>
         </section>
 
         <!-- REFLECTION -->
         <section class="case-section" id="reflection" data-case-target>
           <h2>Reflection</h2>
-          <p>
-            Leading this usability study showed me how structured research methods create shared
-            evidence — findings that a development team or stakeholder cannot easily dismiss because
-            they come from actual user behavior, not designer opinion.
-          </p>
-          <div class="case-results-grid">
+          <div class="case-results-grid" style="grid-template-columns:repeat(2,minmax(0,520px));justify-content:center;gap:24px;max-width:100%;margin:14px auto 0;">
             <article class="case-results-card">
-              <h3>Data reduces opinion</h3>
+              <h3>Data Discrepancy Analysis</h3>
               <p>
-                Loop11's quantitative output — task completion rates, click paths, time-on-task —
-                gave every recommendation a measurable basis. When stakeholders push back on UX
-                changes, data from real users shifts the conversation from "I think" to "we observed."
+                When using Loop11 for usability testing, system issues arose affecting participants'
+                ability to complete the tests. This meant the test results couldn't be used
+                directly; video recordings were required. Instead of relying on automatically
+                generated reports, I manually reviewed the recordings, recalculated metrics, and
+                ensured data integrity.
               </p>
             </article>
             <article class="case-results-card">
-              <h3>Moderation reveals the why</h3>
+              <h3>Actions Over Opinions</h3>
               <p>
-                Unmoderated sessions showed where users struggled; moderated sessions explained
-                why. Think-aloud commentary during moderation surfaced labeling confusion and
-                false assumptions that click data alone would never have revealed — confirming
-                that mixed methods produce richer findings than either approach alone.
-              </p>
-            </article>
-            <article class="case-results-card">
-              <h3>Leading research as a team sport</h3>
-              <p>
-                Coordinating five people across study design, recruitment, moderation, and synthesis
-                required clear role boundaries and shared documentation. The most valuable process
-                decisions — defining task success criteria upfront, agreeing on a synthesis
-                framework — were the ones made before any participant joined the study.
+                This project reinforced a core UX principle: what users do matters more than what
+                they say. Findings were grounded in actual click path deviations and task
+                abandonment rates rather than simply soliciting opinions — producing evidence that
+                stakeholders cannot easily dismiss.
               </p>
             </article>
           </div>
