@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usability Test · Ruiyao Hao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css?v=13" />
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  </head>
+  <body class="case-page">
+    <div class="about-grid-bg"></div>
+
+    <div class="layout layout--centered">
+      <aside class="sidebar">
+        <nav class="sidebar__nav">
+          <a href="../index.html#hero" aria-label="Home" data-label="Home">
+            <span class="iconify" data-icon="fluent-emoji:house"></span>
+          </a>
+          <a href="../projects.html" aria-label="Projects" data-label="Projects">
+            <span class="iconify" data-icon="fluent-emoji:books"></span>
+          </a>
+          <a href="../experience.html" aria-label="Internships" data-label="Internships">
+            <img class="sidebar__icon-image" src="../assets/images/photo/viewintern.png" alt="" />
+          </a>
+          <a href="../assets/Ruiyao_2.pdf" aria-label="Resume" data-label="Resume">📝</a>
+        </nav>
+        <div class="sidebar__contact">
+          <a href="mailto:ruiyaohao983@gmail.com" aria-label="Email" data-label="Email">
+            <span class="iconify" data-icon="fluent-emoji:love-letter"></span>
+          </a>
+          <a href="https://www.linkedin.com/in/hry1/" aria-label="LinkedIn" data-label="LinkedIn">
+            <span class="iconify" data-icon="logos:linkedin-icon"></span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="case-shell">
+        <a class="case-back" href="../projects.html">← Back to Projects</a>
+
+        <div class="case-header">
+          <span class="case-pill">Usability Test</span>
+          <h1>Evaluating the Usability &amp; Information Architecture of an Academic Portal</h1>
+          <p class="case-subtitle">
+            A structured usability study using Loop11 to identify navigation, findability, and
+            labeling issues in a university academic portal — generating data-backed recommendations
+            that improve the user experience for students and staff.
+          </p>
+        </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#methodology" data-case-nav-link>Methodology</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#analysis" data-case-nav-link>Research &amp; Data Analysis</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#findings" data-case-nav-link>Key Findings</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#recommendation" data-case-nav-link>Recommendation</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#reflection" data-case-nav-link>Reflection</a>
+            </li>
+          </ul>
+        </nav>
+
+        <section class="case-image-block case-image-block--overview">
+          <img
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/ux_project_usability.png"
+            alt="Usability test project overview"
+          />
+        </section>
+
+        <section class="case-meta">
+          <article class="case-meta-card">
+            <p class="case-meta-label">Structure</p>
+            <p class="case-meta-value">Group Work (5 members)</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Role</p>
+            <p class="case-meta-value">Team Lead · UX Researcher</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Tool</p>
+            <p class="case-meta-value">Loop11</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Timeline</p>
+            <p class="case-meta-value">Jan – Feb 2026</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Responsibility</p>
+            <p class="case-meta-value">Usability Testing · Moderation · Data Analysis · Recommendations</p>
+          </article>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="case-section" id="overview" data-case-target>
+          <h2>Overview</h2>
+          <p>
+            Academic portals serve as central hubs for students and faculty — managing course
+            registration, grade access, financial records, and institutional resources. When these
+            systems are difficult to navigate, the cost is real: missed deadlines, repeated support
+            requests, and user frustration that erodes trust in the institution's digital services.
+          </p>
+          <p>
+            This project evaluated the usability and information architecture of an academic portal
+            through a structured remote usability study using Loop11. As team lead and primary
+            moderator, I designed the test plan, defined the task set, facilitated moderated
+            sessions, and led the synthesis of quantitative and qualitative findings into five
+            categories of actionable recommendations.
+          </p>
+          <p>Key problems identified going into the evaluation:</p>
+          <ul class="case-analysis__list">
+            <li class="case-analysis__item">
+              <strong>Unclear navigation structure</strong>
+              <p>
+                The portal's top-level navigation did not map to users' mental models of what
+                an academic portal contains — categories were ambiguously labeled and grouped
+                by system logic rather than user tasks.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Low findability for common tasks</strong>
+              <p>
+                Core tasks — finding a transcript, locating a course syllabus, accessing financial
+                aid — required more steps than users expected, leading to high error rates and
+                backtracking on first attempts.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Inconsistent labeling</strong>
+              <p>
+                Menu items and page titles used institutional terminology that new users and
+                international students were unfamiliar with, creating friction at every entry point.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Weak visual hierarchy</strong>
+              <p>
+                Important actions and links lacked visual distinction from secondary content —
+                users frequently scanned past target elements without recognizing them as actionable.
+              </p>
+            </li>
+            <li class="case-analysis__item">
+              <strong>Limited system feedback</strong>
+              <p>
+                The portal provided minimal confirmation or error messaging, leaving users uncertain
+                whether actions had been completed — particularly on form submissions and
+                registration flows.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- METHODOLOGY -->
+        <section class="case-section" id="methodology" data-case-target>
+          <h2>Methodology</h2>
+          <p>
+            We used Loop11, a remote unmoderated and moderated usability testing platform, to
+            capture both behavioral data and qualitative feedback from real portal users. The
+            study combined task-based testing with System Usability Scale (SUS) scoring and
+            post-task interview questions to build a complete picture of the user experience.
+          </p>
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/setup.jpg"
+            alt="Usability study setup and configuration"
+          />
+        </section>
+
+        <section class="case-section">
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Remote moderated &amp; unmoderated sessions</span>
+              <p>
+                Participants completed tasks independently through Loop11's unmoderated flow, while
+                a subset of sessions were moderated via screen share to capture think-aloud
+                commentary. This hybrid approach balanced coverage with depth.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Six-task scenario design</span>
+              <p>
+                Tasks were designed to cover the portal's core user journeys — from registration
+                and grade access to financial aid navigation. Each task had a clear, observable
+                success condition that Loop11 tracked automatically.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">SUS scoring for baseline measurement</span>
+              <p>
+                All participants completed a System Usability Scale questionnaire after each
+                session, providing a standardized overall score alongside task-level data — making
+                findings comparable across participant groups and future iterations.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/participants.jpg"
+            alt="Participant recruitment and demographics"
+          />
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/moderation.png"
+            alt="Moderation session in progress"
+          />
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/task_overview.jpg"
+            alt="Overview of the six usability test tasks"
+          />
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/metrics.jpg"
+            alt="Usability metrics framework"
+          />
+        </section>
+
+        <!-- RESEARCH & DATA ANALYSIS -->
+        <section class="case-section" id="analysis" data-case-target>
+          <h2>Research &amp; Data Analysis</h2>
+          <p>
+            Loop11 captured task completion rates, time-on-task, and click paths automatically.
+            These quantitative signals were combined with SUS scores and moderation session
+            transcripts to identify where users struggled, why they struggled, and how consistently
+            those issues appeared across participants.
+          </p>
+          <p>
+            First-click analysis and click path replay were particularly valuable — they revealed
+            not only where users ended up, but what they tried first, exposing the gap between
+            the portal's structure and users' initial mental models.
+          </p>
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/quantitative.png"
+            alt="Loop11 quantitative data — task completion and time-on-task"
+          />
+        </section>
+
+        <section class="case-section">
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Quantitative signals from Loop11</span>
+              <p>
+                Task completion rates, success paths, and time-on-task data from Loop11 identified
+                which tasks had the highest error rates. Tasks related to financial aid and
+                academic records showed the lowest completion rates and the most backtracking.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Click path analysis</span>
+              <p>
+                Click path replays surfaced recurring wrong-turn patterns — users consistently
+                navigating into the wrong section before finding the correct path. These patterns
+                indicated structural and labeling problems rather than one-off user errors.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">First-click heatmaps</span>
+              <p>
+                First-click heatmaps showed where users looked first for each task. Mismatches
+                between first-click behavior and the actual location of target content confirmed
+                that navigation labels were not matching user expectations.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/clickpath.png"
+            alt="Click path analysis showing navigation patterns"
+          />
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/quanlitative.png"
+            alt="Qualitative analysis and SUS scoring summary"
+          />
+        </section>
+
+        <section class="case-image-block">
+          <img
+            class="case-image-large"
+            src="../assets/images/Portfolio/Projects/UXdesign/Usability/Heatmap.png"
+            alt="First-click heatmap showing where users looked first"
+          />
+        </section>
+
+        <!-- KEY FINDINGS -->
+        <section class="case-section" id="findings" data-case-target>
+          <h2>Key Findings &amp; Insights</h2>
+          <p>
+            Analysis across all sessions produced five recurring issue categories — each supported
+            by quantitative data from Loop11 and qualitative observations from moderated sessions.
+            These findings formed the direct basis for the recommendation framework.
+          </p>
+          <ul class="case-insights">
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Navigation &amp; Information Architecture</span>
+              <p>
+                The portal's top-level navigation structure reflected administrative categorization
+                rather than user task flows. Users looking for academic records, financial
+                information, or course tools all started in the wrong section before finding the
+                correct path — a consistent signal of IA misalignment.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Findability</span>
+              <p>
+                High-priority content — transcripts, financial aid, grade history — was buried
+                multiple levels deep, with no shortcuts or surface-level signposting. Users
+                expected these items to be prominent and were surprised by how many clicks were
+                required to reach them.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Labeling</span>
+              <p>
+                Menu labels and section titles used institutional jargon that created friction for
+                new users. Terms like "Enrolment Services" and "Student Central" were not
+                immediately legible — participants guessed at their meaning rather than navigating
+                with confidence.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Visual Hierarchy</span>
+              <p>
+                Key links and action items did not stand out visually from surrounding content.
+                Users repeatedly scanned past their target without registering it — a problem
+                compounded by dense page layouts with low visual differentiation between
+                primary and secondary content.
+              </p>
+            </li>
+            <li class="case-insight-block">
+              <span class="case-insight-heading">Feedback &amp; System Status</span>
+              <p>
+                The portal provided minimal feedback after user actions — no confirmation
+                messages on form submission, no clear error states, and no indication of
+                progress through multi-step processes. Users frequently questioned whether
+                their actions had been registered.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- RECOMMENDATION -->
+        <section class="case-section" id="recommendation" data-case-target>
+          <h2>Recommendation</h2>
+          <p>
+            Each recommendation category addresses one of the five identified issue areas,
+            paired with specific before/after examples to make the proposed changes concrete
+            and implementable for the portal's development team.
+          </p>
+        </section>
+
+        <section class="knc-projects">
+          <article class="knc-card">
+            <h3>1. Navigation &amp; Information Architecture</h3>
+            <p>
+              Restructure the top-level navigation around user tasks and mental models rather than
+              administrative categories. Group items by what users are trying to accomplish —
+              "My Courses," "My Finances," "My Records" — rather than by which department
+              owns the content. Introduce a persistent quick-access bar for the portal's five
+              most-used features.
+            </p>
+            <div class="knc-image">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_1.jpg"
+                alt="Navigation and IA recommendation — before and after"
+              />
+            </div>
+            <div class="knc-image">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_2.jpg"
+                alt="Navigation and IA recommendation — detail view"
+              />
+            </div>
+            <div class="knc-image">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_3.jpg"
+                alt="Navigation and IA recommendation — proposed structure"
+              />
+            </div>
+          </article>
+
+          <article class="knc-card">
+            <h3>2. Findability</h3>
+            <p>
+              Surface the portal's most frequently accessed content at the top level. Transcripts,
+              financial aid summaries, and course schedules should be reachable in one or two
+              clicks from the homepage. Add a prominent search function with autocomplete to
+              serve users who cannot locate items through browsing.
+            </p>
+            <div class="knc-image">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_1.jpg"
+                alt="Findability recommendation — content surfacing"
+              />
+            </div>
+            <div class="knc-image">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_2.jpg"
+                alt="Findability recommendation — search and shortcuts"
+              />
+            </div>
+          </article>
+
+          <article class="knc-card">
+            <h3>3. Labeling</h3>
+            <p>
+              Replace institutional terminology with plain, task-oriented language throughout
+              the navigation and page headings. Conduct a labeling audit using card sorting or
+              tree testing to validate that proposed labels match users' vocabulary before
+              implementation — particularly for sections that serve international students.
+            </p>
+            <div class="knc-image">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_1.jpg"
+                alt="Labeling recommendation — terminology changes"
+              />
+            </div>
+            <div class="knc-image">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_2.jpg"
+                alt="Labeling recommendation — before and after examples"
+              />
+            </div>
+          </article>
+
+          <article class="knc-card">
+            <h3>4. Visual Hierarchy</h3>
+            <p>
+              Apply stronger visual differentiation between primary actions and secondary content.
+              Use size, weight, and color contrast to make high-priority links and CTAs visually
+              distinct at a glance — reducing the cognitive work of scanning dense pages and
+              ensuring users find their target on the first pass.
+            </p>
+            <div class="knc-image">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom4.jpg"
+                alt="Visual hierarchy recommendation"
+              />
+            </div>
+          </article>
+
+          <article class="knc-card">
+            <h3>5. Feedback &amp; System Status</h3>
+            <p>
+              Add clear confirmation states, error messages, and progress indicators throughout
+              all transactional flows. Users should always know whether their action succeeded,
+              failed, or is still in progress — following Nielsen's heuristic of system visibility.
+              This is especially critical for registration, financial aid, and grade-change requests.
+            </p>
+            <div class="knc-image">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom5.jpg"
+                alt="Feedback and system status recommendation"
+              />
+            </div>
+          </article>
+        </section>
+
+        <!-- REFLECTION -->
+        <section class="case-section" id="reflection" data-case-target>
+          <h2>Reflection</h2>
+          <p>
+            Leading this usability study showed me how structured research methods create shared
+            evidence — findings that a development team or stakeholder cannot easily dismiss because
+            they come from actual user behavior, not designer opinion.
+          </p>
+          <div class="case-results-grid">
+            <article class="case-results-card">
+              <h3>Data reduces opinion</h3>
+              <p>
+                Loop11's quantitative output — task completion rates, click paths, time-on-task —
+                gave every recommendation a measurable basis. When stakeholders push back on UX
+                changes, data from real users shifts the conversation from "I think" to "we observed."
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Moderation reveals the why</h3>
+              <p>
+                Unmoderated sessions showed where users struggled; moderated sessions explained
+                why. Think-aloud commentary during moderation surfaced labeling confusion and
+                false assumptions that click data alone would never have revealed — confirming
+                that mixed methods produce richer findings than either approach alone.
+              </p>
+            </article>
+            <article class="case-results-card">
+              <h3>Leading research as a team sport</h3>
+              <p>
+                Coordinating five people across study design, recruitment, moderation, and synthesis
+                required clear role boundaries and shared documentation. The most valuable process
+                decisions — defining task success criteria upfront, agreeing on a synthesis
+                framework — were the ones made before any participant joined the study.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-related">
+          <h2>Other Projects</h2>
+          <div class="case-related-grid">
+            <article class="project-card">
+              <div class="project-thumb">
+                <img
+                  src="../assets/images/Portfolio/Projects/UXdesign/Website_Design/ux_project_1.png"
+                  alt="Pacific Northwest X Ray project overview"
+                />
+                <a class="project-cta" href="medical-website.html">View Case Study</a>
+              </div>
+              <span class="project-pill">Medical Website Redesign</span>
+              <h3>Pacific Northwest X Ray</h3>
+              <p>Designing a scalable website &amp; visual system for medical imaging.</p>
+              <div class="project-tags">
+                <span>UX Design</span>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-thumb">
+                <img
+                  src="../assets/images/Portfolio/Projects/UXdesign/Food Tracker APP/ux_project_foodtracker.png"
+                  alt="Food Tracker app overview"
+                />
+                <a class="project-cta" href="food-tracker.html">View Case Study</a>
+              </div>
+              <span class="project-pill">Food Tracker App</span>
+              <h3>Personalized Nutrition</h3>
+              <p>Designing a tailored tracking experience through data visualization.</p>
+              <div class="project-tags">
+                <span>UX Design</span>
+                <span>Data Visualization</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
+  </body>
+</html>
