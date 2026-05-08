@@ -107,6 +107,59 @@
         border-radius: 18px;
       }
 
+      .styleguide-carousel {
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+
+      .styleguide-carousel__viewport {
+        position: relative;
+      }
+
+      .styleguide-carousel__slide {
+        display: none;
+      }
+
+      .styleguide-carousel__slide.is-active {
+        display: block;
+      }
+
+      .styleguide-carousel__controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .styleguide-carousel__button {
+        border: none;
+        border-radius: 999px;
+        background: #ececec;
+        color: #151515;
+        padding: 10px 16px;
+        font: inherit;
+        font-size: 0.92rem;
+        font-weight: 600;
+        line-height: 1;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+      }
+
+      .styleguide-carousel__button:hover,
+      .styleguide-carousel__button:focus-visible {
+        background: #dfe6df;
+        transform: translateY(-1px);
+      }
+
+      .styleguide-carousel__status {
+        min-width: 64px;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #5f6f66;
+      }
+
       @media (max-width: 720px) {
         .styleguide-page .case-section {
           margin-top: 38px;
@@ -264,50 +317,6 @@
           </div>
         </section>
 
-        <section class="case-section" id="accessible-colors" data-case-target>
-          <h2>Accessible Colors &amp; Data Mapping</h2>
-          <p>
-            I designed a high-contrast color palette to ensure readability and created a unified
-            theme progression for course modules.
-          </p>
-
-          <div class="styleguide-tabs" data-styleguide-tabs="color">
-            <button class="styleguide-tab is-active" data-styleguide-tab="color-base">
-              Base &amp; Highlight
-            </button>
-            <button class="styleguide-tab" data-styleguide-tab="color-module">
-              Module Tracking
-            </button>
-          </div>
-
-          <div class="styleguide-panel is-active" data-styleguide-panel="color-base">
-            <p class="styleguide-panel-copy styleguide-panel-copy--center">
-              High-contrast primary text (#202122) paired with a singular, distinct highlight
-              color (#BA4700) to draw attention to critical actions.
-            </p>
-            <div class="styleguide-media">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/CS1.jpg"
-                alt="Base and highlight color system"
-              />
-            </div>
-          </div>
-
-          <div class="styleguide-panel" data-styleguide-panel="color-module">
-            <p class="styleguide-panel-copy styleguide-panel-copy--center">
-              Implemented a thematic color progression system to visually map the student's
-              journey from Module 0 (Introduction) and Module 1 (Datasets), through to Module 3
-              (Dashboarding)
-            </p>
-            <div class="styleguide-media">
-              <img
-                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/Example.jpg"
-                alt="Module tracking color mapping"
-              />
-            </div>
-          </div>
-        </section>
-
         <section class="case-section" id="emphasis-system" data-case-target>
           <h2>Intentional Emphasis System</h2>
           <p>
@@ -374,6 +383,83 @@
             </div>
           </div>
         </section>
+
+        <section class="case-section" id="accessible-colors" data-case-target>
+          <h2>Accessible Colors &amp; Data Mapping</h2>
+          <p>
+            I designed a high-contrast color palette to ensure readability and created a unified
+            theme progression for course modules.
+          </p>
+
+          <div class="styleguide-tabs" data-styleguide-tabs="color">
+            <button class="styleguide-tab is-active" data-styleguide-tab="color-base">
+              Base &amp; Highlight
+            </button>
+            <button class="styleguide-tab" data-styleguide-tab="color-module">
+              Module Tracking
+            </button>
+          </div>
+
+          <div class="styleguide-panel is-active" data-styleguide-panel="color-base">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              High-contrast primary text (#202122) paired with a singular, distinct highlight
+              color (#BA4700) to draw attention to critical actions.
+            </p>
+            <div class="styleguide-media">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/CS1.jpg"
+                alt="Base and highlight color system"
+              />
+            </div>
+          </div>
+
+          <div class="styleguide-panel" data-styleguide-panel="color-module">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              Implemented a thematic color progression system to visually map the student's
+              journey from Module 0 (Introduction) and Module 1 (Datasets), through to Module 3
+              (Dashboarding)
+            </p>
+            <div class="styleguide-carousel" data-styleguide-carousel>
+              <div class="styleguide-carousel__viewport">
+                <div class="styleguide-carousel__slide is-active" data-styleguide-slide>
+                  <div class="styleguide-media">
+                    <img
+                      src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/Charts.jpg"
+                      alt="Module tracking color mapping example"
+                    />
+                  </div>
+                </div>
+                <div class="styleguide-carousel__slide" data-styleguide-slide>
+                  <div class="styleguide-media">
+                    <img
+                      src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/Example.jpg"
+                      alt="Module tracking data mapping chart"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="styleguide-carousel__controls">
+                <button
+                  class="styleguide-carousel__button"
+                  type="button"
+                  data-styleguide-prev
+                  aria-label="Show previous module tracking image"
+                >
+                  ←
+                </button>
+                <div class="styleguide-carousel__status" data-styleguide-status>1 / 2</div>
+                <button
+                  class="styleguide-carousel__button"
+                  type="button"
+                  data-styleguide-next
+                  aria-label="Show next module tracking image"
+                >
+                  →
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
 
@@ -408,6 +494,42 @@
               activate(tab.getAttribute("data-styleguide-tab"));
             });
           });
+        });
+
+        var carousels = document.querySelectorAll("[data-styleguide-carousel]");
+
+        carousels.forEach(function (carousel) {
+          var slides = carousel.querySelectorAll("[data-styleguide-slide]");
+          var previousButton = carousel.querySelector("[data-styleguide-prev]");
+          var nextButton = carousel.querySelector("[data-styleguide-next]");
+          var status = carousel.querySelector("[data-styleguide-status]");
+          var activeIndex = 0;
+
+          function renderSlide(index) {
+            activeIndex = (index + slides.length) % slides.length;
+
+            slides.forEach(function (slide, slideIndex) {
+              slide.classList.toggle("is-active", slideIndex === activeIndex);
+            });
+
+            if (status) {
+              status.textContent = activeIndex + 1 + " / " + slides.length;
+            }
+          }
+
+          if (previousButton) {
+            previousButton.addEventListener("click", function () {
+              renderSlide(activeIndex - 1);
+            });
+          }
+
+          if (nextButton) {
+            nextButton.addEventListener("click", function () {
+              renderSlide(activeIndex + 1);
+            });
+          }
+
+          renderSlide(0);
         });
       })();
     </script>

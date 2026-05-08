@@ -22,6 +22,151 @@
         margin: 0 0 12px;
         font-size: 22px;
       }
+
+      .case-image-block--overview img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+      }
+
+      .recommendation-tabs {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        max-width: 88%;
+        margin: 1.5rem auto;
+        padding: 5px 6px;
+        border-radius: 40px;
+        background: #ececec;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+        overflow-x: auto;
+      }
+
+      .recommendation-tab {
+        flex: 1;
+        border: none;
+        border-radius: 999px;
+        background: transparent;
+        padding: 10px 16px;
+        color: #8a8a8a;
+        font: inherit;
+        font-size: 0.82rem;
+        font-weight: 500;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+      }
+
+      .recommendation-tab.is-active {
+        background: #ffffff;
+        color: #111111;
+        font-weight: 700;
+        box-shadow: 0 4px 12px rgba(31, 39, 54, 0.12);
+      }
+
+      .recommendation-panels {
+        max-width: 88%;
+        margin: 0 auto;
+      }
+
+      .recommendation-panel {
+        display: none;
+      }
+
+      .recommendation-panel.is-active {
+        display: block;
+      }
+
+      .recommendation-carousel {
+        position: relative;
+      }
+
+      .recommendation-slide {
+        display: none;
+      }
+
+      .recommendation-slide.is-active {
+        display: block;
+      }
+
+      .recommendation-slide img {
+        width: 100%;
+        display: block;
+        border-radius: 20px;
+      }
+
+      .recommendation-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 56px;
+        margin-top: 28px;
+      }
+
+      .recommendation-status {
+        min-width: 88px;
+        text-align: center;
+        color: #5f6f66;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+
+      .recommendation-arrow {
+        width: 84px;
+        height: 52px;
+        border: none;
+        border-radius: 999px;
+        background: rgba(236, 236, 236, 0.96);
+        color: #4d4d4d;
+        font-size: 2rem;
+        line-height: 1;
+        cursor: pointer;
+        box-shadow: 0 6px 18px rgba(31, 39, 54, 0.08);
+        transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+      }
+
+      .recommendation-arrow:hover,
+      .recommendation-arrow:focus-visible {
+        background: #e1e1e1;
+        transform: translateY(-1px);
+      }
+
+      .recommendation-arrow[disabled] {
+        opacity: 0.35;
+        pointer-events: none;
+      }
+
+      @media (max-width: 960px) {
+        .recommendation-controls {
+          gap: 32px;
+        }
+
+        .recommendation-arrow {
+          width: 72px;
+          height: 48px;
+          font-size: 1.7rem;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .recommendation-tabs,
+        .recommendation-panels {
+          max-width: 100%;
+        }
+
+        .recommendation-controls {
+          gap: 18px;
+          margin-top: 20px;
+        }
+
+        .recommendation-arrow {
+          width: 60px;
+          height: 44px;
+          font-size: 1.4rem;
+        }
+      }
     </style>
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
   </head>
@@ -429,62 +574,85 @@
         <!-- RECOMMENDATION -->
         <section class="case-section" id="recommendation" data-case-target>
           <h2>Recommendation</h2>
-          <div style="background:#efefef;border-radius:40px;padding:5px 6px;display:flex;align-items:center;margin:1.5rem auto 1.5rem;max-width:88%;">
-            <button data-recommendation-tab="navigation" class="recommendation-tab" style="background:#fff;border:none;border-radius:30px;padding:8px 18px;font-size:0.82rem;font-weight:700;cursor:pointer;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.12);font-family:inherit;">Navigation</button>
-            <button data-recommendation-tab="findability" class="recommendation-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Findability</button>
-            <button data-recommendation-tab="labeling" class="recommendation-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Labeling</button>
-            <button data-recommendation-tab="hierarchy" class="recommendation-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Hierarchy</button>
-            <button data-recommendation-tab="feedback" class="recommendation-tab" style="background:none;border:none;border-radius:30px;padding:8px 14px;font-size:0.82rem;color:#888;cursor:pointer;white-space:nowrap;flex:1;font-family:inherit;">Feedback</button>
+          <div class="recommendation-tabs">
+            <button data-recommendation-tab="navigation" class="recommendation-tab is-active">Navigation</button>
+            <button data-recommendation-tab="findability" class="recommendation-tab">Findability</button>
+            <button data-recommendation-tab="labeling" class="recommendation-tab">Labeling</button>
+            <button data-recommendation-tab="hierarchy" class="recommendation-tab">Hierarchy</button>
+            <button data-recommendation-tab="feedback" class="recommendation-tab">Feedback</button>
           </div>
 
-          <div style="max-width: 88%; margin: 0 auto;">
-            <div data-recommendation-panel="navigation">
-              <div data-rec-carousel="navigation" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
-                <button data-rec-prev type="button" aria-label="Previous navigation image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8249;</button>
-                <div style="flex:1;">
-                  <img data-rec-slide="navigation" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_1.jpg" alt="Navigation recommendation 1" style="width:100%;border-radius:12px;" />
-                  <img data-rec-slide="navigation" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_2.jpg" alt="Navigation recommendation 2" style="width:100%;border-radius:12px;display:none;" />
-                  <img data-rec-slide="navigation" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_3.jpg" alt="Navigation recommendation 3" style="width:100%;border-radius:12px;display:none;" />
+          <div class="recommendation-panels">
+            <div data-recommendation-panel="navigation" class="recommendation-panel is-active">
+              <div data-rec-carousel="navigation" data-rec-index="0" class="recommendation-carousel">
+                <div class="recommendation-slide is-active">
+                  <img data-rec-slide="navigation" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_1.jpg" alt="Navigation recommendation 1" />
                 </div>
-                <button data-rec-next type="button" aria-label="Next navigation image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8250;</button>
+                <div class="recommendation-slide">
+                  <img data-rec-slide="navigation" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_2.jpg" alt="Navigation recommendation 2" />
+                </div>
+                <div class="recommendation-slide">
+                  <img data-rec-slide="navigation" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom1_3.jpg" alt="Navigation recommendation 3" />
+                </div>
+                <div class="recommendation-controls">
+                  <button data-rec-prev type="button" class="recommendation-arrow" aria-label="Previous navigation recommendation">&#8592;</button>
+                  <div class="recommendation-status" data-rec-status>1 / 3</div>
+                  <button data-rec-next type="button" class="recommendation-arrow" aria-label="Next navigation recommendation">&#8594;</button>
+                </div>
               </div>
             </div>
-            <div data-recommendation-panel="findability" style="display:none;">
-              <div data-rec-carousel="findability" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
-                <button data-rec-prev type="button" aria-label="Previous findability image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8249;</button>
-                <div style="flex:1;">
-                  <img data-rec-slide="findability" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_1.jpg" alt="Findability recommendation 1" style="width:100%;border-radius:12px;" />
-                  <img data-rec-slide="findability" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_2.jpg" alt="Findability recommendation 2" style="width:100%;border-radius:12px;display:none;" />
+            <div data-recommendation-panel="findability" class="recommendation-panel">
+              <div data-rec-carousel="findability" data-rec-index="0" class="recommendation-carousel">
+                <div class="recommendation-slide is-active">
+                  <img data-rec-slide="findability" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_1.jpg" alt="Findability recommendation 1" />
                 </div>
-                <button data-rec-next type="button" aria-label="Next findability image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8250;</button>
+                <div class="recommendation-slide">
+                  <img data-rec-slide="findability" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom2_2.jpg" alt="Findability recommendation 2" />
+                </div>
+                <div class="recommendation-controls">
+                  <button data-rec-prev type="button" class="recommendation-arrow" aria-label="Previous findability recommendation">&#8592;</button>
+                  <div class="recommendation-status" data-rec-status>1 / 2</div>
+                  <button data-rec-next type="button" class="recommendation-arrow" aria-label="Next findability recommendation">&#8594;</button>
+                </div>
               </div>
             </div>
-            <div data-recommendation-panel="labeling" style="display:none;">
-              <div data-rec-carousel="labeling" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
-                <button data-rec-prev type="button" aria-label="Previous labeling image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8249;</button>
-                <div style="flex:1;">
-                  <img data-rec-slide="labeling" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_1.jpg" alt="Labeling recommendation 1" style="width:100%;border-radius:12px;" />
-                  <img data-rec-slide="labeling" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_2.jpg" alt="Labeling recommendation 2" style="width:100%;border-radius:12px;display:none;" />
+            <div data-recommendation-panel="labeling" class="recommendation-panel">
+              <div data-rec-carousel="labeling" data-rec-index="0" class="recommendation-carousel">
+                <div class="recommendation-slide is-active">
+                  <img data-rec-slide="labeling" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_1.jpg" alt="Labeling recommendation 1" />
                 </div>
-                <button data-rec-next type="button" aria-label="Next labeling image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;">&#8250;</button>
+                <div class="recommendation-slide">
+                  <img data-rec-slide="labeling" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom3_2.jpg" alt="Labeling recommendation 2" />
+                </div>
+                <div class="recommendation-controls">
+                  <button data-rec-prev type="button" class="recommendation-arrow" aria-label="Previous labeling recommendation">&#8592;</button>
+                  <div class="recommendation-status" data-rec-status>1 / 2</div>
+                  <button data-rec-next type="button" class="recommendation-arrow" aria-label="Next labeling recommendation">&#8594;</button>
+                </div>
               </div>
             </div>
-            <div data-recommendation-panel="hierarchy" style="display:none;">
-              <div data-rec-carousel="hierarchy" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
-                <button data-rec-prev type="button" aria-label="Previous hierarchy image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;visibility:hidden;">&#8249;</button>
-                <div style="flex:1;">
-                  <img data-rec-slide="hierarchy" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom4.jpg" alt="Hierarchy recommendation" style="width:100%;border-radius:12px;" />
+            <div data-recommendation-panel="hierarchy" class="recommendation-panel">
+              <div data-rec-carousel="hierarchy" data-rec-index="0" class="recommendation-carousel">
+                <div class="recommendation-slide is-active">
+                  <img data-rec-slide="hierarchy" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom4.jpg" alt="Hierarchy recommendation" />
                 </div>
-                <button data-rec-next type="button" aria-label="Next hierarchy image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;visibility:hidden;">&#8250;</button>
+                <div class="recommendation-controls">
+                  <button data-rec-prev type="button" class="recommendation-arrow" aria-label="Previous hierarchy recommendation">&#8592;</button>
+                  <div class="recommendation-status" data-rec-status>1 / 1</div>
+                  <button data-rec-next type="button" class="recommendation-arrow" aria-label="Next hierarchy recommendation">&#8594;</button>
+                </div>
               </div>
             </div>
-            <div data-recommendation-panel="feedback" style="display:none;">
-              <div data-rec-carousel="feedback" data-rec-index="0" style="display:flex;align-items:center;gap:16px;">
-                <button data-rec-prev type="button" aria-label="Previous feedback image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;visibility:hidden;">&#8249;</button>
-                <div style="flex:1;">
-                  <img data-rec-slide="feedback" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom5.jpg" alt="Feedback recommendation" style="width:100%;border-radius:12px;" />
+            <div data-recommendation-panel="feedback" class="recommendation-panel">
+              <div data-rec-carousel="feedback" data-rec-index="0" class="recommendation-carousel">
+                <div class="recommendation-slide is-active">
+                  <img data-rec-slide="feedback" src="../assets/images/Portfolio/Projects/UXdesign/Usability/recom5.jpg" alt="Feedback recommendation" />
                 </div>
-                <button data-rec-next type="button" aria-label="Next feedback image" style="width:44px;height:44px;border:none;border-radius:999px;background:#efefef;color:#444;font-size:1.3rem;cursor:pointer;flex-shrink:0;visibility:hidden;">&#8250;</button>
+                <div class="recommendation-controls">
+                  <button data-rec-prev type="button" class="recommendation-arrow" aria-label="Previous feedback recommendation">&#8592;</button>
+                  <div class="recommendation-status" data-rec-status>1 / 1</div>
+                  <button data-rec-next type="button" class="recommendation-arrow" aria-label="Next feedback recommendation">&#8594;</button>
+                </div>
               </div>
             </div>
           </div>
@@ -498,13 +666,13 @@
               function activateTab(target) {
                 tabs.forEach(function (t) {
                   var isActive = t.getAttribute('data-recommendation-tab') === target;
-                  t.style.background = isActive ? '#fff' : 'none';
-                  t.style.color = isActive ? '#000' : '#888';
-                  t.style.boxShadow = isActive ? '0 1px 3px rgba(0,0,0,0.12)' : 'none';
-                  t.style.fontWeight = isActive ? '700' : 'normal';
+                  t.classList.toggle('is-active', isActive);
                 });
                 panels.forEach(function (p) {
-                  p.style.display = p.getAttribute('data-recommendation-panel') === target ? 'block' : 'none';
+                  p.classList.toggle(
+                    'is-active',
+                    p.getAttribute('data-recommendation-panel') === target
+                  );
                 });
               }
 
@@ -515,26 +683,24 @@
               });
 
               section.querySelectorAll('[data-rec-carousel]').forEach(function (carousel) {
-                var key = carousel.getAttribute('data-rec-carousel');
-                var slides = carousel.querySelectorAll('[data-rec-slide="' + key + '"]');
+                var slides = carousel.querySelectorAll('.recommendation-slide');
                 var prev = carousel.querySelector('[data-rec-prev]');
                 var next = carousel.querySelector('[data-rec-next]');
+                var status = carousel.querySelector('[data-rec-status]');
 
                 function render(index) {
                   carousel.setAttribute('data-rec-index', String(index));
                   slides.forEach(function (slide, slideIndex) {
-                    slide.style.display = slideIndex === index ? 'block' : 'none';
+                    slide.classList.toggle('is-active', slideIndex === index);
                   });
-                  if (slides.length > 1) {
-                    prev.style.visibility = index === 0 ? 'hidden' : 'visible';
-                    next.style.visibility = index === slides.length - 1 ? 'hidden' : 'visible';
+                  if (status) {
+                    status.textContent = index + 1 + ' / ' + slides.length;
                   }
+                  prev.disabled = slides.length <= 1 || index === 0;
+                  next.disabled = slides.length <= 1 || index === slides.length - 1;
                 }
 
-                if (slides.length <= 1) {
-                  prev.style.visibility = 'hidden';
-                  next.style.visibility = 'hidden';
-                } else {
+                if (slides.length > 1) {
                   prev.addEventListener('click', function () {
                     var index = Number(carousel.getAttribute('data-rec-index'));
                     if (index > 0) {
