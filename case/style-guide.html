@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Guide · Ruiyao Hao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css?v=13" />
+    <style>
+      .case-page .case-section,
+      .case-page .case-related {
+        margin-top: 40px;
+      }
+
+      .styleguide-page .case-section h2,
+      .styleguide-page .case-related h2 {
+        margin: 0 0 12px;
+        font-size: 22px;
+      }
+
+      .styleguide-page .case-section > p {
+        max-width: 1180px;
+      }
+
+      .styleguide-page .case-image-block--overview {
+        margin-bottom: 30px;
+      }
+
+      .styleguide-overview-image {
+        width: 100%;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        border-radius: 18px !important;
+      }
+
+      .styleguide-tabs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: fit-content;
+        max-width: 100%;
+        margin: 28px auto 34px;
+        padding: 5px 6px;
+        border-radius: 40px;
+        background: #ececec;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+        overflow-x: auto;
+      }
+
+      .styleguide-tab {
+        border: none;
+        border-radius: 999px;
+        background: transparent;
+        padding: 8px 18px;
+        color: #777777;
+        font: inherit;
+        font-size: 0.82rem;
+        font-weight: 600;
+        line-height: 1.2;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+      }
+
+      .styleguide-tab.is-active {
+        background: #ffffff;
+        color: #151515;
+        box-shadow: 0 4px 12px rgba(31, 39, 54, 0.18);
+      }
+
+      .styleguide-panel {
+        display: none;
+      }
+
+      .styleguide-panel.is-active {
+        display: block;
+      }
+
+      .styleguide-panel-copy {
+        max-width: 980px;
+        margin: 0 auto 28px;
+        font-size: 15px;
+        line-height: 1.75;
+        color: #000000;
+      }
+
+      .styleguide-panel-copy--center {
+        text-align: center;
+      }
+
+      .styleguide-media {
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+
+      .styleguide-media img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 18px;
+      }
+
+      @media (max-width: 720px) {
+        .styleguide-page .case-section {
+          margin-top: 38px;
+        }
+
+        .styleguide-page .case-section h2 {
+          margin-bottom: 18px;
+        }
+
+        .styleguide-tab {
+          padding: 8px 18px;
+        }
+      }
+    </style>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  </head>
+  <body class="case-page styleguide-page">
+    <div class="about-grid-bg"></div>
+
+    <div class="layout layout--centered">
+      <aside class="sidebar">
+        <nav class="sidebar__nav">
+          <a href="../index.html#hero" aria-label="Home" data-label="Home">
+            <span class="iconify" data-icon="fluent-emoji:house"></span>
+          </a>
+          <a href="../projects.html" aria-label="Projects" data-label="Projects">
+            <span class="iconify" data-icon="fluent-emoji:books"></span>
+          </a>
+          <a href="../experience.html" aria-label="Internships" data-label="Internships">
+            <img class="sidebar__icon-image" src="../assets/images/photo/viewintern.png" alt="" />
+          </a>
+          <a href="../assets/Ruiyao_2.pdf" aria-label="Resume" data-label="Resume">📝</a>
+        </nav>
+        <div class="sidebar__contact">
+          <a href="mailto:ruiyaohao983@gmail.com" aria-label="Email" data-label="Email">
+            <span class="iconify" data-icon="fluent-emoji:love-letter"></span>
+          </a>
+          <a href="https://www.linkedin.com/in/hry1/" aria-label="LinkedIn" data-label="LinkedIn">
+            <span class="iconify" data-icon="logos:linkedin-icon"></span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="case-shell">
+        <a class="case-back" href="../projects.html">← Back to Projects</a>
+
+        <div class="case-header">
+          <span class="case-pill">Style Guide</span>
+          <h1>Establishing a Unified Visual Style Guide for LMS Platforms</h1>
+          <p class="case-subtitle">
+            Designing a scalable typography, emphasis, and color system for Brightspace and Moodle
+            to improve instructional clarity and reduce cognitive load.
+          </p>
+        </div>
+
+        <nav class="case-section-nav" aria-label="Project sections" data-case-nav>
+          <ul class="case-section-nav__list">
+            <li>
+              <a class="case-section-nav__link" href="#overview" data-case-nav-link>Overview</a>
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#platform-hierarchy" data-case-nav-link
+                >Platform-Specific Hierarchy</a
+              >
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#accessible-colors" data-case-nav-link
+                >Accessible Colors &amp; Data Mapping</a
+              >
+            </li>
+            <li>
+              <a class="case-section-nav__link" href="#emphasis-system" data-case-nav-link
+                >Intentional Emphasis System</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <section class="case-image-block case-image-block--overview">
+          <img
+            class="styleguide-overview-image"
+            src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/ux_project_styleguide.png"
+            alt="Visual style guide project overview"
+          />
+        </section>
+
+        <section class="case-meta">
+          <article class="case-meta-card">
+            <p class="case-meta-label">Team Structure</p>
+            <p class="case-meta-value">Solo Designer</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Tool</p>
+            <p class="case-meta-value">Figma</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Time Frame</p>
+            <p class="case-meta-value">March 2026</p>
+          </article>
+          <article class="case-meta-card">
+            <p class="case-meta-label">Responsibility</p>
+            <p class="case-meta-value">UX/UI Design</p>
+          </article>
+        </section>
+
+        <section class="case-section" id="overview" data-case-target>
+          <h2>Overview</h2>
+          <p>
+            To ensure consistency across digital learning environments, I developed a
+            comprehensive visual style guide. Grounded in instructional design principles (e.g.,
+            Sweller's cognitive load theory). This system standardizes hierarchy and emphasis to
+            help students efficiently navigate deadlines, core concepts, and academic modules
+            without visual clutter.
+          </p>
+        </section>
+
+        <section class="case-section" id="platform-hierarchy" data-case-target>
+          <h2>Platform-Specific Hierarchy</h2>
+          <p>
+            To ensure visual consistency across different Learning Management Systems, I created a
+            tailored hierarchy system.
+          </p>
+
+          <div class="styleguide-tabs" data-styleguide-tabs="hierarchy">
+            <button class="styleguide-tab is-active" data-styleguide-tab="hierarchy-brightspace">
+              Brightspace
+            </button>
+            <button class="styleguide-tab" data-styleguide-tab="hierarchy-moodle">Moodle</button>
+          </div>
+
+          <div class="styleguide-panel is-active" data-styleguide-panel="hierarchy-brightspace">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              Structured using standard heading hierarchies (Heading 1 for titles, Heading 2 for
+              subtitles).
+            </p>
+            <div class="styleguide-media">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/HS1.jpg"
+                alt="Brightspace hierarchy system"
+              />
+            </div>
+          </div>
+
+          <div class="styleguide-panel" data-styleguide-panel="hierarchy-moodle">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              Adapted to its specific native constraints by shifting the hierarchy down (Heading 3
+              for titles, Heading 4 for subtitles)
+            </p>
+            <div class="styleguide-media">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/HS2.jpg"
+                alt="Moodle hierarchy system"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="accessible-colors" data-case-target>
+          <h2>Accessible Colors &amp; Data Mapping</h2>
+          <p>
+            I designed a high-contrast color palette to ensure readability and created a unified
+            theme progression for course modules.
+          </p>
+
+          <div class="styleguide-tabs" data-styleguide-tabs="color">
+            <button class="styleguide-tab is-active" data-styleguide-tab="color-base">
+              Base &amp; Highlight
+            </button>
+            <button class="styleguide-tab" data-styleguide-tab="color-module">
+              Module Tracking
+            </button>
+          </div>
+
+          <div class="styleguide-panel is-active" data-styleguide-panel="color-base">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              High-contrast primary text (#202122) paired with a singular, distinct highlight
+              color (#BA4700) to draw attention to critical actions.
+            </p>
+            <div class="styleguide-media">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/CS1.jpg"
+                alt="Base and highlight color system"
+              />
+            </div>
+          </div>
+
+          <div class="styleguide-panel" data-styleguide-panel="color-module">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              Implemented a thematic color progression system to visually map the student's
+              journey from Module 0 (Introduction) and Module 1 (Datasets), through to Module 3
+              (Dashboarding)
+            </p>
+            <div class="styleguide-media">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/Example.jpg"
+                alt="Module tracking color mapping"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="emphasis-system" data-case-target>
+          <h2>Intentional Emphasis System</h2>
+          <p>
+            To prevent visual fatigue, I established strict "Do's &amp; Don'ts" rules linking text
+            emphasis directly to instructional functions rather than aesthetics.
+          </p>
+
+          <div class="styleguide-tabs" data-styleguide-tabs="emphasis">
+            <button class="styleguide-tab is-active" data-styleguide-tab="emphasis-highlight">
+              Bold + Highlight
+            </button>
+            <button class="styleguide-tab" data-styleguide-tab="emphasis-bold">Bold Only</button>
+            <button class="styleguide-tab" data-styleguide-tab="emphasis-italic">Italic</button>
+            <button class="styleguide-tab" data-styleguide-tab="emphasis-link">Hyperlinks</button>
+          </div>
+
+          <div class="styleguide-panel is-active" data-styleguide-panel="emphasis-highlight">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              Strictly reserved for critical actions like deadlines, required submission steps,
+              and high-priority instructions. Limited to 1-2 terms per paragraph
+            </p>
+            <div class="styleguide-media">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/ES1.jpg"
+                alt="Bold and highlight emphasis system"
+              />
+            </div>
+          </div>
+
+          <div class="styleguide-panel" data-styleguide-panel="emphasis-bold">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              Used for first mentions of core concepts and definitions
+            </p>
+            <div class="styleguide-media">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/ES2.jpg"
+                alt="Bold only emphasis system"
+              />
+            </div>
+          </div>
+
+          <div class="styleguide-panel" data-styleguide-panel="emphasis-italic">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              Applied selectively for external references, book titles, and foreign words to
+              reduce extraneous load
+            </p>
+            <div class="styleguide-media">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/ES3.jpg"
+                alt="Italic emphasis system"
+              />
+            </div>
+          </div>
+
+          <div class="styleguide-panel" data-styleguide-panel="emphasis-link">
+            <p class="styleguide-panel-copy styleguide-panel-copy--center">
+              Must use descriptive text rather than vague phrases like "click here"
+            </p>
+            <div class="styleguide-media">
+              <img
+                src="../assets/images/Portfolio/Projects/UXdesign/Styleguide/ES4.jpg"
+                alt="Hyperlink emphasis system"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/scripts/case-lightbox.js"></script>
+    <script src="../assets/scripts/case-section-nav.js"></script>
+    <script>
+      (function () {
+        var tabGroups = document.querySelectorAll("[data-styleguide-tabs]");
+
+        tabGroups.forEach(function (group) {
+          var groupName = group.getAttribute("data-styleguide-tabs");
+          var tabs = group.querySelectorAll("[data-styleguide-tab]");
+          var panels = document.querySelectorAll(
+            '[data-styleguide-panel^="' + groupName + '-"]'
+          );
+
+          function activate(target) {
+            tabs.forEach(function (tab) {
+              tab.classList.toggle("is-active", tab.getAttribute("data-styleguide-tab") === target);
+            });
+
+            panels.forEach(function (panel) {
+              panel.classList.toggle(
+                "is-active",
+                panel.getAttribute("data-styleguide-panel") === target
+              );
+            });
+          }
+
+          tabs.forEach(function (tab) {
+            tab.addEventListener("click", function () {
+              activate(tab.getAttribute("data-styleguide-tab"));
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
