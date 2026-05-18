@@ -11,6 +11,8 @@ const initProjectsSearch = () => {
   const defaultFilter = page.dataset.defaultFilter?.trim() || 'All Projects';
   let activeFilter = defaultFilter;
 
+  const getFilterValue = (button) => button.dataset.filter?.trim() || button.textContent.trim();
+
   const getCardText = (card) => {
     const title = card.querySelector('h3')?.textContent || '';
     const description = card.querySelector('p')?.textContent || '';
@@ -27,7 +29,8 @@ const initProjectsSearch = () => {
     cards.forEach((card) => {
       const haystack = getCardText(card);
       const matchesQuery = !query || haystack.includes(query);
-      const matchesFilter = active === 'all projects' || haystack.includes(active);
+      const matchesFilter =
+        active === 'all projects' || active === 'all internships' || haystack.includes(active);
       card.style.display = matchesQuery && matchesFilter ? '' : 'none';
     });
   };
@@ -40,13 +43,18 @@ const initProjectsSearch = () => {
     btn.addEventListener('click', () => {
       filterButtons.forEach((item) => item.classList.remove('is-active'));
       btn.classList.add('is-active');
-      activeFilter = btn.textContent.trim();
+      activeFilter = getFilterValue(btn);
+      const isShowAll =
+        normalize(activeFilter) === 'all projects' || normalize(activeFilter) === 'all internships';
+      if (isShowAll && searchInput) {
+        searchInput.value = '';
+      }
       applyFilters();
     });
   });
 
   const activeButton = Array.from(filterButtons).find(
-    (btn) => normalize(btn.textContent) === normalize(defaultFilter)
+    (btn) => normalize(getFilterValue(btn)) === normalize(defaultFilter)
   );
 
   if (activeButton) {
